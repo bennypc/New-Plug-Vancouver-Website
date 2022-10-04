@@ -12,7 +12,7 @@ function Logo() {
 function Home() {
   return (
     <div id='home' className='text-white text-center h-[300px] text-5xl'>
-      <h1 className=''>Home</h1>
+      <h1>Home</h1>
     </div>
   )
 }
@@ -57,11 +57,11 @@ function App() {
 
       <div>
         <div className='flex justify-center flex-wrap'>
-          <a href='#home' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>Home</a>
-          <a href='#culture' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>Culture</a>
-          <a href='#events' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>Events</a>
-          <a href='#media' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>Media</a>
-          <a href='#contact' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>Contact</a>
+          <a href='#home' className='text-gray-300 text-2xl font-bold italic pb-3 px-6 md:px-8 lg:px-12'>Home</a>
+          <a href='#culture' className='text-gray-300 text-2xl font-bold italic pb-3 px-6 md:px-8 lg:px-12'>Culture</a>
+          <a href='#events' className='text-gray-300 text-2xl font-bold italic pb-3 px-6 md:px-8 lg:px-12'>Events</a>
+          <a href='#media' className='text-gray-300 text-2xl font-bold italic pb-3 px-6 md:px-8 lg:px-12'>Media</a>
+          <a href='#contact' className='text-gray-300 text-2xl font-bold italic pb-3 px-6 md:px-8 lg:px-12'>Contact</a>
         </div>
       </div>
 
