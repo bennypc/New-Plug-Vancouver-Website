@@ -2,9 +2,9 @@ import './App.css';
 
 function Logo() {
   return (
-    <img 
-      src="../logos/PlugWhite.png"
-      alt="Plug Logo"
+    <img id="main-logo"
+      src={require('./logos/PlugWhite.png')}
+      alt='Plug Logo'
     />
   )
 }
