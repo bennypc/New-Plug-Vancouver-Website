@@ -6,7 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 function Logo() {
   return (
     <img id='main-logo'
-      src={require('./logos/PlugWhite.png')}
+      src={require('./images/logos/PlugWhite.png')}
       alt='Plug Logo'
     />
   )
@@ -22,8 +22,25 @@ function Home() {
 
 function Culture() {
   return (
-    <div id='culture' className='text-white text-center h-[300px] text-5xl'>
-      <h1>CULTURE</h1>
+    <div id='culture' className='text-white text-center text-5xl'>
+      <h1 className='mb-4'>STORY</h1>
+
+      <div className="wrapper">
+        <div id="one">
+          <p className='text-2xl lg:pt-8'>
+            The Plug Vancouver was dreamed up in a small coffee shop in Kitsilano in 2019, with a goal of providing UBC students with the greatest events and most exclusive opportunities we could create. From humble beginnings of $50 pizza giveaways and our original Weekly Breakdowns, we've grown to reach new levels- while keeping the elements UBC students have loved most.
+          </p>
+          <br/>
+          <p className='text-2xl'>
+          So where are we now? Over the years we've expanded our craft to reach all young people in Vancouver who are interested in urban media, culture, and events. We throw the parties you'll keep coming back to, collaborate with the most exciting groups, and create the content you won't want to miss.
+          </p>
+        </div>
+        <div id="two">
+          <img className='px-4 mb-6'
+          src={require('./images/TeamPhotoLarge.jpg')}>
+          </img>
+        </div>
+      </div>
     </div>
   )
 }
@@ -83,7 +100,7 @@ function App() {
       <div>
         <div className='flex justify-center flex-wrap'>
           <a href='#home' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>HOME</a>
-          <a href='#culture' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>CULTURE</a>
+          <a href='#culture' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>STORY</a>
           <a href='#events' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>EVENTS</a>
           <a href='#media' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>MEDIA</a>
           <a href='#contact' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>CONTACT</a>
