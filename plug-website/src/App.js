@@ -1,7 +1,11 @@
 import './App.css';
 import React, { useState } from 'react';
+import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
+import "slick-carousel/slick/slick.css";
+
+import "slick-carousel/slick/slick-theme.css";
 
 function Logo() {
   return (
@@ -37,10 +41,12 @@ function Culture() {
         </div>
         <div id="two">
           <img className='px-4 mb-6'
-          src={require('./images/TeamPhotoLarge.jpg')}>
+          src={require('./images/TeamPhotoLarge.jpg')}
+          alt="team">
           </img>
         </div>
       </div>
+      <AutoplayCarousel/>
     </div>
   )
 }
@@ -89,7 +95,59 @@ function ImageSlideshow() {
             </div>
         </Carousel>
     </div>
-)
+  )
+}
+
+function AutoplayCarousel() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      arrows: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 3000,
+      autoplaySpeed: 3000,
+      cssEase: "linear",
+      pauseOnHover: false
+    };
+  return(
+    <div className='mb-8'>
+        <h2 className='text-gray-400 italic text-3xl mb-4'>Brands we worked with</h2>
+        <Slider {...settings}>
+          <div className='flex justify-center w-[65px]'>
+            <img className=' w-[65px]'
+              src={require('./images/logos/brands/redbull-logo.png')}
+              alt='red bull logo'/>
+          </div>
+          <div className='flex justify-center'>
+            <img className=' w-[110px]'
+              src={require('./images/logos/brands/bumble-logo.png')}
+              alt='bumble logo'/>
+          </div>
+          <div>
+          <img className='flex justify-center w-[65px]'
+              src={require('./images/logos/brands/canucks-logo.png')}
+              alt='canucks logo'/>
+          </div>
+          <div>
+          <img className='flex justify-center w-[65px]'
+              src={require('./images/logos/brands/budlight-logo.png')}
+              alt='bud light logo'/>
+          </div>
+          <div>
+          <img className='flex justify-center w-[65px]'
+              src={require('./images/logos/brands/goldsgym-logo.png')}
+              alt='golds gym logo'/>
+          </div>
+          <div>
+          <img className='flex justify-center w-[90px]'
+              src={require('./images/logos/brands/yerbamate-logo.png')}
+              alt='yerba mate logo'/>
+          </div>
+        </Slider>
+      </div>
+  )
 }
 
 function App() {
