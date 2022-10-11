@@ -19,7 +19,7 @@ body {
 }
 
 .wrapper { 
-  border : 2px solid #000; 
+
   overflow:hidden;
   padding: 20px;
 }
@@ -32,7 +32,7 @@ body {
   float:left; 
   margin-right:0px;
   width:40vw;
-  border-right:2px solid #000;
+
   padding: 0 48px;
 }
 #two { 
@@ -50,4 +50,64 @@ body {
     border:0;  
     padding: 0px 6px 24px 6px;
   }
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+}
+
+.progress-bar {
+  height: 30px;
+  background: #7a7a7a;
+  width: 0%;
+}
+
+.contact-wrapper { 
+
+  overflow:hidden;
+  padding: 20px;
+}
+
+.contact-wrapper div {
+   min-height: 120px;
+   padding: 0px;
+}
+
+.form-input {
+  color:black;
+}
+
+#form-left {
+  float:left; 
+  margin-right:0px;
+  width:40vw;
+
+  padding: 0 48px;
+}
+#form-right { 
+  overflow:hidden;
+  margin:0px;
+  min-height:170px;
+  height: auto;
+  width: 50%;
+}
+
+@media screen and (max-width: 1450px) {
+  #form-left { 
+   float: none;
+   margin-right:0;
+   width:auto;
+   border:0;  
+   padding: 4px 6px 32px 6px;
+ }
+
+ #form-right { 
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+}
 }

@@ -1,5 +1,5 @@
 import './App.css';
-//import React, { useState } from 'react';
+import React, { useState } from 'react';
 import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -70,10 +70,89 @@ function Media() {
 
 function Contact() {
   return (
-    <div id='contact' className='text-white text-center h-[300px] text-5xl'>
-      <h1>CONTACT</h1>
+    <div id='contact' className='text-white text-center text-5xl bg-neutral-900'>
+      <div className="contact-wrapper">
+        <div id="form-left" className='flex lg:h-[350px] justify-center items-center'>
+          <div className='text-center'>
+            <h2>
+              LET'S CONNECT
+            </h2>
+            <br/>
+            <h3 className='text-3xl '>
+              ENGAGE. PARTNER. EXPERIENCE.
+            </h3>
+          </div>
+        </div>
+        <div id="form-right">
+          <ContactForm />
+        </div>
+      </div>
     </div>
   )
+}
+
+const FORM_ENDPOINT = ""; // TODO - fill on the later step
+
+function ContactForm() {
+  const [submitted, setSubmitted] = useState(false);
+  const handleSubmit = () => {
+    setTimeout(() => {
+      setSubmitted(true);
+    }, 100);
+  };
+
+  if (submitted) {
+    return (
+      <>
+        <div className="text-2xl">Thank you!</div>
+        <div className="text-md">We'll be in touch soon.</div>
+      </>
+    );
+  }
+
+  return (
+    <form
+      action={FORM_ENDPOINT}
+      onSubmit={handleSubmit}
+      method="POST"
+      target="_blank"
+    >
+      <div className="pt-0">
+        <input
+          type="text"
+          placeholder="Your name"
+          name="name"
+          className="px-3 py-4 text-xl placeholder-gray-400 text-gray-600 relative bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
+      </div>
+      <div className="pt-0">
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          className="px-3 py-4 text-xl placeholder-gray-400 text-gray-600 relative bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
+      </div>
+      <div className="pt-0">
+        <textarea
+          placeholder="Your message"
+          name="message"
+          className="px-3 py-4 text-xl placeholder-gray-400 text-gray-600 relative bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          required
+        />
+      </div>
+      <div className="pt-0">
+        <button
+          className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          type="submit"
+        >
+          Send a message
+        </button>
+      </div>
+    </form>
+  );
 }
 
 function ImageSlideshow() {
@@ -100,21 +179,19 @@ function ImageSlideshow() {
 
 function AutoplayCarousel() {
     const settings = {
-      dots: true,
-      infinite: true,
-      arrows: false,
       slidesToShow: 3,
       slidesToScroll: 1,
+      infinite: true,
       autoplay: true,
-      speed: 3000,
-      autoplaySpeed: 3000,
-      cssEase: "linear",
-      pauseOnHover: false
+      speed: 10000,
+      autoplaySpeed: 0,
+      cssEase: 'linear',
+      arrows: false,
     };
   return(
     <div className='mb-8'>
-        <h2 className='text-gray-400 italic text-3xl mb-4'>Brands we worked with</h2>
-        <Slider {...settings}>
+        <h2 className='text-gray-400 italic text-3xl mb-4'>Brands we've worked with</h2>
+        <Slider {...settings} className='flex align-middle items-stretch	'>
           <div className='flex justify-center w-[65px]'>
             <img className=' w-[65px]'
               src={require('./images/logos/brands/redbull-logo.png')}
@@ -125,29 +202,48 @@ function AutoplayCarousel() {
               src={require('./images/logos/brands/bumble-logo.png')}
               alt='bumble logo'/>
           </div>
-          <div>
-          <img className='flex justify-center w-[65px]'
-              src={require('./images/logos/brands/canucks-logo.png')}
-              alt='canucks logo'/>
+          <div className='flex justify-center'>
+            <img className='w-[65px]'
+                src={require('./images/logos/brands/canucks-logo.png')}
+                alt='canucks logo'/>
           </div>
-          <div>
-          <img className='flex justify-center w-[65px]'
-              src={require('./images/logos/brands/budlight-logo.png')}
-              alt='bud light logo'/>
+          <div className='flex justify-center'>
+            <img className='w-[65px]'
+                src={require('./images/logos/brands/budlight-logo.png')}
+                alt='bud light logo'/>
           </div>
-          <div>
-          <img className='flex justify-center w-[65px]'
-              src={require('./images/logos/brands/goldsgym-logo.png')}
-              alt='golds gym logo'/>
+          <div className='flex justify-center'>
+            <img className='w-[65px]'
+                src={require('./images/logos/brands/goldsgym-logo.png')}
+                alt='golds gym logo'/>
           </div>
-          <div>
-          <img className='flex justify-center w-[90px]'
-              src={require('./images/logos/brands/yerbamate-logo.png')}
-              alt='yerba mate logo'/>
+          <div className='flex justify-center'>
+            <img className='w-[65px]'
+                src={require('./images/logos/brands/whitecaps-logo.png')}
+                alt='whitecaps logo'/>
           </div>
         </Slider>
       </div>
   )
+}
+
+function ScrollIndicator() {
+  window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+return (
+  
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+  
+)
 }
 
 function App() {
@@ -172,6 +268,8 @@ function App() {
       <Events/>
       <Media/>
       <Contact/>
+
+      <ScrollIndicator />
     </>
     
   )
