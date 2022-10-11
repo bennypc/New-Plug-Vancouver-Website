@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+//import React, { useState } from 'react';
 import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
