@@ -122,7 +122,7 @@ function ContactForm() {
           type="text"
           placeholder="Your name"
           name="name"
-          className="px-3 py-4 text-xl placeholder-gray-400 text-gray-600 relative bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          className="px-3 py-4 text-lg lg:text-xl placeholder-gray-400 text-white relative bg-black rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
           required
         />
       </div>
@@ -131,7 +131,7 @@ function ContactForm() {
           type="email"
           placeholder="Email"
           name="email"
-          className="px-3 py-4 text-xl placeholder-gray-400 text-gray-600 relative bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          className="px-3 py-4 text-lg lg:text-xl placeholder-gray-400 text-white relative bg-black rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
           required
         />
       </div>
@@ -139,13 +139,13 @@ function ContactForm() {
         <textarea
           placeholder="Your message"
           name="message"
-          className="px-3 py-4 text-xl placeholder-gray-400 text-gray-600 relative bg-white rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
+          className="px-3 py-4 text-lg lg:text-xl placeholder-gray-400 text-white relative bg-black rounded border-0 shadow outline-none focus:outline-none focus:ring w-full"
           required
         />
       </div>
       <div className="pt-0">
         <button
-          className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          className="bg-[#e6007e] text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
           type="submit"
         >
           Send a message
