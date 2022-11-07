@@ -14,8 +14,15 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 16px 2px;
-  width: 350px;
+  padding: 8px 2px 4px 2px;
+  width: 200px;
+}
+
+.thumbnail {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  min-width: 100px;
 }
 
 .wrapper { 
@@ -23,6 +30,36 @@ body {
   overflow:hidden;
   padding: 20px;
 }
+
+.event-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 240px;
+  width: 135px;
+
+
+}
+.event-card-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:200px;
+  width:120px;
+  border-radius:12%;
+  overflow:hidden;
+  margin-left: 10px;
+}
+.event-card-image{
+  height:200px;
+  width:120px;
+}
+.event-card-description {
+  margin-top: 10px;
+  font-size: 16px;
+    
+}
+
 
 .wrapper div {
    min-height: 200px;

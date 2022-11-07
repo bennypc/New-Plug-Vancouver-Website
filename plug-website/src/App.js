@@ -16,11 +16,64 @@ function Logo() {
   )
 }
 
+function Header() {
+  return (
+    <div className='mx-6'>
+        <div className='bg-[#e5d7be] w-full h-[4px] mb-2 '></div>
+
+        <div>
+          <div className='flex justify-between'>
+            <h2 className='italic'>
+              <span>
+                THE HOME OF
+              </span>
+
+              <br/>
+
+              <span className='text-[#cb6ce6]'>
+                VANCOUVER
+              </span>
+
+              <br/>
+
+              <span>
+                URBAN CULTURE
+              </span>  
+            </h2>
+            
+            <div className='flex'>
+              <a href="https://www.instagram.com/plugvancouver/">
+                <img className='w-10 h-auto my-4 mr-4'
+                src={require('./images/logos/social/instagram.png')} alt="Instagram logo"/>
+              </a>
+        
+              <a href="https://www.tiktok.com/@plugvancouver">
+                <img className='w-10 h-auto my-4 mr-6'
+                src={require('./images/logos/social/tiktok.png')} alt="Tiktok logo"/>
+              </a>
+
+              
+              <img className='w-10 h-auto my-4'
+              src={require('./images/hamburger-menu.png')} alt="Hamburger Menu" onClick={() => openNav()}/>
+            </div>
+            
+          </div>
+        </div>
+
+        
+        <div className='bg-[#e5d7be] w-full h-[4px] mt-2 mb-4'></div>
+      </div>
+  )
+}
+
 function Home() {
   return (
+    /*
     <div id='home' className='text-white text-center text-5xl mb-8'>
       <ImageSlideshow />
-    </div>
+    </div>*/
+
+    null
   )
 }
 
@@ -52,10 +105,125 @@ function Culture() {
 }
 
 function Events() {
+  var settings = {
+    infinite: false,
+    speed: 500,
+    arrows: false,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
   return (
-    <div id='events' className='text-white text-center h-[300px] text-5xl'>
-      <h1>EVENTS</h1>
+    <div id='events' className='text-white text-center h-[300px] text-5xl mb-8'>
+      <h1 className='my-8 text-white text-center text-5xl italic font-bold'>EVENTS</h1>
+
+      <div>
+        
+        <Slider {...settings}>
+
+        <div className='event-card'>
+            <div className='event-card-image-div'>
+                <img className='event-card-image'
+                  src={require('./images/events/holdthatheat.jpg')}
+                  alt='hold that heat event card'/>
+            </div>
+
+            <h3 className='event-card-description'>
+              JUNE 2
+            </h3>
+          </div>
+
+        <div className='event-card'>
+            <div className='event-card-image-div'>
+              <img className='event-card-image'
+                src={require('./images/events/gymwear.jpg')}
+                alt='gymwear event card'/>
+            </div>
+
+            <h3 className='event-card-description'>
+              JUNE 24
+            </h3>
+          </div>
+
+          <div className='event-card'>
+            <div className='event-card-image-div'>
+              <img className='event-card-image'
+                src={require('./images/events/stampede.jpg')}
+                alt='stampede event card'/>
+            </div>
+
+            <h3 className='event-card-description'>
+              JULY 15
+            </h3>
+          </div>
+
+          <div className='event-card'>
+            <div className='event-card-image-div'>
+                <img className='event-card-image'
+                  src={require('./images/events/poolside.jpg')}
+                  alt='poolside event card'/>
+            </div>
+
+            <h3 className='event-card-description'>
+              JULY 29
+            </h3>
+          </div>
+
+          <div className='event-card'>
+            <div className='event-card-image-div'>
+                <img className='event-card-image'
+                  src={require('./images/events/bundafest.jpg')}
+                  alt='bundafest event card'/>
+            </div>
+
+            <h3 className='event-card-description'>
+              OCTOBER 15
+            </h3>
+          </div>
+          
+          <div className='event-card'>
+            <div className='event-card-image-div'>
+              <img className='event-card-image'
+                src={require('./images/events/caughtin4k.jpg')}
+                alt='caughtin4k event card'/>
+            </div>
+
+            <h3 className='event-card-description'>
+              NOVEMBER 10
+            </h3>
+          </div>
+
+        </Slider>
+      </div>
     </div>
+
   )
 }
 
@@ -239,8 +407,8 @@ function myFunction() {
 
 return (
   
-  <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
+  <div className="progress-container">
+    <div className="progress-bar" id="myBar"></div>
   </div>  
   
 )
@@ -249,9 +417,11 @@ return (
 function App() {
   return (
     <>
+      
+
       <Logo/>
 
-      <div>
+      {/* <div>
         <div className='flex justify-center flex-wrap'>
           <a href='#home' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>HOME</a>
           <a href='#culture' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>STORY</a>
@@ -259,13 +429,82 @@ function App() {
           <a href='#media' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>MEDIA</a>
           <a href='#contact' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>CONTACT</a>
         </div>
+      </div> */}
+
+
+      
+      <Header/>
+
+      <h1 className='my-6 text-white text-center text-5xl italic font-bold' >THE LATEST</h1>
+      
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail'  
+              src={require('./images/thumbnails/safeandsound.png')}
+              alt='golds gym logo'/>
+          </div>
+
+          <div className='width-[100px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              BEST MOMENTS AT VANCOUVER'S SAFE & SOUND FESTIVAL
+            </h2>
+          </div>
+        </div>
       </div>
 
-      <div className='bg-white w-full h-[1px] mt-4'></div>
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail' 
+              src={require('./images/thumbnails/michelin.png')}
+              alt='golds gym logo'/>
+          </div>
 
+          <div className='width-[100px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              TOP 10 NEW MICHELIN STAR RESTAURANTS IN VANCOUVER
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail' 
+              src={require('./images/thumbnails/2023.png')}
+              alt='golds gym logo'/>
+          </div>
+
+          <div className='width-[80px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              YOUR NEW YEAR PLANS AND WHAT TO BRING
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className='border-solid mb-8 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail' 
+              src={require('./images/thumbnails/vfw.png')}
+              alt='golds gym logo'/>
+          </div>
+
+          <div className='width-[80px] resize-none align- '>
+            <h2 className='resize-none align-middle'>
+              VANCOUVER FASHION WEEK FOR THE FASHION WEAK
+            </h2>
+          </div>
+        </div>
+      </div>
+      
       <Home/>
-      <Culture/>
+      
       <Events/>
+
       <Media/>
       <Contact/>
 
@@ -273,6 +512,15 @@ function App() {
     </>
     
   )
+}
+
+function openNav() {
+  console.log("hi")
+  //document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  //document.getElementById("myNav").style.width = "0%";
 }
 
 export default App;
