@@ -82,21 +82,21 @@ function Articles() {
       <h1 className='my-6 text-white text-center text-5xl italic font-bold' >THE LATEST</h1>
       
       <div className='border-solid border-b-2 mx-8'>
+      <a href="/testarticle">
         <div className='flex mx-[2px] my-[20px] justify-between'>
           <div className='mr-8'>
-            <a href="/testarticle">
-              <img className='thumbnail'  
-                src={require('./images/thumbnails/honestlynevermindsquare.jpg')}
-                alt='safe and sound'/>
-            </a>
+            <img className='thumbnail'  
+              src={require('./images/thumbnails/honestlynevermindsquare.jpg')}
+              alt='drake album review'/>
+            
+            </div>
+            <div className='width-[100px] resize-none align-middle'>
+              <h2 className='resize-none align-middle'>
+                HONESTLY, WHICH SONG IS THIS?
+              </h2>
+            </div>
           </div>
-
-          <div className='width-[100px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              HONESTLY, WHICH SONG IS THIS?
-            </h2>
-          </div>
-        </div>
+        </a>
       </div>
 
       <div className='border-solid border-b-2 mx-8'>
