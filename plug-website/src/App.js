@@ -4,7 +4,9 @@ import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import BurgerMenu from "./components/burger";
+import { Routes, Route } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
+import TestArticle from './articles/testArticle';
 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -48,15 +50,10 @@ function Header() {
                 src={require('./images/logos/social/instagram.png')} alt="Instagram logo"/>
               </a>
         
-              <a href="https://www.tiktok.com/@plugvancouver">
-                <img className='w-10 h-auto my-4 mr-6'
+              <a className="mr-[62px]" href="https://www.tiktok.com/@plugvancouver">
+                <img className='w-10 h-auto my-4'
                 src={require('./images/logos/social/tiktok.png')} alt="Tiktok logo"/>
               </a>
-
-              
-              <img className='w-10 h-auto my-4'
-              src={require('./images/hamburger-menu.png')} alt="Hamburger Menu" onClick={() => openNav()}/>
-              
             </div>
             
           </div>
@@ -76,6 +73,80 @@ function Home() {
     </div>*/
 
     null
+  )
+}
+
+function Articles() {
+  return (
+    <div id='latest-articles'>
+      <h1 className='my-6 text-white text-center text-5xl italic font-bold' >THE LATEST</h1>
+      
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <a href="/testarticle">
+              <img className='thumbnail'  
+                src={require('./images/thumbnails/safeandsound.png')}
+                alt='safe and sound'/>
+            </a>
+          </div>
+
+          <div className='width-[100px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              BEST MOMENTS AT VANCOUVER'S SAFE & SOUND FESTIVAL
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail' 
+              src={require('./images/thumbnails/michelin.png')}
+              alt='golds gym logo'/>
+          </div>
+
+          <div className='width-[100px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              TOP 10 NEW MICHELIN STAR RESTAURANTS IN VANCOUVER
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail' 
+              src={require('./images/thumbnails/2023.png')}
+              alt='golds gym logo'/>
+          </div>
+
+          <div className='width-[80px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              YOUR NEW YEAR PLANS AND WHAT TO BRING
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className='border-solid mb-8 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <img className='thumbnail' 
+              src={require('./images/thumbnails/vfw.png')}
+              alt='golds gym logo'/>
+          </div>
+
+          <div className='width-[80px] resize-none align- '>
+            <h2 className='resize-none align-middle'>
+              VANCOUVER FASHION WEEK FOR THE FASHION WEAK
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -395,6 +466,32 @@ function AutoplayCarousel() {
   )
 }
 
+function Footer() {
+  return (
+    <div className='h-[150px] flex align-middle flex-col items-center'>
+      <div className='flex align-middle flex-col items-center text-[26px] md:text-4xl lg:flex-row lg:justify-center'>
+        <h1 className=''>
+          THE HOME OF
+        </h1>
+
+        <h1 className=''>
+          <span className='text-[#cb6ce6]'>
+          &nbsp;VANCOUVER'S 
+          </span>
+
+          <span>
+          &nbsp;URBAN CULTURE
+          </span> 
+        </h1>
+      </div>
+      
+      <h2 className='mt-4 text-sm font-normal text-gray-300 italic'>
+        © THE PLUG MARKETING, MEDIA & EVENTS INC. 2022
+      </h2>
+    </div>
+  )
+}
+
 function ScrollIndicator() {
   window.onscroll = function() {myFunction()};
 
@@ -415,8 +512,16 @@ return (
 }
 
 function App() {
+  React.useEffect(() => {
+    const menuWrap = document.querySelector(".bm-menu-wrap");
+    if (menuWrap) {
+      menuWrap.setAttribute("aria-hidden", true);
+    }
+  }, []);
+
   return (
-    <>
+    <div>
+      <BurgerMenu />
       
       <Logo/>
 
@@ -434,84 +539,17 @@ function App() {
       
       <Header/>
 
-      <h1 className='my-6 text-white text-center text-5xl italic font-bold' >THE LATEST</h1>
-      
-      <div className='border-solid border-b-2 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail'  
-              src={require('./images/thumbnails/safeandsound.png')}
-              alt='golds gym logo'/>
-          </div>
+      <Routes>
+        <Route path='/' element={<><Articles/><Home/><Events/><Media/></>}/>
+        <Route path='/testarticle' element={<TestArticle/>}/>
+      </Routes>
 
-          <div className='width-[100px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              BEST MOMENTS AT VANCOUVER'S SAFE & SOUND FESTIVAL
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div className='border-solid border-b-2 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail' 
-              src={require('./images/thumbnails/michelin.png')}
-              alt='golds gym logo'/>
-          </div>
-
-          <div className='width-[100px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              TOP 10 NEW MICHELIN STAR RESTAURANTS IN VANCOUVER
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div className='border-solid border-b-2 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail' 
-              src={require('./images/thumbnails/2023.png')}
-              alt='golds gym logo'/>
-          </div>
-
-          <div className='width-[80px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              YOUR NEW YEAR PLANS AND WHAT TO BRING
-            </h2>
-          </div>
-        </div>
-      </div>
-
-      <div className='border-solid mb-8 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail' 
-              src={require('./images/thumbnails/vfw.png')}
-              alt='golds gym logo'/>
-          </div>
-
-          <div className='width-[80px] resize-none align- '>
-            <h2 className='resize-none align-middle'>
-              VANCOUVER FASHION WEEK FOR THE FASHION WEAK
-            </h2>
-          </div>
-        </div>
-      </div>
-      
-      <BurgerMenu />
-
-      <Home/>
-      
-      <Events/>
-
-      <Media/>
-      <Contact/>
+      <Footer/>
 
       <ScrollIndicator />
-    </>
-    
+    </div> 
+  
+  
   )
 }
 
