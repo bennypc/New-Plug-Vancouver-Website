@@ -39,8 +39,9 @@ const TestArticle = () => {
                 Fans were already treated to a new music video for “Falling Back”, which honestly deserves an article of its own. A performance of “Best I Ever Had” serenades Drake’s twenty-three wives (yes, twenty-three), is definitely… something. You’ll just have to check that one out for yourself.
             </p>
 
-            <div className="videowrapper">
-            <iframe className="iframe" width="640" height="315" src="https://www.youtube.com/embed/sOreUnGoIMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div className="videowrapper mt-[15px]">
+                <iframe className="iframe" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/sOreUnGoIMg" title="YouTube video player"></iframe>
+                
             </div>
 
             <div className="text-center text-xs mt-[2px]">
