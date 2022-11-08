@@ -86,6 +86,24 @@ function Articles() {
           <div className='mr-8'>
             <a href="/testarticle">
               <img className='thumbnail'  
+                src={require('./images/thumbnails/honestlynevermindsquare.jpg')}
+                alt='safe and sound'/>
+            </a>
+          </div>
+
+          <div className='width-[100px] resize-none align-middle'>
+            <h2 className='resize-none align-middle'>
+              HONESTLY, WHICH SONG IS THIS?
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <div className='border-solid border-b-2 mx-8'>
+        <div className='flex mx-[2px] my-[20px] justify-between'>
+          <div className='mr-8'>
+            <a href="/">
+              <img className='thumbnail'  
                 src={require('./images/thumbnails/safeandsound.png')}
                 alt='safe and sound'/>
             </a>
@@ -115,7 +133,7 @@ function Articles() {
         </div>
       </div>
 
-      <div className='border-solid border-b-2 mx-8'>
+      {/* <div className='border-solid border-b-2 mx-8'>
         <div className='flex mx-[2px] my-[20px] justify-between'>
           <div className='mr-8'>
             <img className='thumbnail' 
@@ -129,7 +147,7 @@ function Articles() {
             </h2>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className='border-solid mb-8 mx-8'>
         <div className='flex mx-[2px] my-[20px] justify-between'>
