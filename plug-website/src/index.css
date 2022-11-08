@@ -26,19 +26,17 @@ body {
 }
 
 .wrapper { 
-
   overflow:hidden;
   padding: 20px;
 }
 
 .event-card {
-  display: flex;
+  display: flex !important; 
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 240px;
   width: 135px;
-
-
 }
 .event-card-image-div {
   display: flex;
