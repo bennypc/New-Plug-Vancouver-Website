@@ -47,7 +47,7 @@ const eyewearArticle = () => {
 
       <img
         className="mt-6 mb-2"
-        src={require("./article_media/eyewear_article/stefanharvalias.png")}
+        src={require("./article_media/eyewear-article/stefanharvalias.png")}
         alt="store manager"
       />
 
