@@ -8,7 +8,7 @@ const TestArticle = () => {
                 Honestly, Which Song is This?
             </h1>
 
-            <h2 className="text-lg font-medium">
+            <h2 className="text-lg font-medium italic">
                 Why “Honestly, Nevermind” has me missing “the old Drake”
             </h2>
 
