@@ -6,16 +6,17 @@ import { Carousel } from 'react-responsive-carousel';
 import BurgerMenu from "./components/burger";
 import { Routes, Route } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
-import TestArticle from './articles/testArticle';
+import HonestlyNevermindArticle from './articles/honestlyNevermindArticle';
 
 import "slick-carousel/slick/slick-theme.css";
 
 function Logo() {
   return (
-    <img id='main-logo'
+    <a href="/">
+      <img id='main-logo'
       src={require('./images/logos/PlugWhite.png')}
-      alt='Plug Logo'
-    />
+      alt='Plug Logo'/>
+    </a>
   )
 }
 
@@ -82,7 +83,7 @@ function Articles() {
       <h1 className='my-6 text-white text-center text-5xl italic font-bold' >THE LATEST</h1>
       
       <div className='border-solid border-b-2 mx-8'>
-      <a href="/testarticle">
+      <a href="/honestly-nevermind">
         <div className='flex mx-[2px] my-[20px] justify-between'>
           <div className='mr-8'>
             <img className='thumbnail'  
@@ -559,7 +560,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<><Articles/><Home/><Events/><Media/></>}/>
-        <Route path='/testarticle' element={<TestArticle/>}/>
+        <Route path='/honestly-nevermind' element={<HonestlyNevermindArticle/>}/>
       </Routes>
 
       <Footer/>
