@@ -40,7 +40,7 @@ const TestArticle = () => {
             </p>
 
             <div className="videowrapper mt-[15px]">
-                <iframe className="iframe" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/sOreUnGoIMg" title="YouTube video player"></iframe>
+                <iframe className="iframe" frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/sOreUnGoIMg" title="YouTube video player"></iframe>
                 
             </div>
 
