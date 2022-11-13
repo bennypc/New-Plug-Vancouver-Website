@@ -6,6 +6,9 @@ import { Carousel } from "react-responsive-carousel";
 import BurgerMenu from "./components/burger";
 import { Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
+
+import ArticlesPage from "./subpages/articles";
+
 import HonestlyNevermindArticle from "./articles/honestlyNevermindArticle";
 import EyewearArticle from "./articles/eyewearArticle";
 import NaduhArticle from "./articles/naduhArticle";
@@ -90,7 +93,7 @@ function Articles() {
       </h1>
 
       <div className="border-solid border-b-2 mx-8">
-        <a href="/community-coffee-and-classy-eyewear">
+        <a href="/articles/community-coffee-and-classy-eyewear">
           <div className="flex mx-[2px] my-[20px] justify-between">
             <div className="mr-8">
               <img
@@ -113,7 +116,7 @@ function Articles() {
       </div>
 
       <div className="border-solid border-b-2 mx-8">
-        <a href="/meet-naduh">
+        <a href="/articles/meet-naduh">
           <div className="flex mx-[2px] my-[20px] justify-between">
             <div className="mr-8">
               <img
@@ -136,8 +139,8 @@ function Articles() {
       </div>
 
       <div className="border-solid mx-8">
-        <a href="/honestly-nevermind">
-          <div className="flex mx-[2px] my-[20px] justify-between">
+        <a href="/articles/honestly-nevermind">
+          <div className="flex mx-[2px] mt-[20px] mb-4 justify-between">
             <div className="mr-8">
               <img
                 className="thumbnail"
@@ -223,6 +226,12 @@ function Articles() {
           </div>
         </div>
       </div> */}
+
+      <div className="w-[130px] h-6 ml-auto mr-6 text-right	">
+        <a href="/articles">
+          <h2 className="italic text-lg">READ MORE &#x2192;</h2>
+        </a>
+      </div>
     </div>
   );
 }
@@ -667,13 +676,16 @@ function App() {
             </>
           }
         />
+
+        <Route path="/articles" element={<ArticlesPage />} />
+
         <Route
-          path="/community-coffee-and-classy-eyewear"
+          path="/articles/community-coffee-and-classy-eyewear"
           element={<EyewearArticle />}
         />
-        <Route path="/meet-naduh" element={<NaduhArticle />} />
+        <Route path="/articles/meet-naduh" element={<NaduhArticle />} />
         <Route
-          path="/honestly-nevermind"
+          path="/articles/honestly-nevermind"
           element={<HonestlyNevermindArticle />}
         />
       </Routes>
