@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -28,25 +28,21 @@ function Logo() {
 }
 
 function Header() {
+  const scrollDirection = useScrollDirection();
+
   return (
-    <div className="mx-6">
-      <div className="bg-[#e5d7be] w-full h-[4px] mb-2 "></div>
+    <div
+      className={`sticky z-[1000] ${
+        scrollDirection === "down" ? "-top-28" : "top-0"
+      } h-28 transition-all duration-500 bg-black flex justify-between align-center z-[1000]" `}
+    >
+      <div>
+        <Logo />
+      </div>
 
       <div>
         <div className="flex justify-between">
-          <h2 className="italic">
-            <span>THE HOME OF</span>
-
-            <br />
-
-            <span className="text-[#cb6ce6]">VANCOUVER</span>
-
-            <br />
-
-            <span>URBAN CULTURE</span>
-          </h2>
-
-          <div className="flex">
+          <div className="flex mt-5">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
                 className="w-10 h-auto my-4 mr-4"
@@ -56,7 +52,7 @@ function Header() {
             </a>
 
             <a
-              className="mr-[62px]"
+              className="mr-[68px]"
               href="https://www.tiktok.com/@plugvancouver"
             >
               <img
@@ -66,12 +62,38 @@ function Header() {
               />
             </a>
           </div>
+
+          <BurgerMenu />
         </div>
       </div>
-
-      <div className="bg-[#e5d7be] w-full h-[4px] mt-2 mb-4"></div>
     </div>
   );
+}
+
+function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = useState(null);
+
+  useEffect(() => {
+    let lastScrollY = window.pageYOffset;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.pageYOffset;
+      const direction = scrollY > lastScrollY ? "down" : "up";
+      if (
+        direction !== scrollDirection &&
+        (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
+      ) {
+        setScrollDirection(direction);
+      }
+      lastScrollY = scrollY > 0 ? scrollY : 0;
+    };
+    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection); // clean up
+    };
+  }, [scrollDirection]);
+
+  return scrollDirection;
 }
 
 function Home() {
@@ -88,21 +110,11 @@ function Home() {
 function Articles() {
   return (
     <div id="latest-articles">
-      <h1 className="my-6 text-white text-center text-5xl italic font-bold">
-        THE LATEST
-      </h1>
-
-      <div className="border-solid border-b-2 mx-8">
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/community-coffee-and-classy-eyewear">
           <div className="flex mx-[2px] my-[20px] justify-between">
-            <div className="mr-8">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/eyewear.png")}
-                alt="glasses"
-              />
-            </div>
             <div className="width-[100px] resize-none align-middle">
+              <h3 className="resize-none align-middle italic">LIFESTYLE</h3>
               <h2 className="resize-none align-middle">
                 COMMUNITY, COFFEE, AND CLASSY EYEWEAR
               </h2>
@@ -111,21 +123,23 @@ function Articles() {
                 The latest summer styles you need to keep an eye on
               </h2>
             </div>
+
+            <div className="ml-8">
+              <img
+                className="thumbnail"
+                src={require("./images/thumbnails/eyewear.png")}
+                alt="glasses"
+              />
+            </div>
           </div>
         </a>
       </div>
 
-      <div className="border-solid border-b-2 mx-8">
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/meet-naduh">
           <div className="flex mx-[2px] my-[20px] justify-between">
-            <div className="mr-8">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/naduh.jpg")}
-                alt="glasses"
-              />
-            </div>
             <div className="width-[100px] resize-none align-middle">
+              <h3 className="resize-none align-middle italic">MUSIC</h3>
               <h2 className="resize-none align-middle">
                 MEET NADUH, VANCOUVER'S NEWEST GIRL GROUP
               </h2>
@@ -134,21 +148,24 @@ function Articles() {
                 The “spicier Spice Girls”
               </h2>
             </div>
+
+            <div className="ml-8">
+              <img
+                className="thumbnail"
+                src={require("./images/thumbnails/naduh.jpg")}
+                alt="glasses"
+              />
+            </div>
           </div>
         </a>
       </div>
 
-      <div className="border-solid mx-8">
+      <div className="border-solid mx-5">
         <a href="/articles/honestly-nevermind">
           <div className="flex mx-[2px] mt-[20px] mb-4 justify-between">
-            <div className="mr-8">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/honestlynevermindsquare.jpg")}
-                alt="drake album review"
-              />
-            </div>
             <div className="width-[100px] resize-none align-middle">
+              <h3 className="resize-none align-middle italic">MUSIC</h3>
+
               <h2 className="resize-none align-middle">
                 HONESTLY, WHICH SONG IS THIS?
               </h2>
@@ -156,6 +173,14 @@ function Articles() {
               <h2 className="text-sm font-medium italic mt-1">
                 Why “Honestly, Nevermind” has me missing “the old Drake”
               </h2>
+            </div>
+
+            <div className="ml-6">
+              <img
+                className="thumbnail"
+                src={require("./images/thumbnails/honestlynevermindsquare.jpg")}
+                alt="drake album review"
+              />
             </div>
           </div>
         </a>
@@ -227,9 +252,9 @@ function Articles() {
         </div>
       </div> */}
 
-      <div className="w-[130px] h-6 ml-auto mr-6 text-right	">
-        <a href="/articles">
-          <h2 className="italic text-lg">READ MORE &#x2192;</h2>
+      <div className="w-[130px] h-6 ml-6 mr-auto text-left mt-6 mb-8">
+        <a className="read-more" href="/articles">
+          <h2 className="text-white">READ MORE</h2>
         </a>
       </div>
     </div>
@@ -262,13 +287,47 @@ function Culture() {
         </div>
         <div id="two">
           <img
-            className="px-4 mb-6"
+            className="px-4 mb-8"
             src={require("./images/TeamPhotoLarge.jpg")}
             alt="team"
           ></img>
         </div>
       </div>
       <AutoplayCarousel />
+    </div>
+  );
+}
+
+function WeeklyBreakdownStrip() {
+  return (
+    <div className="wb-strip mt-14 mb-6 h-[200px] sm:h-[350px] lg:h-[400px]">
+      <img
+        className="wb-strip-image"
+        src={require("./images/wb-strip.png")}
+        alt="crowd"
+      />
+      <h2 className="wb-strip-text top-7 text-2xl font-bold">HOME OF THE</h2>
+      <h1 className="wb-strip-text top-16 text-3xl font-bold">
+        WEEKLY BREAKDOWN
+      </h1>
+
+      <div className="absolute flex justify-around top-[130px]">
+        <button className="wb-button mx-2">LATEST EDITION</button>
+        <button className="wb-button mx-2">SUBMIT YOUR EVENT</button>
+      </div>
+    </div>
+  );
+}
+
+function BestMoments() {
+  return (
+    <div className="mb-4">
+      <div className="flex justify-between align-middle">
+        <h1 className="text-xl font-bold ml-2">YOUR BEST MOMENTS</h1>
+        <button className="bg-black text-white rounded-lg px-2 py-1 mr-2">
+          VIEW ALBUMS
+        </button>
+      </div>
     </div>
   );
 }
@@ -493,7 +552,7 @@ function ContactForm() {
 
 function ImageSlideshow() {
   return (
-    <div>
+    <div className="">
       <Carousel
         autoPlay
         interval="4000"
@@ -504,28 +563,16 @@ function ImageSlideshow() {
         showThumbs={false}
       >
         <div>
-          <img
-            src="https://images.unsplash.com/photo-1656268164012-119304af0c69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
-            alt=""
-          />
+          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
         </div>
         <div>
-          <img
-            src="https://images.unsplash.com/photo-1656268164012-119304af0c69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
-            alt=""
-          />
+          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
         </div>
         <div>
-          <img
-            src="https://images.unsplash.com/photo-1656268164012-119304af0c69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
-            alt=""
-          />
+          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
         </div>
         <div>
-          <img
-            src="https://images.unsplash.com/photo-1656268164012-119304af0c69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1112&q=80"
-            alt=""
-          />
+          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
         </div>
       </Carousel>
     </div>
@@ -598,14 +645,14 @@ function AutoplayCarousel() {
 
 function Footer() {
   return (
-    <div className="h-[150px] flex align-middle flex-col items-center">
-      <div className="flex align-middle flex-col items-center text-[26px] md:text-4xl lg:flex-row lg:justify-center">
-        <h1 className="">THE HOME OF</h1>
+    <div className="h-[180px] flex align-middle flex-col items-center bg-black">
+      <div className="flex align-middle flex-col items-center text-[26px] md:text-4xl lg:flex-row lg:justify-center mt-4">
+        <h1 className="text-white">THE HOME OF</h1>
 
         <h1 className="">
           <span className="text-[#cb6ce6]">&nbsp;VANCOUVER'S</span>
 
-          <span>&nbsp;URBAN CULTURE</span>
+          <span className="text-white">&nbsp;URBAN CULTURE</span>
         </h1>
       </div>
 
@@ -648,10 +695,6 @@ function App() {
 
   return (
     <div>
-      <BurgerMenu />
-
-      <Logo />
-
       {/* <div>
         <div className='flex justify-center flex-wrap'>
           <a href='#home' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>HOME</a>
@@ -669,10 +712,10 @@ function App() {
           path="/"
           element={
             <>
+              <ImageSlideshow />
               <Articles />
-              <Home />
-              <Events />
-              <Media />
+              <WeeklyBreakdownStrip />
+              <BestMoments />
             </>
           }
         />

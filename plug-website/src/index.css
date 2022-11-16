@@ -7,31 +7,77 @@ html {
 }
 
 body {
-  background-color: rgb(20, 20, 20);
+  background-color: white;
+}
+
+.header {
+  z-index: 1000;
+}
+
+.read-more {
+  display: block;
+  width: 115px;
+  height: 40px;
+  background: black;
+  padding: 10px;
+  text-align: center;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  line-height: 25px;
+  display: flex; /*CSS3*/
+  align-items: center; /*Vertical align*/
+  justify-content: center; /*horizontal align*/
 }
 
 #main-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 8px 2px 4px 2px;
-  width: 200px;
+  padding: 8px 2px 8px 8px;
+  width: 175px;
 }
 
 .thumbnail {
   object-fit: cover;
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
+  width: 116px;
+  height: 116px;
+  min-width: 116px;
 }
 
-.wrapper { 
-  overflow:hidden;
+.wrapper {
+  overflow: hidden;
   padding: 20px;
 }
 
+.wb-strip {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.wb-strip-image {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.wb-strip-text {
+  position: absolute;
+  color: white;
+}
+
+.wb-button {
+  background-color: white;
+  padding: 6px 10px 6px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
 .event-card {
-  display: flex !important; 
+  display: flex !important;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -42,47 +88,45 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:200px;
-  width:120px;
-  border-radius:12%;
-  overflow:hidden;
+  height: 200px;
+  width: 120px;
+  border-radius: 12%;
+  overflow: hidden;
   margin-left: 10px;
 }
-.event-card-image{
-  height:200px;
-  width:120px;
+.event-card-image {
+  height: 200px;
+  width: 120px;
 }
 .event-card-description {
   margin-top: 10px;
   font-size: 16px;
-    
 }
-
 
 .wrapper div {
-   min-height: 200px;
-   padding: 0px;
+  min-height: 200px;
+  padding: 0px;
 }
 #one {
-  float:left; 
-  margin-right:0px;
-  width:40vw;
+  float: left;
+  margin-right: 0px;
+  width: 40vw;
 
   padding: 0 48px;
 }
-#two { 
-  overflow:hidden;
-  margin:0px;
-  min-height:170px;
+#two {
+  overflow: hidden;
+  margin: 0px;
+  min-height: 170px;
   height: auto;
 }
 
 @media screen and (max-width: 1450px) {
-   #one { 
+  #one {
     float: none;
-    margin-right:0;
-    width:auto;
-    border:0;  
+    margin-right: 0;
+    width: auto;
+    border: 0;
     padding: 0px 6px 24px 6px;
   }
 }
@@ -101,48 +145,47 @@ body {
   width: 0%;
 }
 
-.contact-wrapper { 
-
-  overflow:hidden;
+.contact-wrapper {
+  overflow: hidden;
   padding: 20px;
 }
 
 .contact-wrapper div {
-   min-height: 120px;
-   padding: 0px;
+  min-height: 120px;
+  padding: 0px;
 }
 
 .form-input {
-  color:black;
+  color: black;
 }
 
 #form-left {
-  float:left; 
-  margin-right:0px;
-  width:40vw;
+  float: left;
+  margin-right: 0px;
+  width: 40vw;
 
   padding: 0 48px;
 }
-#form-right { 
-  overflow:hidden;
-  margin:0px;
-  min-height:170px;
+#form-right {
+  overflow: hidden;
+  margin: 0px;
+  min-height: 170px;
   height: auto;
   width: 50%;
 }
 
 @media screen and (max-width: 1450px) {
-  #form-left { 
-   float: none;
-   margin-right:0;
-   width:auto;
-   border:0;  
-   padding: 4px 6px 32px 6px;
- }
+  #form-left {
+    float: none;
+    margin-right: 0;
+    width: auto;
+    border: 0;
+    padding: 4px 6px 32px 6px;
+  }
 
- #form-right { 
-  width: 100%;
-  padding-left: 32px;
-  padding-right: 32px;
-}
+  #form-right {
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
