@@ -1,0 +1,23 @@
+{
+  "name": "new-plug-vancouver-website",
+  "version": "1.0.0",
+  "description": "Website for Plug Vancouver built with React.js + Tailwind CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennypc/New-Plug-Vancouver-Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bennypc/New-Plug-Vancouver-Website/issues"
+  },
+  "homepage": "https://github.com/bennypc/New-Plug-Vancouver-Website#readme",
+  "dependencies": {
+    "pg": "^8.8.0"
+  }
+}

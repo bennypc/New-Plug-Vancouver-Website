@@ -7,6 +7,7 @@ import BurgerMenu from "./components/burger";
 import { Routes, Route } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 
+import SongsVote from "./songs-form/songs-vote";
 import ArticlesPage from "./subpages/articles";
 
 import HonestlyNevermindArticle from "./articles/honestlyNevermindArticle";
@@ -721,6 +722,7 @@ function App() {
         />
 
         <Route path="/articles" element={<ArticlesPage />} />
+        <Route path="/songs-vote" element={<SongsVote />} />
 
         <Route
           path="/articles/community-coffee-and-classy-eyewear"
