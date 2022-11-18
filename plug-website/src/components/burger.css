@@ -11,12 +11,12 @@
 }
 
 /* .bm-menu-wrap {
-    visibility: hidden;
-  }
-  
-  .bm-menu-wrap.open {
-    visibility: visible;
-  } */
+  visibility: hidden;
+} */
+
+/* .bm-menu-wrap.open {
+  visibility: visible;
+} */
 
 .bm-cross-button {
   height: 48px !important;

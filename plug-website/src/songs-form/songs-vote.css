@@ -4,17 +4,6 @@
   background-color: black;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: futura-pt, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  color: var(--txt);
-  /* outline: 1px solid red; */
-}
-
 .content {
   width: 100vw;
   height: 100vh;
@@ -124,7 +113,7 @@ input:focus {
   border: 2px solid var(--color);
 }
 
-button {
+.request-button {
   background-color: rgba(0, 0, 0, 0);
   color: #e6007e;
   font-weight: 700;
@@ -168,11 +157,7 @@ a:hover {
     display: flex;
     background-size: 100vw;
   }
-  .logo {
-    width: 100vw;
-    position: static;
-    gap: 10px;
-  }
+
   .right {
     width: auto;
     height: auto;
@@ -211,11 +196,7 @@ a:hover {
     justify-content: center;
     margin-bottom: 0px;
   }
-  button {
-    margin-bottom: 0px;
-    width: 60vw;
-    padding: 10px 5px;
-  }
+
   textarea {
     width: 75vw;
   }

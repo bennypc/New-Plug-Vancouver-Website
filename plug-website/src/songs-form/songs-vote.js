@@ -1,26 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./songs-vote.css";
+import supabase from "../supabase";
 
 const SongsVote = () => {
-  const [songLink, setSongLink] = useState("");
-  const [songName, setsongName] = useState("");
-  const [songArtist, setsongArtist] = useState("");
+  const [song_link, setsong_link] = useState("");
+  const [song_name, setsong_name] = useState("");
+  const [song_artist, setsong_artist] = useState("");
   const votes = 0;
 
-  //   const onSubmitForm = async (e) => {
-  //     e.preventDefault();
+  async function fetchData() {
+    let { data: songs, error } = await supabase.from("songs").select("*");
+    console.log(songs);
+  }
 
-  //     try {
-  //       const body = { songLink, songName, songArtist, votes };
-  //       const repsonse = fetch();
-  //     } catch (err) {
-  //       console.log(err.message);
-  //     }
-  //   };
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    console.log("submit");
+    const { data, error } = await supabase
+      .from("songs")
+      .insert([{ song_link, song_name, song_artist, votes }]);
+  }
 
   return (
     <div>
-      <form action="#">
+      <form onSubmit={handleSubmit}>
         <div className="form left">
           <p className="form-title">Submit your song!</p>
           <div className="input">
@@ -29,8 +37,8 @@ const SongsVote = () => {
               type="text"
               name="song-link"
               id="song-link"
-              value={songLink}
-              onChange={(e) => setSongLink(e.target.value)}
+              value={song_link}
+              onChange={(e) => setsong_link(e.target.value)}
               required
             />
           </div>
@@ -41,8 +49,8 @@ const SongsVote = () => {
               type="text"
               name="song-name"
               id="song-name"
-              value={songName}
-              onChange={(e) => setsongName(e.target.value)}
+              value={song_name}
+              onChange={(e) => setsong_name(e.target.value)}
             />
           </div>
 
@@ -52,13 +60,14 @@ const SongsVote = () => {
               type="text"
               name="song-artist"
               id="song-artist"
-              value={songArtist}
-              onChange={(e) => setsongArtist(e.target.value)}
+              value={song_artist}
+              onChange={(e) => setsong_artist(e.target.value)}
               required
             />
           </div>
         </div>
-        <div className="left button">
+
+        <div className="left request-button">
           <button type="submit">Submit Request</button>
         </div>
       </form>

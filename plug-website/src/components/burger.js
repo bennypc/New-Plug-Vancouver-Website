@@ -7,7 +7,6 @@ const toggleMenu = ({ isOpen }) => {
   isOpen
     ? menuWrap.setAttribute("aria-hidden", false)
     : menuWrap.setAttribute("aria-hidden", true);
-    
 };
 
 const BurgerMenu = () => {
@@ -19,25 +18,9 @@ const BurgerMenu = () => {
       <a className="menu-item" href="/#latest-articles">
         READ
       </a>
-      <a className="menu-item" href="/#events">
-        EXPERIENCE
-      </a>
-      <a className="menu-item" href="/#media">
-        WATCH
-      </a>
-      <a className="menu-item" href="/">
-        ARCHIVES
-      </a>
       <a className="menu-item" href="/">
         ABOUT
       </a>
-      <a className="menu-item" href="/">
-        PEOPLE
-      </a>
-      <a className="menu-item" href="/">
-        CONTACT
-      </a>
-
     </Menu>
   );
 };
