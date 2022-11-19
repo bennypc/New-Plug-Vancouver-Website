@@ -17,6 +17,24 @@ const SongsList = () => {
     setSongArray(songs);
   }
 
+  const voteSong = async (id) => {
+    let { data: songs } = await supabase
+      .from("songs")
+      .select("votes")
+      .eq("id", id);
+
+    console.log(songs[0].votes);
+    var newVoteCount = songs[0].votes + 1;
+    console.log(newVoteCount);
+
+    const { data, error } = await supabase
+      .from("songs")
+      .update({ votes: newVoteCount })
+      .eq("id", id);
+
+    window.location.href = "/songs-list";
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
@@ -28,10 +46,10 @@ const SongsList = () => {
       <table className="w-full table-fixed text-sm text-left text-black dark:text-blackp">
         <thead>
           <tr>
-            <th>Song Link</th>
             <th>Song Name</th>
             <th>Song Artist</th>
             <th>Song Votes</th>
+            <th>Vote here</th>
           </tr>
         </thead>
         <tbody>
@@ -42,10 +60,17 @@ const SongsList = () => {
           </tr> */}
           {songArray.map((song) => (
             <tr key={song.id}>
-              <td>{song.song_link}</td>
               <td>{song.song_name}</td>
               <td>{song.song_artist}</td>
               <td>{song.votes}</td>
+              <td>
+                <button
+                  className="bg-black text-purple-500"
+                  onClick={() => voteSong(song.id)}
+                >
+                  VOTE
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>

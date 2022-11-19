@@ -6,8 +6,6 @@ const SongsVote = () => {
   const [song_link, setsong_link] = useState("");
   const votes = 0;
 
-  const [songOne, setSongOne] = useState([]);
-
   async function handleSubmit(e) {
     e.preventDefault();
 
