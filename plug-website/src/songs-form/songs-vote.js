@@ -4,27 +4,53 @@ import supabase from "../supabase";
 
 const SongsVote = () => {
   const [song_link, setsong_link] = useState("");
-  const [song_name, setsong_name] = useState("");
-  const [song_artist, setsong_artist] = useState("");
   const votes = 0;
 
-  async function fetchData() {
-    let { data: songs, error } = await supabase.from("songs").select("*");
-    console.log(songs);
-  }
-
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const [songOne, setSongOne] = useState([]);
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     console.log("submit");
-    const { data, error } = await supabase
-      .from("songs")
-      .insert([{ song_link, song_name, song_artist, votes }]);
+
+    const songData = await fetchSpotify();
+
+    console.log(songData);
+
+    console.log(song_link);
+
+    // console.log(songData?.name);
+    // console.log(songData?.artists[0]?.name);
+
+    const { data, error } = await supabase.from("songs").insert([
+      {
+        song_link,
+        song_name: songData.name,
+        song_artist: songData.artists[0]?.name,
+        votes,
+      },
+    ]);
     window.location.href = "/songs-list";
+  }
+
+  async function fetchSpotify() {
+    var mySubString = song_link.match(/track\/(.*)(\?si)/i);
+    console.log(mySubString[1]);
+
+    var apiLink = "https://api.spotify.com/v1/tracks/" + mySubString[1];
+
+    console.log(apiLink);
+
+    const songTest = await fetch(apiLink, {
+      headers: {
+        Accept: "application/json",
+        Authorization:
+          "Bearer BQC9zXJBwKFkHJXSLRrAehwzMQ-QbSdLAt0vYdecnUvzUtqUrxl7S7YYopIaAo2t5YDaFsCDvFi9WUH7AhxlJxyISP-HwUUjN_THR7d6E_O05L0qiT7Jp8KmT9B7jwShPbP0bYqAkcVShPOzhTbV-l4-bB5Wy3ukQR52JVw_yCjClzj9DefzX57XqBUVpMjBcoE",
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await songTest.json();
+    return data;
   }
 
   return (
@@ -40,29 +66,6 @@ const SongsVote = () => {
               id="song-link"
               value={song_link}
               onChange={(e) => setsong_link(e.target.value)}
-              required
-            />
-          </div>
-
-          <div className="input">
-            <label for="location-name">Song Name</label>
-            <input
-              type="text"
-              name="song-name"
-              id="song-name"
-              value={song_name}
-              onChange={(e) => setsong_name(e.target.value)}
-            />
-          </div>
-
-          <div className="input">
-            <label for="instagram-name">Song Artist</label>
-            <input
-              type="text"
-              name="song-artist"
-              id="song-artist"
-              value={song_artist}
-              onChange={(e) => setsong_artist(e.target.value)}
               required
             />
           </div>

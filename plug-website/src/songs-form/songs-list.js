@@ -24,11 +24,10 @@ const SongsList = () => {
   console.log(songArray);
 
   return (
-    <div>
-      <table className="mx-20 text-sm text-left text-black dark:text-blackp">
+    <div className="">
+      <table className="w-full table-fixed text-sm text-left text-black dark:text-blackp">
         <thead>
           <tr>
-            <th>id</th>
             <th>Song Link</th>
             <th>Song Name</th>
             <th>Song Artist</th>
@@ -43,7 +42,6 @@ const SongsList = () => {
           </tr> */}
           {songArray.map((song) => (
             <tr key={song.id}>
-              <td>{song.id}</td>
               <td>{song.song_link}</td>
               <td>{song.song_name}</td>
               <td>{song.song_artist}</td>
