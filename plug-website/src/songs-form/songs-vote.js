@@ -1,10 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "./songs-vote.css";
 import supabase from "../supabase";
+import { Buffer } from "buffer";
 
 const SongsVote = () => {
   const [song_link, setsong_link] = useState("");
   const votes = 0;
+
+  async function authorize() {
+    const client_id = "8b6cbaab4ead45c9a42deba0c7a4bac8";
+    const client_secret = "8690833a817b44029a5e210d95307fcb";
+    const payload = client_id + ":" + client_secret;
+    const encodedPayload = Buffer.from(payload).toString("base64");
+
+    const options = {
+      method: "POST",
+      body: "grant_type=client_credentials",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Authorization: "Basic " + encodedPayload,
+      },
+      json: true,
+    };
+
+    try {
+      let res = await fetch("https://accounts.spotify.com/api/token", options);
+      res = await res.json();
+
+      return res.access_token;
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -32,18 +59,20 @@ const SongsVote = () => {
   }
 
   async function fetchSpotify() {
-    var mySubString = song_link.match(/track\/(.*)(\?si)/i);
-    console.log(mySubString[1]);
+    const accessToken = await authorize();
+    console.log(accessToken);
 
-    var apiLink = "https://api.spotify.com/v1/tracks/" + mySubString[1];
+    var songID = song_link.match(/track\/(.*)(\?si)/i);
+    console.log(songID[1]);
+
+    var apiLink = "https://api.spotify.com/v1/tracks/" + songID[1];
 
     console.log(apiLink);
 
     const songTest = await fetch(apiLink, {
       headers: {
         Accept: "application/json",
-        Authorization:
-          "Bearer BQAwEGmwDL1QS99j6ueN3uu1d-9EPRIWR0pncV8EN6MEAdjJE8XRIGLaL5B_iKyeAhbMIUiJKQJehPywggHq1Vsmznxc36ZjZSNTJpyqn_selTDbdsQd77thTBCcyB8iIVGdRGBlXD0AZ-NImm_T0cSuzrMquociWsc5iSXTTlcLeL31OySf16Ow-qemWi5Xgj4",
+        Authorization: "Bearer " + accessToken,
         "Content-Type": "application/json",
       },
     });
@@ -56,8 +85,10 @@ const SongsVote = () => {
       <form onSubmit={handleSubmit}>
         <div className="form left">
           <p className="form-title">Submit your song!</p>
-          <div className="input">
-            <label for="event-name">Song Link</label>
+          <div className="input text-white">
+            <label classname="text-white" for="song-link">
+              Song Link
+            </label>
             <input
               type="text"
               name="song-link"
