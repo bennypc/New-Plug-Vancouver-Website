@@ -24,6 +24,7 @@ const SongsVote = () => {
     const { data, error } = await supabase
       .from("songs")
       .insert([{ song_link, song_name, song_artist, votes }]);
+    window.location.href = "http://localhost:3000/songs-list";
   }
 
   return (
