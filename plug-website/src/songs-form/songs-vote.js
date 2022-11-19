@@ -5,6 +5,7 @@ import { Buffer } from "buffer";
 
 const SongsVote = () => {
   const [song_link, setsong_link] = useState("");
+  const [authCode, setAuthCode] = useState("");
   const votes = 0;
 
   async function authorize() {
@@ -36,54 +37,87 @@ const SongsVote = () => {
   async function handleSubmit(e) {
     e.preventDefault();
 
+    var validCode = false;
+    var usedCode = false;
+
+    let { data: authCodes, error } = await supabase
+      .from("authCodes")
+      .select("*");
+
     console.log("submit");
 
-    let { data: links, err } = await supabase
-      .from("songs")
-      .select("song_link")
-      .order("votes", { ascending: false });
-    console.log(links);
-
-    var duplicateSong = false;
-
-    var inputID = song_link.match(/track\/(.*)(\?si)/i);
-
-    for (let i of links) {
-      var currentID = i.song_link.match(/track\/(.*)(\?si)/i);
-
-      if (currentID[0] === inputID[0] && duplicateSong === false) {
-        console.log("duplicate song");
-        duplicateSong = true;
+    for (let c of authCodes) {
+      if (authCode === c.auth_code) {
+        console.log("valid auth code");
+        usedCode = c.submitted_song;
+        validCode = true;
         break;
       } else {
-        console.log("new song");
+        console.log("invalid");
       }
     }
 
-    if (duplicateSong === false) {
-      const songData = await fetchSpotify();
+    if (
+      (validCode === true && usedCode === false) ||
+      authCode === "MASTERPLUGCODE"
+    ) {
+      let { data: links, err } = await supabase
+        .from("songs")
+        .select("song_link")
+        .order("votes", { ascending: false });
+      console.log(links);
 
-      console.log(songData);
+      var duplicateSong = false;
 
-      console.log(song_link);
+      var inputID = song_link.match(/track\/(.*)(\?si)/i);
 
-      // console.log(songData?.name);
-      // console.log(songData?.artists[0]?.name);
+      for (let i of links) {
+        var currentID = i.song_link.match(/track\/(.*)(\?si)/i);
 
-      const { data, error } = await supabase.from("songs").insert([
-        {
-          song_link,
-          song_name: songData.name,
-          song_artist: songData.artists[0]?.name,
-          votes,
-        },
-      ]);
-      window.location.href = "/songs-list";
+        if (currentID[0] === inputID[0] && duplicateSong === false) {
+          console.log("duplicate song");
+          duplicateSong = true;
+          break;
+        } else {
+          console.log("new song");
+        }
+      }
+
+      if (duplicateSong === false) {
+        const songData = await fetchSpotify();
+
+        console.log(songData);
+
+        console.log(song_link);
+
+        // console.log(songData?.name);
+        // console.log(songData?.artists[0]?.name);
+
+        const { data, error } = await supabase.from("songs").insert([
+          {
+            song_link,
+            song_name: songData.name,
+            song_artist: songData.artists[0]?.name,
+            votes,
+          },
+        ]);
+
+        try {
+        } catch (error) {}
+        const { submitted, updateError } = await supabase
+          .from("authCodes")
+          .update({ submitted_song: true })
+          .eq("auth_code", authCode);
+
+        window.location.href = "/songs-list";
+      } else {
+        console.log("user tryna add dupe song");
+        alert(
+          "This song has already been added! Please add a different song and feel free to vote for the existing song later on!"
+        );
+      }
     } else {
-      console.log("user tryna add dupe song");
-      alert(
-        "This song has already been added! Please add a different song and feel free to vote for the existing song later on!"
-      );
+      alert("Please enter a valid auth code.");
     }
   }
 
@@ -124,6 +158,20 @@ const SongsVote = () => {
               id="song-link"
               value={song_link}
               onChange={(e) => setsong_link(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="input text-white">
+            <label classname="text-white" for="auth-code">
+              Auth Code
+            </label>
+            <input
+              type="text"
+              name="auth-code"
+              id="auth-code"
+              value={authCode}
+              onChange={(e) => setAuthCode(e.target.value)}
               required
             />
           </div>
