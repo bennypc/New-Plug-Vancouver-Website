@@ -38,31 +38,60 @@ const SongsVote = () => {
 
     console.log("submit");
 
-    const songData = await fetchSpotify();
+    let { data: links, err } = await supabase
+      .from("songs")
+      .select("song_link")
+      .order("votes", { ascending: false });
+    console.log(links);
 
-    console.log(songData);
+    var duplicateSong = false;
 
-    console.log(song_link);
+    var inputID = song_link.match(/track\/(.*)(\?si)/i);
 
-    // console.log(songData?.name);
-    // console.log(songData?.artists[0]?.name);
+    for (let i of links) {
+      var currentID = i.song_link.match(/track\/(.*)(\?si)/i);
 
-    const { data, error } = await supabase.from("songs").insert([
-      {
-        song_link,
-        song_name: songData.name,
-        song_artist: songData.artists[0]?.name,
-        votes,
-      },
-    ]);
-    window.location.href = "/songs-list";
+      if (currentID[0] === inputID[0] && duplicateSong === false) {
+        console.log("duplicate song");
+        duplicateSong = true;
+        break;
+      } else {
+        console.log("new song");
+      }
+    }
+
+    if (duplicateSong === false) {
+      const songData = await fetchSpotify();
+
+      console.log(songData);
+
+      console.log(song_link);
+
+      // console.log(songData?.name);
+      // console.log(songData?.artists[0]?.name);
+
+      const { data, error } = await supabase.from("songs").insert([
+        {
+          song_link,
+          song_name: songData.name,
+          song_artist: songData.artists[0]?.name,
+          votes,
+        },
+      ]);
+      window.location.href = "/songs-list";
+    } else {
+      console.log("user tryna add dupe song");
+      alert(
+        "This song has already been added! Please add a different song and feel free to vote for the existing song later on!"
+      );
+    }
   }
 
   async function fetchSpotify() {
     const accessToken = await authorize();
     console.log(accessToken);
 
-    var songID = song_link.match(/track\/(.*)(\?si)/i);
+    var songID = song_link.match(/track\/(.*)(\?si)?/i);
     console.log(songID[1]);
 
     var apiLink = "https://api.spotify.com/v1/tracks/" + songID[1];
