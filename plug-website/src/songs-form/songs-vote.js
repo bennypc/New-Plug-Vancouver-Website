@@ -43,7 +43,7 @@ const SongsVote = () => {
       headers: {
         Accept: "application/json",
         Authorization:
-          "Bearer BQC9zXJBwKFkHJXSLRrAehwzMQ-QbSdLAt0vYdecnUvzUtqUrxl7S7YYopIaAo2t5YDaFsCDvFi9WUH7AhxlJxyISP-HwUUjN_THR7d6E_O05L0qiT7Jp8KmT9B7jwShPbP0bYqAkcVShPOzhTbV-l4-bB5Wy3ukQR52JVw_yCjClzj9DefzX57XqBUVpMjBcoE",
+          "Bearer BQAwEGmwDL1QS99j6ueN3uu1d-9EPRIWR0pncV8EN6MEAdjJE8XRIGLaL5B_iKyeAhbMIUiJKQJehPywggHq1Vsmznxc36ZjZSNTJpyqn_selTDbdsQd77thTBCcyB8iIVGdRGBlXD0AZ-NImm_T0cSuzrMquociWsc5iSXTTlcLeL31OySf16Ow-qemWi5Xgj4",
         "Content-Type": "application/json",
       },
     });
