@@ -11,7 +11,10 @@ const SongsList = () => {
   const [songArray, setSongArray] = useState([]);
 
   async function fetchData() {
-    let { data: songs, error } = await supabase.from("songs").select("*");
+    let { data: songs, error } = await supabase
+      .from("songs")
+      .select("*")
+      .order("votes", { ascending: false });
     console.log(songs);
 
     setSongArray(songs);
