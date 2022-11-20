@@ -24,6 +24,8 @@ const AccountCreation = () => {
         emailRedirectTo: "login",
       },
     });
+
+    window.location.href = "/signup-success";
   }
 
   return (

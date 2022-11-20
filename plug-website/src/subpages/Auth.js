@@ -6,6 +6,17 @@ const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  async function handleLogin(e) {
+    e.preventDefault();
+
+    let { user, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
+    });
+
+    window.location.href = "/user";
+  }
+
   return (
     <div className="bg-black">
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -29,7 +40,7 @@ const Auth = () => {
               </a>
             </p>
           </div>
-          <form className="mt-8 space-y-6" action="#" method="POST">
+          <form className="mt-8 space-y-6" onSubmit={handleLogin}>
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="-space-y-px rounded-md shadow-sm h">
               <div>

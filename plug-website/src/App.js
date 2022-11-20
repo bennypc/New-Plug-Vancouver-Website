@@ -20,6 +20,8 @@ import EyewearArticle from "./articles/eyewearArticle";
 import NaduhArticle from "./articles/naduhArticle";
 
 import "slick-carousel/slick/slick-theme.css";
+import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
+import User from "./subpages/User";
 
 function Logo() {
   return (
@@ -802,7 +804,9 @@ function App() {
         </Route>
 
         <Route path="/login" element={<Auth />} />
+        <Route path="/user" element={<User />} />
         <Route path="/signup" element={<AccountCreation />} />
+        <Route path="/signup-success" element={<AccountCreateSuccess />} />
       </Routes>
     </div>
   );
