@@ -1,11 +1,25 @@
 import React, { useEffect, useState } from "react";
+import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+  Box,
+  ChakraProvider,
+  CloseButton,
+} from "@chakra-ui/react";
 
 import supabase from "../supabase";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
 
+  function onClose(e) {
+    console.log(showAlert);
+    setShowAlert(false);
+  }
   async function handleLogin(e) {
     e.preventDefault();
 
@@ -14,7 +28,13 @@ const Auth = () => {
       password: password,
     });
 
-    window.location.href = "/user";
+    if (!!error) {
+      console.log(error.message);
+      setShowAlert(true);
+    } else {
+      console.log("good login");
+      window.location.href = "/user";
+    }
   }
 
   return (
@@ -114,6 +134,32 @@ const Auth = () => {
             </div>
           </form>
         </div>
+      </div>
+      <div className="flex min-h-full items-center justify-center">
+        {showAlert && (
+          <Alert
+            status="error"
+            width="350px"
+            alignItems="center"
+            justifyContent="center"
+            textAlign="center"
+            borderRadius="lg"
+          >
+            <AlertIcon />
+            <Box>
+              <AlertDescription>
+                Incorrect email or password, please try again.
+              </AlertDescription>
+            </Box>
+            <CloseButton
+              alignSelf="flex-start"
+              position="relative"
+              right={-1}
+              top={-1}
+              onClick={onClose}
+            />
+          </Alert>
+        )}
       </div>
     </div>
   );

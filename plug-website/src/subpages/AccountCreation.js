@@ -1,4 +1,13 @@
 import React, { useEffect, useState } from "react";
+import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
+  Box,
+  ChakraProvider,
+  CloseButton,
+} from "@chakra-ui/react";
 
 import supabase from "../supabase";
 
@@ -8,6 +17,14 @@ const AccountCreation = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const [showAlert, setShowAlert] = useState(false);
+  const [alertMessage, setAlertMessage] = useState("");
+
+  function onClose(e) {
+    console.log(showAlert);
+    setShowAlert(false);
+  }
 
   async function createAccount(e) {
     e.preventDefault();
@@ -25,7 +42,30 @@ const AccountCreation = () => {
       },
     });
 
-    window.location.href = "/signup-success";
+    let { data: emails, err } = await supabase.from("users").select("email");
+
+    for (let i of emails) {
+      if (i.email === email) {
+        console.log("account already exists");
+
+        setAlertMessage(
+          "Account already exists with this email! Please try logging in instead"
+        );
+        setShowAlert(true);
+        break;
+      } else {
+        console.log("new account");
+
+        if (!!error) {
+          console.log(error.message);
+          setAlertMessage(error.message);
+          setShowAlert(true);
+        } else {
+          console.log("good sign up");
+          window.location.href = "/signup-success";
+        }
+      }
+    }
   }
 
   return (
@@ -116,7 +156,7 @@ const AccountCreation = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                   className="h-[50px] relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-[#cb6ce6] focus:outline-none focus:ring-[#cb6ce6] sm:text-sm"
-                  placeholder="Password"
+                  placeholder="Password (min. 6 characters)"
                 />
               </div>
 
@@ -148,6 +188,31 @@ const AccountCreation = () => {
             </div>
           </form>
         </div>
+      </div>
+
+      <div className="flex min-h-full items-center justify-center">
+        {showAlert && (
+          <Alert
+            status="error"
+            width="350px"
+            alignItems="center"
+            justifyContent="center"
+            textAlign="center"
+            borderRadius="lg"
+          >
+            <AlertIcon />
+            <Box>
+              <AlertDescription>{alertMessage}</AlertDescription>
+            </Box>
+            <CloseButton
+              alignSelf="flex-start"
+              position="relative"
+              right={-1}
+              top={-1}
+              onClick={onClose}
+            />
+          </Alert>
+        )}
       </div>
     </div>
   );

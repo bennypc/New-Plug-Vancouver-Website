@@ -22,6 +22,7 @@ import NaduhArticle from "./articles/naduhArticle";
 import "slick-carousel/slick/slick-theme.css";
 import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
 import User from "./subpages/User";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function Logo() {
   return (
@@ -764,8 +765,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {/* <div>
+    <ChakraProvider>
+      <div>
+        {/* <div>
         <div className='flex justify-center flex-wrap'>
           <a href='#home' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>HOME</a>
           <a href='#culture' className='text-gray-300 text-2xl font-bold italic pb-3 px-4 md:px-8 lg:px-12'>STORY</a>
@@ -775,40 +777,41 @@ function App() {
         </div>
       </div> */}
 
-      <Routes>
-        <Route element={<HeaderFooterLayout />}>
-          <Route
-            path="/"
-            element={
-              <>
-                <ImageSlideshow />
-                <Articles />
-                <WeeklyBreakdownStrip />
-                <BestMoments />
-              </>
-            }
-          />
-          <Route path="/articles" element={<ArticlesPage />} />
-          <Route path="/songs-vote" element={<SongsVote />} />
-          <Route path="/songs-list" element={<SongsList />} />
+        <Routes>
+          <Route element={<HeaderFooterLayout />}>
+            <Route
+              path="/"
+              element={
+                <>
+                  <ImageSlideshow />
+                  <Articles />
+                  <WeeklyBreakdownStrip />
+                  <BestMoments />
+                </>
+              }
+            />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/songs-vote" element={<SongsVote />} />
+            <Route path="/songs-list" element={<SongsList />} />
 
-          <Route
-            path="/articles/community-coffee-and-classy-eyewear"
-            element={<EyewearArticle />}
-          />
-          <Route path="/articles/meet-naduh" element={<NaduhArticle />} />
-          <Route
-            path="/articles/honestly-nevermind"
-            element={<HonestlyNevermindArticle />}
-          />
-        </Route>
+            <Route
+              path="/articles/community-coffee-and-classy-eyewear"
+              element={<EyewearArticle />}
+            />
+            <Route path="/articles/meet-naduh" element={<NaduhArticle />} />
+            <Route
+              path="/articles/honestly-nevermind"
+              element={<HonestlyNevermindArticle />}
+            />
+          </Route>
 
-        <Route path="/login" element={<Auth />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/signup" element={<AccountCreation />} />
-        <Route path="/signup-success" element={<AccountCreateSuccess />} />
-      </Routes>
-    </div>
+          <Route path="/login" element={<Auth />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/signup" element={<AccountCreation />} />
+          <Route path="/signup-success" element={<AccountCreateSuccess />} />
+        </Routes>
+      </div>
+    </ChakraProvider>
   );
 }
 
