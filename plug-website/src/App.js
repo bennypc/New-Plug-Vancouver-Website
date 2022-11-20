@@ -4,11 +4,15 @@ import Slider from "react-slick";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import BurgerMenu from "./components/burger";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Outlet } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 
 import SongsVote from "./songs-form/songs-vote";
 import SongsList from "./songs-form/songs-list";
+
+import Auth from "./subpages/Auth";
+import AccountCreation from "./subpages/AccountCreation";
+
 import ArticlesPage from "./subpages/articles";
 
 import HonestlyNevermindArticle from "./articles/honestlyNevermindArticle";
@@ -114,19 +118,72 @@ function Articles() {
     <div id="latest-articles">
       <div className="border-solid border-b-2 mx-5">
         <a href="/articles/community-coffee-and-classy-eyewear">
-          <div className="flex mx-[2px] my-[20px] justify-between">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic">LIFESTYLE</h3>
-              <h2 className="resize-none align-middle">
+              <h3 className="resize-none align-middle italic leading-4">
+                LIFESTYLE
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                 COMMUNITY, COFFEE, AND CLASSY EYEWEAR
               </h2>
-
-              <h2 className="text-sm font-medium italic mt-1">
-                The latest summer styles you need to keep an eye on
+              <h2 className="resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 19.11.2022
               </h2>
             </div>
 
-            <div className="ml-8">
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./images/thumbnails/eyewear.png")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/community-coffee-and-classy-eyewear">
+          <div className="flex mx-[2px] my-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="resize-none align-middle italic leading-4">
+                LIFESTYLE
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                COMMUNITY, COFFEE, AND CLASSY EYEWEAR
+              </h2>
+              <h2 className="resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 19.11.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./images/thumbnails/eyewear.png")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/community-coffee-and-classy-eyewear">
+          <div className="flex mx-[2px] my-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="resize-none align-middle italic leading-4">
+                LIFESTYLE
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                COMMUNITY, COFFEE, AND CLASSY EYEWEAR
+              </h2>
+              <h2 className="resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 19.11.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
               <img
                 className="thumbnail"
                 src={require("./images/thumbnails/eyewear.png")}
@@ -687,6 +744,15 @@ function ScrollIndicator() {
   );
 }
 
+const HeaderFooterLayout = () => (
+  <>
+    <Header />
+    <Outlet />
+    <Footer />
+    <ScrollIndicator />
+  </>
+);
+
 function App() {
   React.useEffect(() => {
     const menuWrap = document.querySelector(".bm-menu-wrap");
@@ -707,39 +773,37 @@ function App() {
         </div>
       </div> */}
 
-      <Header />
-
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <ImageSlideshow />
-              <Articles />
-              <WeeklyBreakdownStrip />
-              <BestMoments />
-            </>
-          }
-        />
+        <Route element={<HeaderFooterLayout />}>
+          <Route
+            path="/"
+            element={
+              <>
+                <ImageSlideshow />
+                <Articles />
+                <WeeklyBreakdownStrip />
+                <BestMoments />
+              </>
+            }
+          />
+          <Route path="/articles" element={<ArticlesPage />} />
+          <Route path="/songs-vote" element={<SongsVote />} />
+          <Route path="/songs-list" element={<SongsList />} />
 
-        <Route path="/articles" element={<ArticlesPage />} />
-        <Route path="/songs-vote" element={<SongsVote />} />
-        <Route path="/songs-list" element={<SongsList />} />
+          <Route
+            path="/articles/community-coffee-and-classy-eyewear"
+            element={<EyewearArticle />}
+          />
+          <Route path="/articles/meet-naduh" element={<NaduhArticle />} />
+          <Route
+            path="/articles/honestly-nevermind"
+            element={<HonestlyNevermindArticle />}
+          />
+        </Route>
 
-        <Route
-          path="/articles/community-coffee-and-classy-eyewear"
-          element={<EyewearArticle />}
-        />
-        <Route path="/articles/meet-naduh" element={<NaduhArticle />} />
-        <Route
-          path="/articles/honestly-nevermind"
-          element={<HonestlyNevermindArticle />}
-        />
+        <Route path="/login" element={<Auth />} />
+        <Route path="/signup" element={<AccountCreation />} />
       </Routes>
-
-      <Footer />
-
-      <ScrollIndicator />
     </div>
   );
 }

@@ -163,7 +163,7 @@ const SongsVote = () => {
           </div>
 
           <div className="input text-white">
-            <label classname="text-white" for="auth-code">
+            <label classname="text-white bg-black" for="auth-code">
               Auth Code
             </label>
             <input

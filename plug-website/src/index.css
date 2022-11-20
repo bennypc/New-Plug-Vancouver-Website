@@ -40,9 +40,41 @@ body {
 
 .thumbnail {
   object-fit: cover;
-  width: 116px;
-  height: 116px;
-  min-width: 116px;
+  width: 120px;
+  height: 92px;
+  min-width: 160px;
+}
+
+.article-heading {
+  font-family: "Arial";
+  font-size: 22px;
+  font-weight: 900;
+}
+
+@media only screen and (min-width: 430px) {
+  .article-heading {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .article-heading {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .article-heading {
+    font-size: 26px;
+    line-height: 22px;
+  }
+
+  .thumbnail {
+    object-fit: cover;
+    width: 130px;
+    height: 98px;
+    min-width: 160px;
+  }
 }
 
 .wrapper {
