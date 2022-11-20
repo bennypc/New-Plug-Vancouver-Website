@@ -4,7 +4,7 @@ import "./articles.css";
 const naduhArticle = () => {
   return (
     <div className="mx-6">
-      <h1 className="text-4xl mb-2">
+      <h1 className="text-4xl mb-2 mt-6">
         Meet NADUH, Vancouver’s Newest Girl Group
       </h1>
 

@@ -4,7 +4,9 @@ import "./articles.css";
 const eyewearArticle = () => {
   return (
     <div className="mx-6">
-      <h1 className="text-4xl mb-2">Community, Coffee, and Classy Eyewear</h1>
+      <h1 className="text-4xl mb-2 mt-6">
+        Community, Coffee, and Classy Eyewear
+      </h1>
 
       <h2 className="text-lg font-medium italic">
         The latest summer styles you need to keep an eye on

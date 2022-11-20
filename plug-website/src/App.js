@@ -146,76 +146,26 @@ function Articles() {
       </div>
 
       <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/community-coffee-and-classy-eyewear">
-          <div className="flex mx-[2px] my-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic leading-4">
-                LIFESTYLE
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                COMMUNITY, COFFEE, AND CLASSY EYEWEAR
-              </h2>
-              <h2 className="resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 19.11.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/eyewear.png")}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/community-coffee-and-classy-eyewear">
-          <div className="flex mx-[2px] my-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic leading-4">
-                LIFESTYLE
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                COMMUNITY, COFFEE, AND CLASSY EYEWEAR
-              </h2>
-              <h2 className="resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 19.11.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/eyewear.png")}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/meet-naduh">
-          <div className="flex mx-[2px] my-[20px] justify-between">
+          <div className="flex mx-[2px] my-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic">MUSIC</h3>
-              <h2 className="resize-none align-middle">
-                MEET NADUH, VANCOUVER'S NEWEST GIRL GROUP
+              <h3 className="resize-none align-middle italic leading-4">
+                MUSIC
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                VANCOUVER'S NEWEST GIRL GROUP
               </h2>
 
-              <h2 className="text-sm font-medium italic mt-1">
-                The “spicier Spice Girls”
+              <h2 className="resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 03.09.2022
               </h2>
             </div>
 
-            <div className="ml-8">
+            <div className="ml-2">
               <img
                 className="thumbnail"
                 src={require("./images/thumbnails/naduh.jpg")}
-                alt="glasses"
+                alt="band"
               />
             </div>
           </div>
@@ -224,20 +174,22 @@ function Articles() {
 
       <div className="border-solid mx-5">
         <a href="/articles/honestly-nevermind">
-          <div className="flex mx-[2px] mt-[20px] mb-4 justify-between">
+          <div className="flex mx-[2px] my-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic">MUSIC</h3>
+              <h3 className="resize-none align-middle italic leading-4">
+                MUSIC
+              </h3>
 
-              <h2 className="resize-none align-middle">
-                HONESTLY, WHICH SONG IS THIS?
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                DRAKE: HONESTLY, WHICH SONG IS THIS?
               </h2>
 
-              <h2 className="text-sm font-medium italic mt-1">
-                Why “Honestly, Nevermind” has me missing “the old Drake”
+              <h2 className="resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 22.08.2022
               </h2>
             </div>
 
-            <div className="ml-6">
+            <div className="ml-2">
               <img
                 className="thumbnail"
                 src={require("./images/thumbnails/honestlynevermindsquare.jpg")}

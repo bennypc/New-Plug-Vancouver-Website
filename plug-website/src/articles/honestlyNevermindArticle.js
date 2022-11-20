@@ -4,7 +4,7 @@ import "./articles.css";
 const honestlyNevermindArticle = () => {
   return (
     <div className="mx-6">
-      <h1 className="text-4xl mb-2">Honestly, Which Song is This?</h1>
+      <h1 className="text-4xl mb-2 mt-6">Honestly, Which Song is This?</h1>
 
       <h2 className="text-lg font-medium italic">
         Why “Honestly, Nevermind” has me missing “the old Drake”
