@@ -51,6 +51,13 @@ body {
   font-weight: 900;
 }
 
+.burger {
+  width: 20px;
+  height: 3.5px;
+  background-color: black;
+  margin: 0;
+}
+
 @media only screen and (min-width: 430px) {
   .article-heading {
     font-size: 22px;

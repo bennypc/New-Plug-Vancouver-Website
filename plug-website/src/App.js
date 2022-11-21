@@ -54,25 +54,51 @@ function Header() {
           <div className="flex mt-5">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
-                className="w-10 h-auto my-4 mr-4"
+                className="w-[30px] h-auto my-4 mr-3"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
             </a>
 
-            <a
-              className="mr-[68px]"
-              href="https://www.tiktok.com/@plugvancouver"
-            >
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="w-10 h-auto my-4"
+                className="w-[30px] h-auto my-4 mr-2"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
             </a>
-          </div>
 
-          <BurgerMenu />
+            <div className="dropdown dropdown-end mr-4 align-middle items-center pt-[7px]	md:w-24">
+              <label
+                tabIndex={0}
+                className="btn-sm md:btn-lg md:w-[64px] btn btn-square p-[3px] bg-white m-1 text-black"
+              >
+                <div className="burger"></div>
+                <div className="burger"></div>
+                <div className="burger"></div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2"
+              >
+                <li className="">
+                  <a>
+                    <h1>HOME</h1>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <h1>READ</h1>
+                  </a>
+                </li>
+                <li>
+                  <a>
+                    <h1>ABOUT</h1>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -314,7 +340,7 @@ function Culture() {
 
 function WeeklyBreakdownStrip() {
   return (
-    <div className="wb-strip mt-14 mb-6 h-[200px] sm:h-[350px] lg:h-[400px]">
+    <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[400px]">
       <img
         className="wb-strip-image"
         src={require("./images/wb-strip.png")}
@@ -333,15 +359,48 @@ function WeeklyBreakdownStrip() {
   );
 }
 
+const getConfigurableProps = () => ({
+  showThumbs: false,
+  centerMode: true,
+  showStatus: false,
+  showArrows: true,
+  infiniteLoop: true,
+  interval: 2000,
+  stopOnHover: false,
+});
+
 function BestMoments() {
   return (
-    <div className="mb-4">
+    <div className="mb-0">
       <div className="flex justify-between align-middle">
-        <h1 className="text-xl font-bold ml-2">YOUR BEST MOMENTS</h1>
-        <button className="bg-black text-white rounded-lg px-2 py-1 mr-2">
+        <h1 className="text-xl font-bold ml-3">YOUR BEST MOMENTS</h1>
+        <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
           VIEW ALBUMS
         </button>
       </div>
+
+      <Carousel
+        {...getConfigurableProps()}
+        className="mt-4 mb-8"
+        autoPlay
+        centerSlidePercentage={60}
+      >
+        <div>
+          <img src={require("./images/moments/hello1.jpg")} alt="hello1" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello2.jpg")} alt="hello2" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello3.jpg")} alt="hello3" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello4.jpg")} alt="hello4" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello5.jpg")} alt="hello5" />
+        </div>
+      </Carousel>
     </div>
   );
 }
