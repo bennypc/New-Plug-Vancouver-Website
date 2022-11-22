@@ -54,7 +54,7 @@ function Header() {
           <div className="flex mt-5">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
-                className="w-[30px] h-auto my-4 mr-3"
+                className="w-[30px] h-auto my-4 mr-3 lg:w-[48px]"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
@@ -62,7 +62,7 @@ function Header() {
 
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="w-[30px] h-auto my-4 mr-2"
+                className="w-[30px] h-auto my-4 mr-2 lg:w-[48px]"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
@@ -71,7 +71,7 @@ function Header() {
             <div className="dropdown dropdown-end mr-4 align-middle items-center pt-[7px]	md:w-24">
               <label
                 tabIndex={0}
-                className="btn-sm md:btn-lg md:w-[64px] btn btn-square p-[3px] bg-white m-1 text-black"
+                className="btn-sm md:btn-md md:w-[48px] btn btn-square p-[3px] lg:mt-[9px] bg-white m-1 text-black"
               >
                 <div className="burger"></div>
                 <div className="burger"></div>
@@ -340,18 +340,19 @@ function Culture() {
 
 function WeeklyBreakdownStrip() {
   return (
-    <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[400px]">
+    <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[500px]">
       <img
         className="wb-strip-image"
         src={require("./images/wb-strip.png")}
         alt="crowd"
       />
-      <h2 className="wb-strip-text top-7 text-2xl font-bold">HOME OF THE</h2>
-      <h1 className="wb-strip-text top-16 text-3xl font-bold">
+
+      <h2 className="wb-strip-text top-7 text-2xl font-bold lg:mt-24">HOME OF THE</h2>
+      <h1 className="wb-strip-text top-16 text-3xl font-bold lg:mt-24">
         WEEKLY BREAKDOWN
       </h1>
 
-      <div className="absolute flex justify-around top-[130px]">
+      <div className="absolute flex justify-around top-[130px] lg:mt-24">
         <button className="wb-button mx-2">LATEST EDITION</button>
         <button className="wb-button mx-2">SUBMIT YOUR EVENT</button>
       </div>
