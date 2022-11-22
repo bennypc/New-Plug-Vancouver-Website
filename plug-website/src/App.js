@@ -721,10 +721,10 @@ function Footer() {
     <div className="h-[180px] flex align-middle flex-col items-center bg-black">
 
       <div className="w-full flex justify-between ">
-        <div className="ml-2 mt-4">
+        <div className="ml-2 mt-4 items-center pb-1">
           <a href="/">
             <img
-              className="w-[130px]"
+              className="w-[150px]"
               src={require("./images/logos/PlugWhite.png")}
               alt="Plug Logo"
             />
