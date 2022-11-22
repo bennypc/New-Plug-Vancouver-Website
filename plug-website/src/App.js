@@ -719,6 +719,65 @@ function AutoplayCarousel() {
 function Footer() {
   return (
     <div className="h-[180px] flex align-middle flex-col items-center bg-black">
+
+      <div className="w-full flex justify-between ">
+        <div className="ml-2 mt-4">
+          <a href="/">
+            <img
+              className="w-[130px]"
+              src={require("./images/logos/PlugWhite.png")}
+              alt="Plug Logo"
+            />
+          </a>
+        </div>
+        <div className="ml-[20px]">
+          <div className="flex mt-5 h-[30px] justify-left items-center">
+            <a href="https://www.instagram.com/plugvancouver/">
+              <img
+                className="w-[30px] h-auto mr-3"
+                src={require("./images/logos/social/instagram.png")}
+                alt="Instagram logo"
+              />
+            </a>
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
+              <img
+                className="w-[30px] h-auto mr-2"
+                src={require("./images/logos/social/tiktok.png")}
+                alt="Tiktok logo"
+              />
+            </a>
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
+              <img
+                className="h-[40px] w-auto mr-1"
+                src={require("./images/logos/social/youtube.png")}
+                alt="YouTube logo"
+              />
+            </a>
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
+              <img
+                className="h-[35px] w-auto mr-2"
+                src={require("./images/logos/social/facebook.png")}
+                alt="Facebook logo"
+              />
+            </a>
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
+              <img
+                className="h-[35px] w-auto mr-2"
+                src={require("./images/logos/social/linkedin.png")}
+                alt="LinkedIn logo"
+              />
+            </a>
+          </div>
+
+          <h2 className="text-white text-xs mt-2">
+            Company Contact 
+          </h2>
+          <h2 className="text-white text-xs">
+            INFO@PLUGVANCOUVER.COM
+          </h2>
+        </div>
+        
+      </div>
       <div className="flex align-middle flex-col items-center text-[26px] md:text-4xl lg:flex-row lg:justify-center mt-4">
         <h1 className="text-white">THE HOME OF</h1>
 
@@ -729,7 +788,7 @@ function Footer() {
         </h1>
       </div>
 
-      <h2 className="mt-4 text-sm font-normal text-gray-300 italic">
+      <h2 className="mt-4 text-sm font-normal text-gray-300 italic pb-8">
         © THE PLUG MARKETING, MEDIA & EVENTS INC. 2022
       </h2>
     </div>
