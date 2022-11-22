@@ -10,7 +10,7 @@ const articlesPage = () => {
         </h1>
       </div>
 
-      <div className="text-left">
+      <div className="text-left mb-8">
         <div className="border-solid border-b-2 mx-5">
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
@@ -167,7 +167,7 @@ const articlesPage = () => {
           </a>
         </div>
 
-        <div className="border-solid border-b-2 mx-5">
+        <div className="border-solid mx-5">
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
