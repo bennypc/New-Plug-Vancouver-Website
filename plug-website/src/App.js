@@ -21,8 +21,12 @@ import NaduhArticle from "./articles/naduhArticle";
 
 import "slick-carousel/slick/slick-theme.css";
 import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
-import User from "./subpages/User";
+import DashboardHome from "./dashboard/DashboardHome";
+import DashboardProfile from "./dashboard/DashboardProfile";
 import { ChakraProvider } from "@chakra-ui/react";
+import DashboardSettings from "./dashboard/DashboardSettings";
+import DashboardCalendar from "./dashboard/DashboardCalendar";
+import DashboardTeams from "./dashboard/DashboardTeams";
 
 function Logo() {
   return (
@@ -347,7 +351,9 @@ function WeeklyBreakdownStrip() {
         alt="crowd"
       />
 
-      <h2 className="wb-strip-text top-7 text-2xl font-bold lg:mt-24">HOME OF THE</h2>
+      <h2 className="wb-strip-text top-7 text-2xl font-bold lg:mt-24">
+        HOME OF THE
+      </h2>
       <h1 className="wb-strip-text top-16 text-3xl font-bold lg:mt-24">
         WEEKLY BREAKDOWN
       </h1>
@@ -720,7 +726,6 @@ function AutoplayCarousel() {
 function Footer() {
   return (
     <div className="h-[180px] flex align-middle flex-col items-center bg-black">
-
       <div className="w-full flex justify-between ">
         <div className="ml-2 mt-4 items-center pb-1">
           <a href="/">
@@ -770,14 +775,9 @@ function Footer() {
             </a>
           </div>
 
-          <h2 className="text-white text-xs mt-2">
-            Company Contact 
-          </h2>
-          <h2 className="text-white text-xs">
-            INFO@PLUGVANCOUVER.COM
-          </h2>
+          <h2 className="text-white text-xs mt-2">Company Contact</h2>
+          <h2 className="text-white text-xs">INFO@PLUGVANCOUVER.COM</h2>
         </div>
-        
       </div>
       <div className="flex align-middle flex-col items-center text-[26px] md:text-4xl lg:flex-row lg:justify-center mt-4">
         <h1 className="text-white">THE HOME OF</h1>
@@ -877,7 +877,13 @@ function App() {
           </Route>
 
           <Route path="/login" element={<Auth />} />
-          <Route path="/user" element={<User />} />
+
+          <Route path="/dashboard/home" element={<DashboardHome />} />
+          <Route path="/dashboard/calendar" element={<DashboardCalendar />} />
+          <Route path="/dashboard/teams" element={<DashboardTeams />} />
+          <Route path="/dashboard/profile" element={<DashboardProfile />} />
+          <Route path="/dashboard/settings" element={<DashboardSettings />} />
+
           <Route path="/signup" element={<AccountCreation />} />
           <Route path="/signup-success" element={<AccountCreateSuccess />} />
         </Routes>
