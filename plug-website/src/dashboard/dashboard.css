@@ -1,0 +1,7 @@
+.main-content {
+  max-height: 100%;
+}
+
+.contact-list {
+  overflow-y: scroll;
+}
