@@ -33,12 +33,12 @@ const Auth = () => {
       setShowAlert(true);
     } else {
       console.log("good login");
-      window.location.href = "/user";
+      window.location.href = "/dashboard/home";
     }
   }
 
   return (
-    <div className="bg-black">
+    <div className="bg-black h-full">
       <div className="flex min-h-full items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="w-full max-w-md space-y-8 mx-4">
           <div>
