@@ -73,6 +73,7 @@ const DashboardProfile = () => {
     setUsersArray(users);
 
     console.log(users);
+    window.location.reload();
   }
 
   useEffect(() => {
