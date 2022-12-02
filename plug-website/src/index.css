@@ -49,6 +49,12 @@ body {
   font-family: "Arial";
   font-size: 22px;
   font-weight: 900;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .burger {
@@ -115,6 +121,31 @@ body {
   font-size: 14px;
 }
 
+.about-strip {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.about-strip-image {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.about-strip-text {
+  position: absolute;
+  color: white;
+}
+
+.about-button {
+  background-color: white;
+  padding: 6px 10px 6px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+}
 .event-card {
   display: flex !important;
   justify-content: center;

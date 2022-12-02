@@ -27,6 +27,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import DashboardSettings from "./dashboard/DashboardSettings";
 import DashboardCalendar from "./dashboard/DashboardCalendar";
 import DashboardTeams from "./dashboard/DashboardTeams";
+import AboutPage from "./subpages/About";
 
 function Logo() {
   return (
@@ -72,6 +73,14 @@ function Header() {
               />
             </a>
 
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
+              <img
+                className="h-[40px] w-auto my-3 mr-1 lg:h-[58px]"
+                src={require("./images/logos/social/youtube.png")}
+                alt="YouTube logo"
+              />
+            </a>
+
             <div className="dropdown dropdown-end mr-4 align-middle items-center pt-[7px]	md:w-24">
               <label
                 tabIndex={0}
@@ -86,17 +95,17 @@ function Header() {
                 className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52 mt-2"
               >
                 <li className="">
-                  <a>
+                  <a href="/">
                     <h1>HOME</h1>
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/articles">
                     <h1>READ</h1>
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="/about">
                     <h1>ABOUT</h1>
                   </a>
                 </li>
@@ -187,7 +196,7 @@ function Articles() {
               </h2>
 
               <h2 className="resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 03.09.2022
+                LAUREN BENSON | 13.11.2022
               </h2>
             </div>
 
@@ -215,7 +224,7 @@ function Articles() {
               </h2>
 
               <h2 className="resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 22.08.2022
+                LAUREN BENSON | 23.10.2022
               </h2>
             </div>
 
@@ -862,6 +871,7 @@ function App() {
               }
             />
             <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/about" element={<AboutPage />} />
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />
 

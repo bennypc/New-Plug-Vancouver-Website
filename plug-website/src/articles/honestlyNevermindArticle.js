@@ -4,11 +4,17 @@ import "./articles.css";
 const honestlyNevermindArticle = () => {
   return (
     <div className="mx-6">
-      <h1 className="text-4xl mb-2 mt-6">Honestly, Which Song is This?</h1>
+      <p className="text-xl mt-6 italic">MUSIC</p>
+
+      <h1 className="text-4xl mb-1 mt-1">Honestly, Which Song is This?</h1>
 
       <h2 className="text-lg font-medium italic">
         Why “Honestly, Nevermind” has me missing “the old Drake”
       </h2>
+
+      <p className="text-sm mt-2 italic font-medium">
+        LAUREN BENSON | 23.10.2022
+      </p>
 
       <img
         className="my-6"

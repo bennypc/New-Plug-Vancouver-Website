@@ -4,13 +4,19 @@ import "./articles.css";
 const naduhArticle = () => {
   return (
     <div className="mx-6">
-      <h1 className="text-4xl mb-2 mt-6">
+      <p className="text-xl mt-6 italic">MUSIC</p>
+
+      <h1 className="text-4xl mb-1 mt-1">
         Meet NADUH, Vancouver’s Newest Girl Group
       </h1>
 
       <h2 className="text-lg font-medium italic">
         The “spicier Spice Girls” you didn’t know you needed
       </h2>
+
+      <p className="text-sm mt-2 italic font-medium">
+        LAUREN BENSON | 13.11.2022
+      </p>
 
       <img
         className="mt-6 mb-2"
