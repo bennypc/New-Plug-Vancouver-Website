@@ -46,7 +46,7 @@ body {
 }
 
 .article-heading {
-  font-family: "Arial";
+  font-family: "Helvetica";
   font-size: 22px;
   font-weight: 900;
   display: -webkit-box;
@@ -55,6 +55,14 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.article-category {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: #a6a6a6;
+  margin-bottom:2px;
 }
 
 .burger {

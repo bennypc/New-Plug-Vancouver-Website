@@ -162,13 +162,13 @@ function Articles() {
         <a href="/articles/community-coffee-and-classy-eyewear">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic leading-4">
+              <h3 className="article-category resize-none align-middle italic leading-4">
                 LIFESTYLE
               </h3>
               <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                 COMMUNITY, COFFEE, AND CLASSY EYEWEAR
               </h2>
-              <h2 className="resize-none align-middle text-xs font-[600]">
+              <h2 className="italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 19.11.2022
               </h2>
             </div>
@@ -188,14 +188,14 @@ function Articles() {
         <a href="/articles/meet-naduh">
           <div className="flex mx-[2px] my-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic leading-4">
+              <h3 className="article-category resize-none align-middle italic leading-4">
                 MUSIC
               </h3>
               <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                 VANCOUVER'S NEWEST GIRL GROUP
               </h2>
 
-              <h2 className="resize-none align-middle text-xs font-[600]">
+              <h2 className="italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 13.11.2022
               </h2>
             </div>
@@ -215,7 +215,7 @@ function Articles() {
         <a href="/articles/honestly-nevermind">
           <div className="flex mx-[2px] my-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
-              <h3 className="resize-none align-middle italic leading-4">
+              <h3 className="article-category resize-none align-middle italic leading-4">
                 MUSIC
               </h3>
 
@@ -223,7 +223,7 @@ function Articles() {
                 DRAKE: HONESTLY, WHICH SONG IS THIS?
               </h2>
 
-              <h2 className="resize-none align-middle text-xs font-[600]">
+              <h2 className="italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 23.10.2022
               </h2>
             </div>
@@ -363,13 +363,19 @@ function WeeklyBreakdownStrip() {
       <h2 className="wb-strip-text top-7 text-2xl font-bold lg:mt-24">
         HOME OF THE
       </h2>
-      <h1 className="wb-strip-text top-16 text-3xl font-bold lg:mt-24">
+      <h1 className="wb-strip-text top-14 text-3xl font-bold lg:mt-24">
         WEEKLY BREAKDOWN
       </h1>
 
-      <div className="absolute flex justify-around top-[130px] lg:mt-24">
-        <button className="wb-button mx-2">LATEST EDITION</button>
-        <button className="wb-button mx-2">SUBMIT YOUR EVENT</button>
+      <div className="absolute flex justify-around top-[120px] lg:mt-24">
+        <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
+          <button className="wb-button mx-2">LATEST EDITION</button>
+        </a>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaVbHeLjA0HQYeYVYaTjYBZYYN0fxR5MO6-a0cIq5xT7Teaw/viewform" target="_blank">
+          <button className="wb-button mx-2">SUBMIT YOUR EVENT</button>
+        </a>
+        
       </div>
     </div>
   );
@@ -390,6 +396,42 @@ function BestMoments() {
     <div className="mb-0">
       <div className="flex justify-between align-middle">
         <h1 className="text-xl font-bold ml-3">YOUR BEST MOMENTS</h1>
+        <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
+          VIEW ALBUMS
+        </button>
+      </div>
+
+      <Carousel
+        {...getConfigurableProps()}
+        className="mt-4 mb-8"
+        autoPlay
+        centerSlidePercentage={60}
+      >
+        <div>
+          <img src={require("./images/moments/hello1.jpg")} alt="hello1" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello2.jpg")} alt="hello2" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello3.jpg")} alt="hello3" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello4.jpg")} alt="hello4" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello5.jpg")} alt="hello5" />
+        </div>
+      </Carousel>
+    </div>
+  );
+}
+
+function FeaturedVideos() {
+  return (
+    <div className="mb-0">
+      <div className="flex justify-between align-middle">
+        <h1 className="text-xl font-bold ml-3">FEATURED VIDEOS</h1>
         <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
           VIEW ALBUMS
         </button>
@@ -745,7 +787,7 @@ function Footer() {
             />
           </a>
         </div>
-        <div className="ml-[20px]">
+        <div className="ml-[20px] flex align-middle items-center">
           <div className="flex mt-5 h-[30px] justify-left items-center">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
@@ -783,21 +825,20 @@ function Footer() {
               />
             </a>
           </div>
-
-          <h2 className="text-white text-xs">INFO@PLUGVANCOUVER.COM</h2>
         </div>
       </div>
-      <div className="flex align-middle flex-col items-center text-[26px] md:text-4xl lg:flex-row lg:justify-center mt-4">
-        <h1 className="text-white">THE HOME OF</h1>
+      <div className="flex align-middle flex-col items-center text-[17px] md:text-4xl lg:flex-row lg:justify-center">
+        {/* <h1 className="text-white">THE HOME OF</h1> */}
 
         <h1 className="">
+          <span className="text-white">THE HOME OF</span>
           <span className="text-[#cb6ce6]">&nbsp;VANCOUVER'S</span>
 
           <span className="text-white">&nbsp;URBAN CULTURE</span>
         </h1>
       </div>
 
-      <h2 className="mt-4 text-sm font-normal text-gray-300 italic pb-8">
+      <h2 className="mt-2 text-sm font-normal text-gray-300 italic pb-8">
         © THE PLUG MARKETING, MEDIA & EVENTS INC. 2022
       </h2>
     </div>
@@ -866,6 +907,7 @@ function App() {
                   <Articles />
                   <WeeklyBreakdownStrip />
                   <BestMoments />
+                  <FeaturedVideos />
                 </>
               }
             />
