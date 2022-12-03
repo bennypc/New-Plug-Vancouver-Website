@@ -784,7 +784,6 @@ function Footer() {
             </a>
           </div>
 
-          <h2 className="text-white text-xs mt-2">Company Contact</h2>
           <h2 className="text-white text-xs">INFO@PLUGVANCOUVER.COM</h2>
         </div>
       </div>

@@ -91,7 +91,7 @@ const ArticlesPage = () => {
                 <h3 className="resize-none align-middle italic leading-4">
                   LIFESTYLE
                 </h3>
-                <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
                   COMMUNITY, COFFEE, AND CLASSY EYEWEAR
                 </h2>
                 <h2 className="resize-none align-middle text-xs font-[600]">
