@@ -57,7 +57,7 @@ function Header() {
       <div>
         <div className="flex justify-between">
           <div className="flex mt-5">
-            <a href="https://www.instagram.com/plugvancouver/">
+            <a href="https://www.instagram.com/plugvancouver/" target="_blank">
               <img
                 className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
                 src={require("./images/logos/social/instagram.png")}
@@ -65,7 +65,7 @@ function Header() {
               />
             </a>
 
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="https://www.tiktok.com/@plugvancouver" target="_blank">
               <img
                 className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
                 src={require("./images/logos/social/tiktok.png")}
@@ -73,7 +73,7 @@ function Header() {
               />
             </a>
 
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ" target="_blank">
               <img
                 className="h-[40px] w-auto my-3 mr-1 lg:h-[56px]"
                 src={require("./images/logos/social/youtube.png")}
@@ -793,35 +793,35 @@ function Footer() {
         </div>
         <div className="ml-[20px] flex-col align-middle items-center">
           <div className="flex mt-5 h-[30px] justify-left items-center mt-8 ">
-            <a href="https://www.instagram.com/plugvancouver/">
+            <a href="https://www.instagram.com/plugvancouver/" target="_blank"> 
               <img
                 className="w-[30px] h-auto mr-1"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
             </a>
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="https://www.tiktok.com/@plugvancouver" target="_blank">
               <img
                 className="w-[30px] h-auto mr-1"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
             </a>
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ" target="_blank">
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
             </a>
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="https://www.facebook.com/theplugvancouver/" target="_blank">
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/facebook.png")}
                 alt="Facebook logo"
               />
             </a>
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="https://www.linkedin.com/company/plugvancouver/mycompany/" target="_blank">
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/linkedin.png")}
@@ -829,11 +829,11 @@ function Footer() {
               />
             </a>
 
-            <a className="" href="https://www.tiktok.com/@plugvancouver">
+            <a className="" href="mailto:info@theplugvancouver.com" target="_blank">
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/email.png")}
-                alt="LinkedIn logo"
+                alt="Email logo"
               />
             </a>
             
