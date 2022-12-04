@@ -120,13 +120,14 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
 }
 
 .wb-strip-image {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  width: auto;
+
   object-fit: cover;
 }
 

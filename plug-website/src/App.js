@@ -361,7 +361,7 @@ function Culture() {
 
 function WeeklyBreakdownStrip() {
   return (
-    <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[500px]">
+    <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[500px] w-full">
       <img
         className="wb-strip-image"
         src={require("./images/wb-strip.png")}
