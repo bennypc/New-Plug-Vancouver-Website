@@ -59,7 +59,7 @@ function Header() {
           <div className="flex mt-5">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
-                className="w-[40px] h-auto my-3 mr-1 lg:w-[48px]"
+                className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
@@ -67,7 +67,7 @@ function Header() {
 
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="w-[40px] h-auto my-3 mr-1 lg:w-[48px]"
+                className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
@@ -75,7 +75,7 @@ function Header() {
 
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="h-[40px] w-auto my-3 mr-1 lg:h-[48px]"
+                className="h-[40px] w-auto my-3 mr-1 lg:h-[56px]"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
@@ -86,9 +86,9 @@ function Header() {
                 tabIndex={0}
                 className="btn-sm md:btn-md md:w-[48px] btn btn-square p-[3px] lg:mt-[9px] bg-white m-1 text-black"
               >
-                <div className="burger"></div>
-                <div className="burger"></div>
-                <div className="burger"></div>
+                <div className="burger md:px-[12px]"></div>
+                <div className="burger md:px-[12px]"></div>
+                <div className="burger md:px-[12px]"></div>
               </label>
               <ul
                 tabIndex={0}
@@ -341,7 +341,7 @@ function Culture() {
         <div id="two">
           <img
             className="px-4 mb-8"
-            src={require("./images/TeamPhotoLarge.jpg")}
+            src={require("./images/ldoc-banner.jpg")}
             alt="team"
           ></img>
         </div>
@@ -396,9 +396,12 @@ function BestMoments() {
     <div className="mb-0">
       <div className="flex justify-between align-middle">
         <h1 className="text-xl font-bold ml-3">YOUR BEST MOMENTS</h1>
+        <a href="https://www.facebook.com/theplugvancouver/photos/?ref=page_internal&tab=album" target="_blank">
         <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
           VIEW ALBUMS
         </button>
+        </a>
+        
       </div>
 
       <Carousel
@@ -683,30 +686,33 @@ function ContactForm() {
 
 function ImageSlideshow() {
   return (
-    <div className="">
-      <Carousel
-        autoPlay
-        interval="4000"
-        transitionTime="1000"
-        infiniteLoop
-        stopOnHover={false}
-        showStatus={false}
-        showThumbs={false}
-      >
-        <div>
-          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
+    // <div className="">
+    //   <Carousel
+    //     autoPlay
+    //     interval="4000"
+    //     transitionTime="1000"
+    //     infiniteLoop
+    //     stopOnHover={false}
+    //     showStatus={false}
+    //     showThumbs={false}
+    //   >
+    //     <div>
+    //       <img src={require("./images/ldoc-banner.jpg")} alt="" />
+    //     </div>
+    //     <div>
+    //       <img src={require("./images/ldoc-banner.jpg")} alt="" />
+    //     </div>
+    //     <div>
+    //       <img src={require("./images/ldoc-banner.jpg")} alt="" />
+    //     </div>
+    //     <div>
+    //       <img src={require("./images/ldoc-banner.jpg")} alt="" />
+    //     </div>
+    //   </Carousel>
+    // </div>
+    <div>
+          <img src={require("./images/ldoc-banner.jpg")} alt="" />
         </div>
-        <div>
-          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
-        </div>
-        <div>
-          <img src={require("./images/TeamPhotoLarge.jpg")} alt="" />
-        </div>
-      </Carousel>
-    </div>
   );
 }
 
@@ -837,15 +843,15 @@ function Footer() {
 
           <div className="flex justify-center mt-1">
             <h1 className="text-white">
-              <a className="text-white" href="/">HOME </a>
+              <a className="text-white font-bold" href="/">HOME </a>
 
               |
 
-              <a className="text-white" href="/articles"> READ </a>
+              <a className="text-white font-bold" href="/articles"> READ </a>
 
               |
 
-              <a className="text-white" href="/about"> ABOUT</a>
+              <a className="text-white font-bold" href="/about"> ABOUT</a>
             </h1>
           
           </div>

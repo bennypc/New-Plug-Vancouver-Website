@@ -1,5 +1,28 @@
 import React from "react";
 import "./articles.css";
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  LinkedinIcon,
+  LinkedinShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import {
+  EmailIcon,
+  FacebookIcon,
+  FacebookMessengerIcon,
+
+  RedditIcon,
+  
+  TwitterIcon,
+  
+  WhatsappIcon,
+
+} from "react-share";
 
 const eyewearArticle = () => {
   return (
@@ -18,6 +41,32 @@ const eyewearArticle = () => {
         LAUREN BENSON | 19.11.2022
       </p>
 
+      <Popup className="rounded-md" trigger={<button> Trigger</button>} modal>
+    <div className="rounded-md">
+      <h1 className="text-center">
+        Share
+      </h1>
+      <div lassName="text-center items-center flex justify-center">
+        <FacebookShareButton url="">
+            <FacebookIcon size={32} round={true} />
+        </FacebookShareButton>
+        <TwitterShareButton url="">
+            <TwitterIcon size={32} round={true} />
+        </TwitterShareButton>
+        <LinkedinShareButton url="">
+            <LinkedinIcon size={32} round={true} />
+        </LinkedinShareButton>
+        <WhatsappShareButton url="">
+            <WhatsappIcon size={32} round={true} />
+        </WhatsappShareButton>
+        <EmailShareButton url="">
+            <EmailIcon size={32} round={true} />
+        </EmailShareButton>
+      </div>
+      
+    </div>
+  </Popup>
+  
       <img
         className="mt-6 mb-2"
         src={require("./article_media/eyewear.png")}
