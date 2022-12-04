@@ -59,7 +59,7 @@ function Header() {
           <div className="flex mt-5">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
-                className="w-[30px] h-auto my-4 mr-3 lg:w-[48px]"
+                className="w-[40px] h-auto my-3 mr-1 lg:w-[48px]"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
@@ -67,7 +67,7 @@ function Header() {
 
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="w-[30px] h-auto my-4 mr-2 lg:w-[48px]"
+                className="w-[40px] h-auto my-3 mr-1 lg:w-[48px]"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
@@ -75,7 +75,7 @@ function Header() {
 
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="h-[40px] w-auto my-3 mr-1 lg:h-[58px]"
+                className="h-[40px] w-auto my-3 mr-1 lg:h-[48px]"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
@@ -787,44 +787,70 @@ function Footer() {
             />
           </a>
         </div>
-        <div className="ml-[20px] flex align-middle items-center">
-          <div className="flex mt-5 h-[30px] justify-left items-center">
+        <div className="ml-[20px] flex-col align-middle items-center">
+          <div className="flex mt-5 h-[30px] justify-left items-center mt-8 ">
             <a href="https://www.instagram.com/plugvancouver/">
               <img
-                className="w-[30px] h-auto mr-3"
+                className="w-[30px] h-auto mr-1"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
             </a>
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="w-[30px] h-auto mr-2"
+                className="w-[30px] h-auto mr-1"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
             </a>
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="h-[40px] w-auto mr-1"
+                className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
             </a>
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="h-[35px] w-auto mr-2"
+                className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/facebook.png")}
                 alt="Facebook logo"
               />
             </a>
             <a className="" href="https://www.tiktok.com/@plugvancouver">
               <img
-                className="h-[35px] w-auto mr-2"
+                className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/linkedin.png")}
                 alt="LinkedIn logo"
               />
             </a>
+
+            <a className="" href="https://www.tiktok.com/@plugvancouver">
+              <img
+                className="h-[30px] w-auto mr-1"
+                src={require("./images/logos/social/email.png")}
+                alt="LinkedIn logo"
+              />
+            </a>
+            
           </div>
+
+          <div className="flex justify-center mt-1">
+            <h1 className="text-white">
+              <a className="text-white" href="/">HOME </a>
+
+              |
+
+              <a className="text-white" href="/articles"> READ </a>
+
+              |
+
+              <a className="text-white" href="/about"> ABOUT</a>
+            </h1>
+          
+          </div>
+
+          
         </div>
       </div>
       <div className="flex align-middle flex-col items-center text-[17px] md:text-4xl lg:flex-row lg:justify-center">
