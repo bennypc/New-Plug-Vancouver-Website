@@ -60,7 +60,7 @@ const ArticlesPage = () => {
           OUR STORIES
         </h1>
 
-        <div>
+        <div className="whitespace-pre-wrap break-normal">
           <a className="mx-2" onClick={onClickAll}>
             ALL
           </a>

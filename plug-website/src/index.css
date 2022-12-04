@@ -60,9 +60,9 @@ body {
 .article-category {
   font-size: 14px;
   font-weight: 700;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   color: #a6a6a6;
-  margin-bottom:4px;
+  margin-bottom: 4px;
 }
 
 .article-info {
@@ -70,7 +70,7 @@ body {
 }
 
 .a {
-  font-family:  helvetica, sans-serif;
+  font-family: helvetica, sans-serif;
 }
 
 .burger {
@@ -279,4 +279,8 @@ body {
     padding-left: 32px;
     padding-right: 32px;
   }
+}
+
+.top-banner-button {
+  border-radius: 16px;
 }

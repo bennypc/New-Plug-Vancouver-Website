@@ -65,7 +65,11 @@ function Header() {
               />
             </a>
 
-            <a className="" href="https://www.tiktok.com/@plugvancouver" target="_blank">
+            <a
+              className=""
+              href="https://www.tiktok.com/@plugvancouver"
+              target="_blank"
+            >
               <img
                 className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
                 src={require("./images/logos/social/tiktok.png")}
@@ -73,7 +77,11 @@ function Header() {
               />
             </a>
 
-            <a className="" href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ" target="_blank">
+            <a
+              className=""
+              href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ"
+              target="_blank"
+            >
               <img
                 className="h-[40px] w-auto my-3 mr-1 lg:h-[56px]"
                 src={require("./images/logos/social/youtube.png")}
@@ -371,11 +379,13 @@ function WeeklyBreakdownStrip() {
         <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
           <button className="wb-button mx-2">LATEST EDITION</button>
         </a>
-        
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfaVbHeLjA0HQYeYVYaTjYBZYYN0fxR5MO6-a0cIq5xT7Teaw/viewform" target="_blank">
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfaVbHeLjA0HQYeYVYaTjYBZYYN0fxR5MO6-a0cIq5xT7Teaw/viewform"
+          target="_blank"
+        >
           <button className="wb-button mx-2">SUBMIT YOUR EVENT</button>
         </a>
-        
       </div>
     </div>
   );
@@ -396,12 +406,14 @@ function BestMoments() {
     <div className="mb-0">
       <div className="flex justify-between align-middle">
         <h1 className="text-xl font-bold ml-3">YOUR BEST MOMENTS</h1>
-        <a href="https://www.facebook.com/theplugvancouver/photos/?ref=page_internal&tab=album" target="_blank">
-        <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
-          VIEW ALBUMS
-        </button>
+        <a
+          href="https://www.facebook.com/theplugvancouver/photos/?ref=page_internal&tab=album"
+          target="_blank"
+        >
+          <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
+            VIEW ALBUMS
+          </button>
         </a>
-        
       </div>
 
       <Carousel
@@ -435,7 +447,6 @@ function FeaturedVideos() {
     <div className="mb-0">
       <div className="flex justify-between align-middle">
         <h1 className="text-xl font-bold ml-3">FEATURED VIDEOS</h1>
-        
       </div>
 
       <Carousel
@@ -709,8 +720,15 @@ function ImageSlideshow() {
     //   </Carousel>
     // </div>
     <div>
-          <img src={require("./images/ldoc-banner.jpg")} alt="" />
-        </div>
+      <img src={require("./images/ldoc-banner.jpg")} alt="" />
+      <div className="absolute flex justify-around top-[27vw] right-[9vw] md:right-[15vw] mt-[102px] md:mt-24">
+        <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
+          <button className="top-banner-button mx-2 bg-white md:px-[12px] md:py-[3px] lg:px-[24px] lg:py-[6px] px-[5px] py-[3px] text-[8px] md:text-sm">
+            RSVP NOW
+          </button>
+        </a>
+      </div>
+    </div>
   );
 }
 
@@ -793,35 +811,51 @@ function Footer() {
         </div>
         <div className="ml-[20px] flex-col align-middle items-center">
           <div className="flex mt-5 h-[30px] justify-left items-center mt-8 ">
-            <a href="https://www.instagram.com/plugvancouver/" target="_blank"> 
+            <a href="https://www.instagram.com/plugvancouver/" target="_blank">
               <img
                 className="w-[30px] h-auto mr-1"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
             </a>
-            <a className="" href="https://www.tiktok.com/@plugvancouver" target="_blank">
+            <a
+              className=""
+              href="https://www.tiktok.com/@plugvancouver"
+              target="_blank"
+            >
               <img
                 className="w-[30px] h-auto mr-1"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
             </a>
-            <a className="" href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ" target="_blank">
+            <a
+              className=""
+              href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ"
+              target="_blank"
+            >
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
             </a>
-            <a className="" href="https://www.facebook.com/theplugvancouver/" target="_blank">
+            <a
+              className=""
+              href="https://www.facebook.com/theplugvancouver/"
+              target="_blank"
+            >
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/facebook.png")}
                 alt="Facebook logo"
               />
             </a>
-            <a className="" href="https://www.linkedin.com/company/plugvancouver/mycompany/" target="_blank">
+            <a
+              className=""
+              href="https://www.linkedin.com/company/plugvancouver/mycompany/"
+              target="_blank"
+            >
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/linkedin.png")}
@@ -829,32 +863,36 @@ function Footer() {
               />
             </a>
 
-            <a className="" href="mailto:info@theplugvancouver.com" target="_blank">
+            <a
+              className=""
+              href="mailto:info@theplugvancouver.com"
+              target="_blank"
+            >
               <img
                 className="h-[30px] w-auto mr-1"
                 src={require("./images/logos/social/email.png")}
                 alt="Email logo"
               />
             </a>
-            
           </div>
 
           <div className="flex justify-center mt-1">
             <h1 className="text-white">
-              <a className="text-white font-bold" href="/">HOME </a>
-
+              <a className="text-white font-bold" href="/">
+                HOME{" "}
+              </a>
               |
-
-              <a className="text-white font-bold" href="/articles"> READ </a>
-
+              <a className="text-white font-bold" href="/articles">
+                {" "}
+                READ{" "}
+              </a>
               |
-
-              <a className="text-white font-bold" href="/about"> ABOUT</a>
+              <a className="text-white font-bold" href="/about">
+                {" "}
+                ABOUT
+              </a>
             </h1>
-          
           </div>
-
-          
         </div>
       </div>
       <div className="flex align-middle flex-col items-center text-[17px] md:text-4xl lg:flex-row lg:justify-center">
