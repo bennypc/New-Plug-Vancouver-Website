@@ -435,9 +435,7 @@ function FeaturedVideos() {
     <div className="mb-0">
       <div className="flex justify-between align-middle">
         <h1 className="text-xl font-bold ml-3">FEATURED VIDEOS</h1>
-        <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
-          VIEW ALBUMS
-        </button>
+        
       </div>
 
       <Carousel
