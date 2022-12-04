@@ -447,19 +447,19 @@ function FeaturedVideos() {
         centerSlidePercentage={60}
       >
         <div>
-          <img src={require("./images/moments/hello1.jpg")} alt="hello1" />
+          <img src={require("./images/video-thumbnails/1.png")} alt="hello1" />
         </div>
         <div>
-          <img src={require("./images/moments/hello2.jpg")} alt="hello2" />
+          <img src={require("./images/video-thumbnails/2.png")} alt="hello2" />
         </div>
         <div>
-          <img src={require("./images/moments/hello3.jpg")} alt="hello3" />
+          <img src={require("./images/video-thumbnails/3.png")} alt="hello3" />
         </div>
         <div>
-          <img src={require("./images/moments/hello4.jpg")} alt="hello4" />
+          <img src={require("./images/video-thumbnails/4.png")} alt="hello4" />
         </div>
         <div>
-          <img src={require("./images/moments/hello5.jpg")} alt="hello5" />
+          <img src={require("./images/video-thumbnails/5.png")} alt="hello5" />
         </div>
       </Carousel>
     </div>
