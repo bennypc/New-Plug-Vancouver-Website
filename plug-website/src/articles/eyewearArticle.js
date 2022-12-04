@@ -41,7 +41,7 @@ const eyewearArticle = () => {
         LAUREN BENSON | 19.11.2022
       </p>
 
-      <Popup className="rounded-md" trigger={<button> Trigger</button>} modal>
+      {/* <Popup className="rounded-md" trigger={<button > <img className="width-[32px]" src={require("../images/logos/social/share-button.png")} /></button>} modal>
     <div className="rounded-md">
       <h1 className="text-center">
         Share
@@ -65,7 +65,7 @@ const eyewearArticle = () => {
       </div>
       
     </div>
-  </Popup>
+  </Popup> */}
   
       <img
         className="mt-6 mb-2"
