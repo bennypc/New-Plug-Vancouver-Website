@@ -738,9 +738,9 @@ function ImageSlideshow() {
       <img src={require("./images/ldoc-banner.jpg")} alt="" />
       <div className="absolute flex justify-around top-[27vw] right-[9vw] md:right-[15vw] mt-[102px] md:mt-24">
         <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
-          <button className="top-banner-button mx-2 bg-white md:px-[12px] md:py-[3px] lg:px-[24px] lg:py-[6px] px-[5px] py-[3px] text-[8px] md:text-sm">
+          {/* <button className="top-banner-button mx-2 bg-white md:px-[12px] md:py-[3px] lg:px-[24px] lg:py-[6px] px-[5px] py-[3px] text-[8px] md:text-sm">
             RSVP NOW
-          </button>
+          </button> */}
         </a>
       </div>
     </div>
