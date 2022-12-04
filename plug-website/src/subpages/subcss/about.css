@@ -1,0 +1,13 @@
+@media only screen and (min-width: 1300px) {
+  .about-container {
+    width: 1000px;
+    margin-left: 30vw;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1299px) {
+  .about-container {
+    width: 1000px;
+    margin-left: 10vw;
+  }
+}

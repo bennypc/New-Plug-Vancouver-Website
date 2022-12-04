@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./subcss/about.css";
 
 const AboutPage = () => {
   return (
@@ -22,24 +23,26 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <h1 className="ml-6 my-4 text-black text-3xl font-bold">OUR STORY</h1>
+      <div className="about-container">
+        <h1 className="ml-6 my-4 text-black text-3xl font-bold">OUR STORY</h1>
 
-      <p className="text-lg ml-6 mr-8">
-        The Plug Vancouver was dreamed up in a small coffee shop in Kitsilano in
-        2019, with a goal of providing UBC students with the greatest events and
-        most exclusive opportunities we could create. From humble beginnings of
-        $50 pizza giveaways and our original Weekly Breakdowns, we've grown to
-        reach new levels- while keeping the elements UBC students have loved
-        most.
-      </p>
+        <p className="text-lg ml-6 mr-8">
+          The Plug Vancouver was dreamed up in a small coffee shop in Kitsilano
+          in 2019, with a goal of providing UBC students with the greatest
+          events and most exclusive opportunities we could create. From humble
+          beginnings of $50 pizza giveaways and our original Weekly Breakdowns,
+          we've grown to reach new levels- while keeping the elements UBC
+          students have loved most.
+        </p>
 
-      <p className="text-lg ml-6 mr-8 my-4">
-        So where are we now? Over the years we've expanded our craft to reach
-        all young people in Vancouver who are interested in urban media,
-        culture, and events. We throw the parties you'll keep coming back to,
-        collaborate with the most exciting groups, and create the content you
-        won't want to miss.
-      </p>
+        <p className="text-lg ml-6 mr-8 my-4">
+          So where are we now? Over the years we've expanded our craft to reach
+          all young people in Vancouver who are interested in urban media,
+          culture, and events. We throw the parties you'll keep coming back to,
+          collaborate with the most exciting groups, and create the content you
+          won't want to miss.
+        </p>
+      </div>
     </div>
   );
 };
