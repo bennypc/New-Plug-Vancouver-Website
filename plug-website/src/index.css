@@ -58,11 +58,15 @@ body {
 }
 
 .article-category {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   font-family: 'Helvetica', 'Arial', sans-serif;
   color: #a6a6a6;
-  margin-bottom:2px;
+  margin-bottom:4px;
+}
+
+.article-info {
+  margin-top: 4px;
 }
 
 .burger {
@@ -86,8 +90,13 @@ body {
 
 @media only screen and (min-width: 480px) {
   .article-heading {
-    font-size: 26px;
-    line-height: 22px;
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .article-info {
+    font-size: 16px;
+    line-height: 32px;
   }
 
   .thumbnail {

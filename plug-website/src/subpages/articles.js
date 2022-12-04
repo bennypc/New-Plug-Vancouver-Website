@@ -56,7 +56,7 @@ const ArticlesPage = () => {
   return (
     <div className="mx-2">
       <div className="text-center">
-        <h1 className="my-6 text-black text-center text-5xl italic font-bold">
+        <h1 className="mt-4 mb-2 text-black text-center text-5xl italic font-bold">
           OUR STORIES
         </h1>
 

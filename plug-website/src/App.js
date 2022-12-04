@@ -168,7 +168,7 @@ function Articles() {
               <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                 COMMUNITY, COFFEE, AND CLASSY EYEWEAR
               </h2>
-              <h2 className="italic resize-none align-middle text-xs font-[600]">
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 19.11.2022
               </h2>
             </div>
@@ -195,7 +195,7 @@ function Articles() {
                 VANCOUVER'S NEWEST GIRL GROUP
               </h2>
 
-              <h2 className="italic resize-none align-middle text-xs font-[600]">
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 13.11.2022
               </h2>
             </div>
@@ -223,7 +223,7 @@ function Articles() {
                 DRAKE: HONESTLY, WHICH SONG IS THIS?
               </h2>
 
-              <h2 className="italic resize-none align-middle text-xs font-[600]">
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 23.10.2022
               </h2>
             </div>
