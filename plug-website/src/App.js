@@ -349,7 +349,7 @@ function Culture() {
         <div id="two">
           <img
             className="px-4 mb-8"
-            src={require("./images/ldoc-banner.jpg")}
+            src={require("./images/ldoc-banner-reduced.jpg")}
             alt="team"
           ></img>
         </div>
@@ -456,19 +456,34 @@ function FeaturedVideos() {
         centerSlidePercentage={60}
       >
         <div>
-          <img src={require("./images/video-thumbnails/1.png")} alt="hello1" />
+          <img
+            src={require("./images/video-thumbnails/compressed/1-c.jpg")}
+            alt="hello1"
+          />
         </div>
         <div>
-          <img src={require("./images/video-thumbnails/2.png")} alt="hello2" />
+          <img
+            src={require("./images/video-thumbnails/compressed/2-c.jpg")}
+            alt="hello2"
+          />
         </div>
         <div>
-          <img src={require("./images/video-thumbnails/3.png")} alt="hello3" />
+          <img
+            src={require("./images/video-thumbnails/compressed/3-c.jpg")}
+            alt="hello3"
+          />
         </div>
         <div>
-          <img src={require("./images/video-thumbnails/4.png")} alt="hello4" />
+          <img
+            src={require("./images/video-thumbnails/compressed/4-c.jpg")}
+            alt="hello4"
+          />
         </div>
         <div>
-          <img src={require("./images/video-thumbnails/5.png")} alt="hello5" />
+          <img
+            src={require("./images/video-thumbnails/compressed/5-c.jpg")}
+            alt="hello5"
+          />
         </div>
       </Carousel>
     </div>
@@ -810,10 +825,10 @@ function Footer() {
           </a>
         </div>
         <div className="ml-[20px] flex-col align-middle items-center">
-          <div className="flex mt-5 h-[30px] justify-left items-center mt-8 ">
+          <div className="flex h-[30px] justify-left items-center mt-8 ">
             <a href="https://www.instagram.com/plugvancouver/" target="_blank">
               <img
-                className="w-[30px] h-auto mr-1"
+                className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
@@ -824,7 +839,7 @@ function Footer() {
               target="_blank"
             >
               <img
-                className="w-[30px] h-auto mr-1"
+                className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
@@ -835,7 +850,7 @@ function Footer() {
               target="_blank"
             >
               <img
-                className="h-[30px] w-auto mr-1"
+                className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
@@ -846,7 +861,7 @@ function Footer() {
               target="_blank"
             >
               <img
-                className="h-[30px] w-auto mr-1"
+                className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/facebook.png")}
                 alt="Facebook logo"
               />
@@ -857,7 +872,7 @@ function Footer() {
               target="_blank"
             >
               <img
-                className="h-[30px] w-auto mr-1"
+                className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/linkedin.png")}
                 alt="LinkedIn logo"
               />
@@ -869,14 +884,14 @@ function Footer() {
               target="_blank"
             >
               <img
-                className="h-[30px] w-auto mr-1"
+                className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/email.png")}
                 alt="Email logo"
               />
             </a>
           </div>
 
-          <div className="flex justify-center mt-1">
+          <div className="flex justify-center mt-1 lg:mt-4">
             <h1 className="text-white">
               <a className="text-white font-bold" href="/">
                 HOME{" "}

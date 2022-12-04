@@ -192,7 +192,7 @@ const ArticlesPage = () => {
               <div className="ml-2">
                 <img
                   className="thumbnail"
-                  src={require("../images/thumbnails/safeandsound.png")}
+                  src={require("../images/thumbnails/safeandsound.jpg")}
                   alt="naduh"
                 />
               </div>
@@ -222,7 +222,7 @@ const ArticlesPage = () => {
               <div className="ml-2">
                 <img
                   className="thumbnail"
-                  src={require("../images/thumbnails/michelin.png")}
+                  src={require("../images/thumbnails/michelin.jpg")}
                   alt="naduh"
                 />
               </div>
@@ -252,7 +252,7 @@ const ArticlesPage = () => {
               <div className="ml-2">
                 <img
                   className="thumbnail"
-                  src={require("../images/thumbnails/2023.png")}
+                  src={require("../images/thumbnails/2023.jpg")}
                   alt="naduh"
                 />
               </div>
@@ -282,7 +282,7 @@ const ArticlesPage = () => {
               <div className="ml-2">
                 <img
                   className="thumbnail"
-                  src={require("../images/thumbnails/vfw.png")}
+                  src={require("../images/thumbnails/vfw.jpg")}
                   alt="naduh"
                 />
               </div>
