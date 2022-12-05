@@ -17,6 +17,7 @@
 .profile-card:hover {
   border-radius: 10px;
   height: 200px;
+  margin-top: 60px;
 }
 
 .profile-card .profile-img {
