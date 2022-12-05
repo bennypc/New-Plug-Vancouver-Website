@@ -88,13 +88,13 @@ const ArticlesPage = () => {
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   LIFESTYLE
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
                   COMMUNITY, COFFEE, AND CLASSY EYEWEAR
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 19.11.2022
                 </h2>
               </div>
@@ -118,13 +118,13 @@ const ArticlesPage = () => {
           <a href="/articles/meet-naduh">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   MUSIC
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                   MEET NADUH, VANCOUVER'S NEWEST GIRL GROUP
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 13.11.2022
                 </h2>
               </div>
@@ -148,13 +148,13 @@ const ArticlesPage = () => {
           <a href="/articles/honestly-nevermind">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   MUSIC
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                   HONESTLY, WHICH SONG IS THIS?
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 23.10.2022
                 </h2>
               </div>
@@ -178,13 +178,13 @@ const ArticlesPage = () => {
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   EVENTS
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                   BEST MOMENTS AT VANCOUVER'S SAFE & SOUND FESTIVAL
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 14.10.2022
                 </h2>
               </div>
@@ -208,13 +208,13 @@ const ArticlesPage = () => {
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   LIFESTYLE
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                   TOP 10 NEW MICHELIN STAR RESTAURANTS IN VANCOUVER
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 07.10.2022
                 </h2>
               </div>
@@ -238,13 +238,13 @@ const ArticlesPage = () => {
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   LIFESTYLE
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                   YOUR NEW YEAR PLANS AND WHAT TO BRING
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 07.10.2022
                 </h2>
               </div>
@@ -268,13 +268,13 @@ const ArticlesPage = () => {
           <a href="/articles/community-coffee-and-classy-eyewear">
             <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
               <div className="width-[100px] resize-none align-middle">
-                <h3 className="resize-none align-middle italic leading-4">
+                <h3 className="article-category resize-none align-middle italic leading-4">
                   FASHION
                 </h3>
                 <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
                   VANCOUVER FASHION WEEK FOR THE FASHION WEAK
                 </h2>
-                <h2 className="resize-none align-middle text-xs font-[600]">
+                <h2 className="italic resize-none align-middle text-xs font-[600]">
                   LAUREN BENSON | 07.10.2022
                 </h2>
               </div>

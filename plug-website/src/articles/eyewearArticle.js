@@ -24,7 +24,7 @@ const eyewearArticle = () => {
   return (
     <div className="mx-6">
       <div className="article-container">
-        <p className="text-xl mt-6 italic">LIFESTYLE</p>
+        <p className="article-topic mt-6 italic">LIFESTYLE</p>
 
         <h1 className="text-4xl mb-1 mt-1">
           Community, Coffee, and Classy Eyewear
@@ -34,7 +34,7 @@ const eyewearArticle = () => {
           The latest summer styles you need to keep an eye on
         </h2>
 
-        <p className="text-sm mt-2 italic font-medium">
+        <p className="text-sm mt-2 italic font-[600]">
           LAUREN BENSON | 19.11.2022
         </p>
 

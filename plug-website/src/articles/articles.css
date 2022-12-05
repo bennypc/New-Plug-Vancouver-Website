@@ -13,8 +13,27 @@
   height: 100%;
 }
 
+.article-category {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #a6a6a6;
+  margin-bottom: 4px;
+}
+
+.article-topic {
+  font-weight: 700;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #a6a6a6;
+  font-size: 22px;
+}
+
 .article-heading {
   height: 60px;
+}
+
+.article-info {
+  margin-top: 4px;
 }
 
 @media only screen and (min-width: 1300px) {

@@ -5,7 +5,7 @@ const naduhArticle = () => {
   return (
     <div className="mx-6">
       <div className="article-container">
-        <p className="text-xl mt-6 italic">MUSIC</p>
+        <p className="article-topic mt-6 italic">MUSIC</p>
 
         <h1 className="text-4xl mb-1 mt-1">
           Meet NADUH, Vancouver’s Newest Girl Group
@@ -15,7 +15,7 @@ const naduhArticle = () => {
           The “spicier Spice Girls” you didn’t know you needed
         </h2>
 
-        <p className="text-sm mt-2 italic font-medium">
+        <p className="text-sm mt-2 italic font-[600]">
           LAUREN BENSON | 13.11.2022
         </p>
 

@@ -38,6 +38,24 @@ body {
   width: 175px;
 }
 
+.mobile-banner {
+  display: block;
+}
+
+.desktop-banner {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mobile-banner {
+    display: none;
+  }
+
+  .desktop-banner {
+    display: block;
+  }
+}
+
 .thumbnail {
   object-fit: cover;
   width: 120px;

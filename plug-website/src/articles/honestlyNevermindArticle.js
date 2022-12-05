@@ -5,7 +5,7 @@ const honestlyNevermindArticle = () => {
   return (
     <div className="mx-6">
       <div className="article-container">
-        <p className="text-xl mt-6 italic">MUSIC</p>
+        <p className="article-topic mt-6 italic">MUSIC</p>
 
         <h1 className="text-4xl mb-1 mt-1">Honestly, Which Song is This?</h1>
 
@@ -13,7 +13,7 @@ const honestlyNevermindArticle = () => {
           Why “Honestly, Nevermind” has me missing “the old Drake”
         </h2>
 
-        <p className="text-sm mt-2 italic font-medium">
+        <p className="text-sm mt-2 italic font-[600]">
           LAUREN BENSON | 23.10.2022
         </p>
 

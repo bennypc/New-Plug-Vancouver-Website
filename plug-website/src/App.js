@@ -454,37 +454,70 @@ function FeaturedVideos() {
         className="mt-4 mb-8"
         autoPlay
         centerSlidePercentage={60}
+        infiniteLoop={true}
       >
-        <div>
-          <img
-            src={require("./images/video-thumbnails/compressed/1-c.jpg")}
-            alt="hello1"
-          />
-        </div>
-        <div>
-          <img
-            src={require("./images/video-thumbnails/compressed/2-c.jpg")}
-            alt="hello2"
-          />
-        </div>
-        <div>
-          <img
-            src={require("./images/video-thumbnails/compressed/3-c.jpg")}
-            alt="hello3"
-          />
-        </div>
-        <div>
-          <img
-            src={require("./images/video-thumbnails/compressed/4-c.jpg")}
-            alt="hello4"
-          />
-        </div>
-        <div>
-          <img
-            src={require("./images/video-thumbnails/compressed/5-c.jpg")}
-            alt="hello5"
-          />
-        </div>
+        <a
+          href="https://www.instagram.com/reel/CkuFW3tOsmy/?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/4-c.jpg")}
+              alt="bundafest-vid"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.instagram.com/reel/ClRqjsHDYZq/?igshid=YmMyMTA2M2Y=
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/1-c.jpg")}
+              alt="rating-3"
+            />
+          </div>
+        </a>
+        <a
+          href="https://youtu.be/3e1FfEKiniQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/5-c.jpg")}
+              alt="ldoc-vid"
+            />
+          </div>
+        </a>
+        <a
+          href="https://www.instagram.com/reel/CjGgDh_Olfb/?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/3-c.jpg")}
+              alt="rating-2"
+            />
+          </div>
+        </a>
+        <a
+          href="https://www.instagram.com/reel/CiyGonzNGW8/?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/2-c.jpg")}
+              alt="rating-1"
+            />
+          </div>
+        </a>
       </Carousel>
     </div>
   );
@@ -735,14 +768,23 @@ function ImageSlideshow() {
     //   </Carousel>
     // </div>
     <div>
-      <img src={require("./images/ldoc-banner.jpg")} alt="" />
-      <div className="absolute flex justify-around top-[27vw] right-[9vw] md:right-[15vw] mt-[102px] md:mt-24">
+      <img
+        className="mobile-banner"
+        src={require("./images/ldoc-banner-mobile.jpg")}
+        alt=""
+      />
+      <img
+        className="desktop-banner"
+        src={require("./images/ldoc-banner-reduced.jpg")}
+        alt=""
+      />
+      {/* <div className="absolute flex justify-around top-[27vw] right-[9vw] md:right-[15vw] mt-[102px] md:mt-24">
         <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
-          {/* <button className="top-banner-button mx-2 bg-white md:px-[12px] md:py-[3px] lg:px-[24px] lg:py-[6px] px-[5px] py-[3px] text-[8px] md:text-sm">
+          <button className="top-banner-button mx-2 bg-white md:px-[12px] md:py-[3px] lg:px-[24px] lg:py-[6px] px-[5px] py-[3px] text-[8px] md:text-sm">
             RSVP NOW
-          </button> */}
+          </button>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
