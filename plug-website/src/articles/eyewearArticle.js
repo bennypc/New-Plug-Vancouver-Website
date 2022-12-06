@@ -22,21 +22,29 @@ import {
 
 const eyewearArticle = () => {
   return (
-    <div className="mx-6">
+    <div className="mx-6 mt-6 ">
       <div className="article-container">
-        <p className="article-topic mt-6 italic">LIFESTYLE</p>
+        <a href="/articles">
+          <button className="astext">
+            <p className="article-topic italic">LIFESTYLE</p>
+          </button>
+        </a>
 
         <h1 className="text-4xl mb-1 mt-1">
           Community, Coffee, and Classy Eyewear
         </h1>
 
-        <h2 className="text-lg font-medium italic">
+        <h2 className="text-lg font-medium italic mb-1">
           The latest summer styles you need to keep an eye on
         </h2>
 
-        <p className="text-sm mt-2 italic font-[600]">
-          LAUREN BENSON | 19.11.2022
-        </p>
+        <a href="/articles/lauren-benson">
+          <button className="astext">
+            <p className="text-sm italic font-[600]">
+              LAUREN BENSON | 19.11.2022
+            </p>
+          </button>
+        </a>
 
         {/* <Popup className="rounded-md" trigger={<button > <img className="width-[32px]" src={require("../images/logos/social/share-button.png")} /></button>} modal>
 <div className="rounded-md">

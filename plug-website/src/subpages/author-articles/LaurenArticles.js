@@ -8,9 +8,9 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 import React, { useState } from "react";
-import "../articles/articles.css";
+import "../../articles/articles.css";
 
-const ArticlesPage = () => {
+const LaurenArticles = () => {
   //const [showAll, setShowAll] = React.useState(true);
   const [showMusic, setsShowMusic] = React.useState(true);
   const [showEvents, setShowEvents] = React.useState(true);
@@ -93,73 +93,28 @@ const ArticlesPage = () => {
 
   return (
     <div className="mx-2">
-      <div className="text-center">
-        <h1 className="mt-4 mb-2 text-black text-center text-5xl italic font-bold">
-          OUR STORIES
-        </h1>
+      <div className="author-container flex justify-center mt-8">
+        <div className="flex-col flex justify-center m-auto">
+          <div className="flex justify-center mb-2 md:mb-4">
+            <img
+              className="author-page-image rounded-full flex  justify-center"
+              src={require("../../articles/article_media/authors/laurenbenson.png")}
+              alt="lauren"
+            />
+          </div>
 
-        <div className="whitespace-pre-wrap break-normal">
-          <ThemeProvider theme={theme}>
-            <a href="#all">
-              <Button
-                style={styles.button}
-                variant="contained"
-                onClick={onClickAll}
-              >
-                ALL
-              </Button>
-            </a>
-            <a href="#music">
-              <Button
-                style={styles.button}
-                variant="contained"
-                onClick={onClickMusic}
-              >
-                MUSIC
-              </Button>
-            </a>
-            <Button
-              style={styles.button}
-              variant="contained"
-              onClick={onClickEvents}
-            >
-              EVENTS
-            </Button>
-            <Button
-              style={styles.button}
-              variant="contained"
-              onClick={onClickFashion}
-            >
-              FASHION
-            </Button>
-            <Button
-              style={styles.button}
-              variant="contained"
-              onClick={onClickLifestyle}
-            >
-              LIFESTYLE
-            </Button>
-          </ThemeProvider>
-
-          {/* <span className="mx-2 category" onClick={onClickAll}>
-            ALL
-          </span>
-          <span className="mx-2 category" onClick={onClickMusic}>
-            MUSIC
-          </span>
-          <span className="mx-2 category" onClick={onClickEvents}>
-            EVENTS
-          </span>
-          <span className="mx-2 category" onClick={onClickFashion}>
-            FASHION
-          </span>
-          <span className="mx-2 category" onClick={onClickLifestyle}>
-            LIFESTYLE
-          </span> */}
+          <div className="flex align-middle justify-center flex-col text-center">
+            <h2 className="text-2xl md:text-4xl md:mb-1">
+              <span>Lauren Benson</span>
+            </h2>
+            <h2 className="text-xl md:text-4xl">
+              <span className="font-normal">Editorial Director</span>
+            </h2>
+          </div>
         </div>
       </div>
 
-      <div className="text-center flex justify-center mt-2 mb-8 articles-container">
+      <div className="text-center flex justify-center articles-container">
         <div className="text-left">
           <div
             className={`border-solid border-b-2 mx-5 ${
@@ -167,7 +122,7 @@ const ArticlesPage = () => {
             }`}
           >
             <a href="/articles/community-coffee-and-classy-eyewear">
-              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+              <div className="flex mx-[2px] mt-[20px] md:mt-[10px] mb-[10px] justify-between">
                 <div className="width-[100px] resize-none align-middle">
                   <h3 className="article-category resize-none align-middle italic leading-4">
                     LIFESTYLE
@@ -183,7 +138,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../images/thumbnails/eyewear.png")}
+                    src={require("../../images/thumbnails/eyewear.png")}
                     alt="glasses"
                   />
                 </div>
@@ -213,7 +168,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../images/thumbnails/naduh.jpg")}
+                    src={require("../../images/thumbnails/naduh.jpg")}
                     alt="naduh"
                   />
                 </div>
@@ -243,7 +198,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../articles/article_media/honestlynevermind.png")}
+                    src={require("../../articles/article_media/honestlynevermind.png")}
                     alt="naduh"
                   />
                 </div>
@@ -273,7 +228,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../images/thumbnails/safeandsound.jpg")}
+                    src={require("../../images/thumbnails/safeandsound.jpg")}
                     alt="naduh"
                   />
                 </div>
@@ -303,7 +258,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../images/thumbnails/michelin.jpg")}
+                    src={require("../../images/thumbnails/michelin.jpg")}
                     alt="naduh"
                   />
                 </div>
@@ -333,7 +288,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../images/thumbnails/2023.jpg")}
+                    src={require("../../images/thumbnails/2023.jpg")}
                     alt="naduh"
                   />
                 </div>
@@ -363,7 +318,7 @@ const ArticlesPage = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../images/thumbnails/vfw.jpg")}
+                    src={require("../../images/thumbnails/vfw.jpg")}
                     alt="naduh"
                   />
                 </div>
@@ -376,4 +331,4 @@ const ArticlesPage = () => {
   );
 };
 
-export default ArticlesPage;
+export default LaurenArticles;

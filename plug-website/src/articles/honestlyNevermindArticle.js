@@ -13,9 +13,13 @@ const honestlyNevermindArticle = () => {
           Why “Honestly, Nevermind” has me missing “the old Drake”
         </h2>
 
-        <p className="text-sm mt-2 italic font-[600]">
-          LAUREN BENSON | 23.10.2022
-        </p>
+        <a href="/articles/lauren-benson">
+          <button className="astext">
+            <p className="text-sm italic font-[600]">
+              LAUREN BENSON | 23.10.2022
+            </p>
+          </button>
+        </a>
 
         <img
           className="my-6"

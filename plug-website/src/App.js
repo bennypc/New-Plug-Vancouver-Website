@@ -28,6 +28,7 @@ import DashboardSettings from "./dashboard/DashboardSettings";
 import DashboardCalendar from "./dashboard/DashboardCalendar";
 import DashboardTeams from "./dashboard/DashboardTeams";
 import AboutPage from "./subpages/About";
+import LaurenArticles from "./subpages/author-articles/LaurenArticles";
 
 function Logo() {
   return (
@@ -1037,6 +1038,10 @@ function App() {
               }
             />
             <Route path="/articles" element={<ArticlesPage />} />
+            <Route
+              path="/articles/lauren-benson"
+              element={<LaurenArticles />}
+            />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />

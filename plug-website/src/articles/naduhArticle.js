@@ -15,9 +15,13 @@ const naduhArticle = () => {
           The “spicier Spice Girls” you didn’t know you needed
         </h2>
 
-        <p className="text-sm mt-2 italic font-[600]">
-          LAUREN BENSON | 13.11.2022
-        </p>
+        <a href="/articles/lauren-benson">
+          <button className="astext">
+            <p className="text-sm italic font-[600]">
+              LAUREN BENSON | 13.11.2022
+            </p>
+          </button>
+        </a>
 
         <img
           className="mt-6 mb-2"
