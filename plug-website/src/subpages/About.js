@@ -21,8 +21,6 @@ const AboutPage = () => {
     message: message,
   };
   const sendEmail = (e) => {
-    e.preventDefault();
-
     emailjs
       .send("service_38dsvu9", templateID, templateParams, "JYTHfEmzwQQJLqNA2")
       .then(
@@ -33,6 +31,8 @@ const AboutPage = () => {
           console.log("FAILED...", error);
         }
       );
+
+    window.location.href = "/about";
   };
 
   return (
