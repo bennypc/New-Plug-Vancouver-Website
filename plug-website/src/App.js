@@ -23,6 +23,7 @@ import VancouverVintageArticle from "./articles/VancouverVintageArticle";
 import BlockchainBottleArticle from "./articles/BlockchainBottleArticle";
 import VFWTrendsArticle from "./articles/VFWTrendsArticle";
 import WeeklyBreakdownDecember4Article from "./articles/WeeklyBreakdownDecember4Article";
+import ChalanseArticle from "./articles/ChalanseArticle";
 
 import "slick-carousel/slick/slick-theme.css";
 import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
@@ -34,6 +35,7 @@ import DashboardCalendar from "./dashboard/DashboardCalendar";
 import DashboardTeams from "./dashboard/DashboardTeams";
 import AboutPage from "./subpages/About";
 import LaurenArticles from "./subpages/author-articles/LaurenArticles";
+import ZoieArticles from "./subpages/author-articles/ZoieArticles";
 
 function Logo() {
   return (
@@ -198,7 +200,7 @@ function Articles() {
         </a>
       </div>
       <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/community-coffee-and-classy-eyewear">
+        <a href="/articles/chalanse">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
               <h3 className="article-category resize-none align-middle italic leading-4">
@@ -215,7 +217,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/chanlese/chanlese.jpeg")}
+                src={require("./articles/article_media/chalanse/chalanse.jpeg")}
                 alt="glasses"
               />
             </div>
@@ -1035,6 +1037,7 @@ function App() {
               path="/articles/lauren-benson"
               element={<LaurenArticles />}
             />
+            <Route path="/articles/zoie-mcclymont" element={<ZoieArticles />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />
@@ -1062,10 +1065,7 @@ function App() {
               path="/articles/weekly-breakdown-december-4"
               element={<WeeklyBreakdownDecember4Article />}
             />
-            <Route
-              path="/articles/chalanse"
-              element={<VancouverVintageArticle />}
-            />
+            <Route path="/articles/chalanse" element={<ChalanseArticle />} />
             <Route
               path="/articles/vancouver-fashion-week-trends"
               element={<VFWTrendsArticle />}

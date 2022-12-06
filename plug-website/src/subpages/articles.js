@@ -196,6 +196,36 @@ const ArticlesPage = () => {
               showFashion ? undefined : "hidden"
             }`}
           >
+            <a href="/articles/chalanse">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    FASHION
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
+                    CHANLESE: FASHION THAT EMPOWERS - THE BRAND TO WATCH
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    ZOIE MCCLYMONT | 04.12.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require("../articles/article_media/chalanse/chalanse.jpeg")}
+                    alt="glasses"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            className={`border-solid border-b-2 mx-5 ${
+              showFashion ? undefined : "hidden"
+            }`}
+          >
             <a href="/articles/vancouver-fashion-week-trends">
               <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
                 <div className="width-[100px] resize-none align-middle">
