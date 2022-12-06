@@ -10,6 +10,28 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const AboutPage = () => {
+  const [status, setStatus] = useState("Submit");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    let result = await response.json();
+    alert(result.status);
+  };
+
   return (
     <div className="flex justify-center">
       <div className="text-center">
@@ -57,11 +79,31 @@ const AboutPage = () => {
         </p>
 
         <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[38px] md:text-5xl italic font-bold">
+          CONTACT US
+        </h1>
+
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" required />
+          </div>
+          <div>
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" required />
+          </div>
+          <div>
+            <label htmlFor="message">Message:</label>
+            <textarea className="" id="message" required />
+          </div>
+          <button type="submit">{status}</button>
+        </form>
+
+        <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[38px] md:text-5xl italic font-bold">
           OUR PEOPLE
         </h1>
 
-        <div className="main flex flex-wrap mt-[10px] mb-[40px]">
-          <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+        <div className="flex justify-center">
+          <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:mt-8 md:mx-8 md:w-[180px] md:h-[180px]">
             <div className="profile-img">
               <img
                 src={require("../images/team-members/kalith.jpg")}
@@ -86,7 +128,9 @@ const AboutPage = () => {
               </div>
             </div>
           </div>
+        </div>
 
+        <div className="main flex flex-wrap mb-[40px]">
           <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
             <div className="profile-img">
               <img
@@ -124,32 +168,6 @@ const AboutPage = () => {
               <h3>Kevin</h3>
               <h3>You</h3>
               <p>VP Events</p>
-
-              <div className="social-links ml-2 md:ml-3">
-                <a href="#">
-                  <FontAwesomeIcon icon={faInstagram} />
-                </a>
-                <a href="#">
-                  <FontAwesomeIcon icon={faLinkedin} />
-                </a>
-                <a href="#">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-            <div className="profile-img">
-              <img
-                src={require("../images/team-members/sean.jpg")}
-                alt="sean"
-              />
-            </div>
-            <div className="caption mt-2 md:mt-0">
-              <h3>Sean</h3>
-              <h3>Dunphy</h3>
-              <p>VP Business Development</p>
 
               <div className="social-links ml-2 md:ml-3">
                 <a href="#">
