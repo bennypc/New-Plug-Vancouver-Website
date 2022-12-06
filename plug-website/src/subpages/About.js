@@ -37,26 +37,17 @@ const AboutPage = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="text-center">
-        {/* <h1 className="my-6 text-black text-center text-5xl italic font-bold">
-          ABOUT
-        </h1> */}
-
-        {/* <div className="wb-strip mb-4 h-[200px] sm:h-[350px] lg:h-[500px]">
-          <img
-            className="about-strip-image"
-            src={require("../images/about-strip.png")}
-            alt="crowd"
-          />
-
-          <h2 className="wb-strip-text top-8 text-2xl font-bold lg:mt-24">
-            a blurb about what we do, our mission, and something that sparks
-            interest - like a fact!
-          </h2>
-        </div> */}
-      </div>
-
       <div className="about-container">
+        <div className="text-center">
+          <div className="wb-strip mb-4 h-full sm:h-[450px] lg:h-[750px] lg:my-12">
+            <img
+              className="about-strip-image"
+              src={require("../images/plugmobile.jpg")}
+              alt="crowd"
+            />
+          </div>
+        </div>
+
         <h1 className="mt-4 md:mt-8 mb-8 text-black text-center text-[40px] md:text-6xl italic font-bold">
           UBC BORN. VANCOUVER BRED.
         </h1>
