@@ -128,7 +128,7 @@ const ZoieArticles = () => {
                     FASHION
                   </h3>
                   <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
-                    CHANLESE: FASHION THAT EMPOWERS - THE BRAND TO WATCH
+                    CHALANSE: FASHION THAT EMPOWERS - THE BRAND TO WATCH
                   </h2>
                   <h2 className="italic resize-none align-middle text-xs font-[600]">
                     ZOIE MCCLYMONT | 04.12.2022
