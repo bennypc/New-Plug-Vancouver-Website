@@ -188,7 +188,7 @@ const BlockchainBottleArticle = () => {
           <h2 className="">
             <span>Lauren Benson</span>
             <br />
-            <span className="font-normal">Creative Director</span>
+            <span className="font-normal">Editorial Director</span>
           </h2>
         </div>
       </div>

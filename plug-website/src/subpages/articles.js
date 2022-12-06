@@ -163,6 +163,36 @@ const ArticlesPage = () => {
         <div className="text-left">
           <div
             className={`border-solid border-b-2 mx-5 ${
+              showFashion ? undefined : "hidden"
+            }`}
+          >
+            <a href="/articles/community-coffee-and-classy-eyewear">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    FASHION
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
+                    THE FORECAST: THE TRENDS TO WATCH, ACCORDING TO VFW
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 03.12.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require("../articles/article_media/vfwtrends/vfwtrendsbanner.jpg")}
+                    alt="glasses"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            className={`border-solid border-b-2 mx-5 ${
               showLifestyle ? undefined : "hidden"
             }`}
           >
@@ -285,7 +315,7 @@ const ArticlesPage = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showMusic ? undefined : "hidden"
+              showFashion ? undefined : "hidden"
             }`}
           >
             <a href="/articles/vancouver-vintage">
@@ -317,7 +347,7 @@ const ArticlesPage = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showMusic ? undefined : "hidden"
+              showEvents ? undefined : "hidden"
             }`}
           >
             <a href="/articles/blockchain-bottle">

@@ -21,6 +21,8 @@ import NaduhArticle from "./articles/naduhArticle";
 import KardinalArticle from "./articles/KardinalArticle";
 import VancouverVintageArticle from "./articles/VancouverVintageArticle";
 import BlockchainBottleArticle from "./articles/BlockchainBottleArticle";
+import VFWTrendsArticle from "./articles/VFWTrendsArticle";
+import WeeklyBreakdownDecember4Article from "./articles/WeeklyBreakdownDecember4Article";
 
 import "slick-carousel/slick/slick-theme.css";
 import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
@@ -800,16 +802,23 @@ function ImageSlideshow() {
     //   </Carousel>
     // </div>
     <div>
-      <img
-        className="mobile-banner"
-        src={require("./images/ldoc-banner-mobile.jpg")}
-        alt=""
-      />
-      <img
-        className="desktop-banner"
-        src={require("./images/ldoc-banner-reduced.jpg")}
-        alt=""
-      />
+      <a
+        href="https://www.ticketweb.ca/event/plug-presents-ldoc-40-winter-celebrities-nightclub-tickets/12708925"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          className="mobile-banner"
+          src={require("./images/LDOC-Website-Banner.jpg")}
+          alt=""
+        />
+        <img
+          className="desktop-banner"
+          src={require("./images/ldoc-banner-reduced.jpg")}
+          alt=""
+        />
+      </a>
+
       {/* <div className="absolute flex justify-around top-[27vw] right-[9vw] md:right-[15vw] mt-[102px] md:mt-24">
         <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
           <button className="top-banner-button mx-2 bg-white md:px-[12px] md:py-[3px] lg:px-[24px] lg:py-[6px] px-[5px] py-[3px] text-[8px] md:text-sm">
@@ -1097,16 +1106,16 @@ function App() {
               element={<BlockchainBottleArticle />}
             />
             <Route
-              path="/articles/wb-1"
-              element={<VancouverVintageArticle />}
+              path="/articles/weekly-breakdown-december-4"
+              element={<WeeklyBreakdownDecember4Article />}
             />
             <Route
               path="/articles/chalanse"
               element={<VancouverVintageArticle />}
             />
             <Route
-              path="/articles/vancouver-fashion-week"
-              element={<VancouverVintageArticle />}
+              path="/articles/vancouver-fashion-week-trends"
+              element={<VFWTrendsArticle />}
             />
           </Route>
 
