@@ -173,6 +173,81 @@ function Articles() {
   return (
     <div id="latest-articles">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/weekly-breakdown-december-4">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                EVENTS
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                THE WEEKLY BREAKDOWN:DECEMBER 4TH-11TH
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 05.12.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./articles/article_media/wb-1/wb1-banner.jpg")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/community-coffee-and-classy-eyewear">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                FASHION
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                CHANLESE: FASHION THAT EMPOWERS - THE BRAND TO WATCH
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                ZOIE MCCLYMONT | 04.12.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./articles/article_media/chanlese/chanlese.jpeg")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/vancouver-fashion-week-trends">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                FASHION
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                THE FORECAST: THE TRENDS TO WATCH, ACCORDING TO VFW
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 03.12.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./articles/article_media/vfwtrends/vfwtrendsbanner.jpg")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/community-coffee-and-classy-eyewear">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -224,128 +299,6 @@ function Articles() {
           </div>
         </a>
       </div>
-
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/honestly-nevermind">
-          <div className="flex mx-[2px] my-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                MUSIC
-              </h3>
-
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                DRAKE: HONESTLY, WHICH SONG IS THIS?
-              </h2>
-
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 17.06.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/honestlynevermindsquare.jpg")}
-                alt="drake album review"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid mx-5">
-        <a href="/articles/kardinal">
-          <div className="flex mx-[2px] my-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                MUSIC
-              </h3>
-
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                CATCHING UP WITH KARDINAL
-              </h2>
-
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 06.06.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require("./images/thumbnails/kardinal.jpg")}
-                alt="kardinal interview"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      {/* <div className='border-solid border-b-2 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <a href="/">
-              <img className='thumbnail'  
-                src={require('./images/thumbnails/safeandsound.png')}
-                alt='safe and sound'/>
-            </a>
-          </div>
-
-          <div className='width-[100px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              BEST MOMENTS AT VANCOUVER'S SAFE & SOUND FESTIVAL
-            </h2>
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className='border-solid border-b-2 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail' 
-              src={require('./images/thumbnails/michelin.png')}
-              alt='golds gym logo'/>
-          </div>
-
-          <div className='width-[100px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              TOP 10 NEW MICHELIN STAR RESTAURANTS IN VANCOUVER
-            </h2>
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className='border-solid border-b-2 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail' 
-              src={require('./images/thumbnails/2023.png')}
-              alt='golds gym logo'/>
-          </div>
-
-          <div className='width-[80px] resize-none align-middle'>
-            <h2 className='resize-none align-middle'>
-              YOUR NEW YEAR PLANS AND WHAT TO BRING
-            </h2>
-          </div>
-        </div>
-      </div> */}
-
-      {/* <div className='border-solid mb-8 mx-8'>
-        <div className='flex mx-[2px] my-[20px] justify-between'>
-          <div className='mr-8'>
-            <img className='thumbnail' 
-              src={require('./images/thumbnails/vfw.png')}
-              alt='golds gym logo'/>
-          </div>
-
-          <div className='width-[80px] resize-none align- '>
-            <h2 className='resize-none align-middle'>
-              VANCOUVER FASHION WEEK FOR THE FASHION WEAK
-            </h2>
-          </div>
-        </div>
-      </div> */}
 
       <div className="w-[130px] h-6 ml-6 mr-auto text-left mt-6 mb-8">
         <a className="read-more" href="/articles">

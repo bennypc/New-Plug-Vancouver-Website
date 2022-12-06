@@ -118,6 +118,65 @@ const LaurenArticles = () => {
         <div className="text-left">
           <div
             className={`border-solid border-b-2 mx-5 ${
+              showEvents ? undefined : "hidden"
+            }`}
+          >
+            <a href="/articles/weekly-breakdown-december-4">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    EVENTS
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
+                    THE WEEKLY BREAKDOWN:DECEMBER 4TH-11TH
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 03.12.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require("../../articles/article_media/wb-1/wb1-banner.jpg")}
+                    alt="glasses"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            className={`border-solid border-b-2 mx-5 ${
+              showFashion ? undefined : "hidden"
+            }`}
+          >
+            <a href="/articles/vancouver-fashion-week-trends">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    FASHION
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
+                    THE FORECAST: THE TRENDS TO WATCH, ACCORDING TO VFW
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 03.12.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require("../../articles/article_media/vfwtrends/vfwtrendsbanner.jpg")}
+                    alt="glasses"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className={`border-solid border-b-2 mx-5 ${
               showLifestyle ? undefined : "hidden"
             }`}
           >
@@ -208,88 +267,30 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showEvents ? undefined : "hidden"
+              showMusic ? undefined : "hidden"
             }`}
           >
-            <a href="/articles/community-coffee-and-classy-eyewear">
-              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <a href="/articles/kardinal">
+              <div className="flex mx-[2px] my-[10px] justify-between">
                 <div className="width-[100px] resize-none align-middle">
                   <h3 className="article-category resize-none align-middle italic leading-4">
-                    EVENTS
+                    MUSIC
                   </h3>
+
                   <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                    BEST MOMENTS AT VANCOUVER'S SAFE & SOUND FESTIVAL
+                    CATCHING UP WITH KARDINAL
                   </h2>
+
                   <h2 className="italic resize-none align-middle text-xs font-[600]">
-                    LAUREN BENSON | 14.10.2022
+                    LAUREN BENSON | 06.06.2022
                   </h2>
                 </div>
 
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../images/thumbnails/safeandsound.jpg")}
-                    alt="naduh"
-                  />
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            className={`border-solid border-b-2 mx-5 ${
-              showLifestyle ? undefined : "hidden"
-            }`}
-          >
-            <a href="/articles/community-coffee-and-classy-eyewear">
-              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-                <div className="width-[100px] resize-none align-middle">
-                  <h3 className="article-category resize-none align-middle italic leading-4">
-                    LIFESTYLE
-                  </h3>
-                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                    TOP 10 NEW MICHELIN STAR RESTAURANTS IN VANCOUVER
-                  </h2>
-                  <h2 className="italic resize-none align-middle text-xs font-[600]">
-                    LAUREN BENSON | 07.10.2022
-                  </h2>
-                </div>
-
-                <div className="ml-2">
-                  <img
-                    className="thumbnail"
-                    src={require("../../images/thumbnails/michelin.jpg")}
-                    alt="naduh"
-                  />
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div
-            className={`border-solid border-b-2 mx-5 ${
-              showLifestyle ? undefined : "hidden"
-            }`}
-          >
-            <a href="/articles/community-coffee-and-classy-eyewear">
-              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-                <div className="width-[100px] resize-none align-middle">
-                  <h3 className="article-category resize-none align-middle italic leading-4">
-                    LIFESTYLE
-                  </h3>
-                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                    YOUR NEW YEAR PLANS AND WHAT TO BRING
-                  </h2>
-                  <h2 className="italic resize-none align-middle text-xs font-[600]">
-                    LAUREN BENSON | 07.10.2022
-                  </h2>
-                </div>
-
-                <div className="ml-2">
-                  <img
-                    className="thumbnail"
-                    src={require("../../images/thumbnails/2023.jpg")}
-                    alt="naduh"
+                    src={require("../../images/thumbnails/kardinal.jpg")}
+                    alt="kardinal interview"
                   />
                 </div>
               </div>
@@ -301,25 +302,59 @@ const LaurenArticles = () => {
               showFashion ? undefined : "hidden"
             }`}
           >
-            <a href="/articles/community-coffee-and-classy-eyewear">
-              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <a href="/articles/vancouver-vintage">
+              <div className="flex mx-[2px] my-[10px] justify-between">
                 <div className="width-[100px] resize-none align-middle">
                   <h3 className="article-category resize-none align-middle italic leading-4">
                     FASHION
                   </h3>
+
                   <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                    VANCOUVER FASHION WEEK FOR THE FASHION WEAK
+                    VANCOUVER'S NEW VINTAGE SCENE
                   </h2>
+
                   <h2 className="italic resize-none align-middle text-xs font-[600]">
-                    LAUREN BENSON | 07.10.2022
+                    LAUREN BENSON | 31.05.2022
                   </h2>
                 </div>
 
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../images/thumbnails/vfw.jpg")}
-                    alt="naduh"
+                    src={require("../../articles/article_media/vancouver-vintage/top-banner.webp")}
+                    alt="vintage"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            className={`border-solid border-b-2 mx-5 ${
+              showEvents ? undefined : "hidden"
+            }`}
+          >
+            <a href="/articles/blockchain-bottle">
+              <div className="flex mx-[2px] my-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    EVENTS
+                  </h3>
+
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                    BLOCKCHAIN TO BOTTLE SERVICE
+                  </h2>
+
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 11.05.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require("../../articles/article_media/blockchain-bottle/koji-hand.webp")}
+                    alt="vintage"
                   />
                 </div>
               </div>
