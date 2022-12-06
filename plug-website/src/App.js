@@ -394,7 +394,9 @@ function BestMoments() {
   return (
     <div className="mb-0">
       <div className="flex justify-between align-middle">
-        <h1 className="text-xl font-bold ml-3">YOUR BEST MOMENTS</h1>
+        <h1 className="text-xl font-bold ml-3 md:text-3xl md:my-3 ">
+          YOUR BEST MOMENTS
+        </h1>
         <a
           href="https://www.facebook.com/theplugvancouver/photos/?ref=page_internal&tab=album"
           target="_blank"
@@ -435,7 +437,9 @@ function FeaturedVideos() {
   return (
     <div className="mb-0">
       <div className="flex justify-between align-middle">
-        <h1 className="text-xl font-bold ml-3">FEATURED VIDEOS</h1>
+        <h1 className="text-xl font-bold ml-3 md:text-3xl md:my-3">
+          FEATURED VIDEOS
+        </h1>
       </div>
 
       <Carousel
