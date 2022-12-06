@@ -16,7 +16,7 @@ const honestlyNevermindArticle = () => {
         <a href="/articles/lauren-benson">
           <button className="astext">
             <p className="text-sm italic font-[600]">
-              LAUREN BENSON | 23.10.2022
+              LAUREN BENSON | 17.06.2022
             </p>
           </button>
         </a>

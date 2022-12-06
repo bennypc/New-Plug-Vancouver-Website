@@ -18,6 +18,9 @@ import ArticlesPage from "./subpages/articles";
 import HonestlyNevermindArticle from "./articles/honestlyNevermindArticle";
 import EyewearArticle from "./articles/eyewearArticle";
 import NaduhArticle from "./articles/naduhArticle";
+import KardinalArticle from "./articles/KardinalArticle";
+import VancouverVintageArticle from "./articles/VancouverVintageArticle";
+import BlockchainBottleArticle from "./articles/BlockchainBottleArticle";
 
 import "slick-carousel/slick/slick-theme.css";
 import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
@@ -178,7 +181,7 @@ function Articles() {
                 COMMUNITY, COFFEE, AND CLASSY EYEWEAR
               </h2>
               <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 19.11.2022
+                LAUREN BENSON | 04.07.2022
               </h2>
             </div>
 
@@ -205,7 +208,7 @@ function Articles() {
               </h2>
 
               <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 13.11.2022
+                LAUREN BENSON | 22.06.2022
               </h2>
             </div>
 
@@ -220,7 +223,7 @@ function Articles() {
         </a>
       </div>
 
-      <div className="border-solid mx-5">
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/honestly-nevermind">
           <div className="flex mx-[2px] my-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -233,7 +236,7 @@ function Articles() {
               </h2>
 
               <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 23.10.2022
+                LAUREN BENSON | 17.06.2022
               </h2>
             </div>
 
@@ -242,6 +245,34 @@ function Articles() {
                 className="thumbnail"
                 src={require("./images/thumbnails/honestlynevermindsquare.jpg")}
                 alt="drake album review"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid mx-5">
+        <a href="/articles/kardinal">
+          <div className="flex mx-[2px] my-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                MUSIC
+              </h3>
+
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                CATCHING UP WITH KARDINAL
+              </h2>
+
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 06.06.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./images/thumbnails/kardinal.jpg")}
+                alt="kardinal interview"
               />
             </div>
           </div>
@@ -1054,6 +1085,28 @@ function App() {
             <Route
               path="/articles/honestly-nevermind"
               element={<HonestlyNevermindArticle />}
+            />
+            <Route path="/articles/kardinal" element={<KardinalArticle />} />
+            <Route
+              path="/articles/vancouver-vintage"
+              element={<VancouverVintageArticle />}
+            />
+
+            <Route
+              path="/articles/blockchain-bottle"
+              element={<BlockchainBottleArticle />}
+            />
+            <Route
+              path="/articles/wb-1"
+              element={<VancouverVintageArticle />}
+            />
+            <Route
+              path="/articles/chalanse"
+              element={<VancouverVintageArticle />}
+            />
+            <Route
+              path="/articles/vancouver-fashion-week"
+              element={<VancouverVintageArticle />}
             />
           </Route>
 

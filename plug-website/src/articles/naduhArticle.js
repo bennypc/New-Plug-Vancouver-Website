@@ -18,7 +18,7 @@ const naduhArticle = () => {
         <a href="/articles/lauren-benson">
           <button className="astext">
             <p className="text-sm italic font-[600]">
-              LAUREN BENSON | 13.11.2022
+              LAUREN BENSON | 22.06.2022
             </p>
           </button>
         </a>

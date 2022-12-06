@@ -41,7 +41,7 @@ const eyewearArticle = () => {
         <a href="/articles/lauren-benson">
           <button className="astext">
             <p className="text-sm italic font-[600]">
-              LAUREN BENSON | 19.11.2022
+              LAUREN BENSON | 04.07.2022
             </p>
           </button>
         </a>
