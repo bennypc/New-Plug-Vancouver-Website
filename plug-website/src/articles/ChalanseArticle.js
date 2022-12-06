@@ -211,21 +211,22 @@ const ChalanseArticle = () => {
       </div>
 
       <div className="border-solid border-b-[1px] mx-2 my-6" />
-
-      <div className="flex h-[75px] mb-4">
-        <img
-          className="rounded-full mr-6"
-          src={require("../images/team-members/zoie.jpg")}
-          alt="lauren"
-        />
-        <div className="flex align-middle justify-center flex-col">
-          <h2 className="">
-            <span>Zoie McClymont</span>
-            <br />
-            <span className="font-normal">Editorial Associate</span>
-          </h2>
+      <a href="/articles/zoie-mcclymont">
+        <div className="flex h-[75px] mb-4">
+          <img
+            className="rounded-full mr-6"
+            src={require("../images/team-members/zoie.jpg")}
+            alt="lauren"
+          />
+          <div className="flex align-middle justify-center flex-col">
+            <h2 className="">
+              <span>Zoie McClymont</span>
+              <br />
+              <span className="font-normal">Editorial Associate</span>
+            </h2>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   );
 };

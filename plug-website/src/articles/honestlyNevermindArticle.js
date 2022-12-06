@@ -4,8 +4,12 @@ import "./articles.css";
 const honestlyNevermindArticle = () => {
   return (
     <div className="mx-6">
-      <div className="article-container">
-        <p className="article-topic mt-6 italic">MUSIC</p>
+      <div className="article-container mt-6">
+        <a href="/articles">
+          <button className="astext">
+            <p className="article-topic  italic">MUSIC</p>
+          </button>
+        </a>
 
         <h1 className="text-4xl mb-1 mt-1">Honestly, Which Song is This?</h1>
 
@@ -127,21 +131,22 @@ const honestlyNevermindArticle = () => {
         </p>
 
         <div className="border-solid border-b-[1px] mx-2 my-6" />
-
-        <div className="flex h-[75px] mb-4">
-          <img
-            className="rounded-full mr-6"
-            src={require("./article_media/authors/laurenbenson.png")}
-            alt="lauren"
-          />
-          <div className="flex align-middle justify-center flex-col">
-            <h2 className="">
-              <span>Lauren Benson</span>
-              <br />
-              <span className="font-normal">Editorial Director</span>
-            </h2>
+        <a href="/articles/lauren-benson">
+          <div className="flex h-[75px] mb-4">
+            <img
+              className="rounded-full mr-6"
+              src={require("./article_media/authors/laurenbenson.png")}
+              alt="lauren"
+            />
+            <div className="flex align-middle justify-center flex-col">
+              <h2 className="">
+                <span>Lauren Benson</span>
+                <br />
+                <span className="font-normal">Editorial Director</span>
+              </h2>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

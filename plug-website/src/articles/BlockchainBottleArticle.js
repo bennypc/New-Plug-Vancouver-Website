@@ -177,21 +177,22 @@ const BlockchainBottleArticle = () => {
       </div>
 
       <div className="border-solid border-b-[1px] mx-2 my-6" />
-
-      <div className="flex h-[75px] mb-4">
-        <img
-          className="rounded-full mr-6"
-          src={require("./article_media/authors/laurenbenson.png")}
-          alt="lauren"
-        />
-        <div className="flex align-middle justify-center flex-col">
-          <h2 className="">
-            <span>Lauren Benson</span>
-            <br />
-            <span className="font-normal">Editorial Director</span>
-          </h2>
+      <a href="/articles/lauren-benson">
+        <div className="flex h-[75px] mb-4">
+          <img
+            className="rounded-full mr-6"
+            src={require("./article_media/authors/laurenbenson.png")}
+            alt="lauren"
+          />
+          <div className="flex align-middle justify-center flex-col">
+            <h2 className="">
+              <span>Lauren Benson</span>
+              <br />
+              <span className="font-normal">Editorial Director</span>
+            </h2>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   );
 };
