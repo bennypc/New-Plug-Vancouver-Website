@@ -32,7 +32,7 @@ const AboutPage = () => {
         }
       );
 
-    window.location.href = "/about";
+    alert("Your message has been sent!");
   };
 
   return (
