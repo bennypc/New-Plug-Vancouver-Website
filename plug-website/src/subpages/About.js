@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./subcss/about.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import emailjs from "@emailjs/browser";
 
 import {
   faGithub,
@@ -10,26 +11,38 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const AboutPage = () => {
-  const [status, setStatus] = useState("Submit");
-  const handleSubmit = async (e) => {
+  const [fromName, setFromName] = useState("");
+  const [message, setMessage] = useState("");
+  const form = useRef();
+  const templateID = "template_y9nvg7g";
+
+  var templateParams = {
+    from_name: fromName,
+    message: message,
+  };
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(details),
-    });
-    setStatus("Submit");
-    let result = await response.json();
-    alert(result.status);
+
+    if (fromName || message === "") {
+      alert("Please enter your name and a message!");
+    } else {
+      emailjs
+        .send(
+          "service_38dsvu9",
+          templateID,
+          templateParams,
+          "JYTHfEmzwQQJLqNA2"
+        )
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+    }
   };
 
   return (
@@ -82,20 +95,38 @@ const AboutPage = () => {
           CONTACT US
         </h1>
 
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input type="text" id="name" required />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" required />
-          </div>
-          <div>
-            <label htmlFor="message">Message:</label>
-            <textarea className="" id="message" required />
-          </div>
-          <button type="submit">{status}</button>
+        <form ref={form} onSubmit={sendEmail}>
+          <label>
+            <h2 className="my-4">Name</h2>
+          </label>
+          <input
+            style={{ fontFamily: "Helvetica" }}
+            type="text"
+            name="user_name"
+            value={fromName}
+            onChange={(e) => setFromName(e.target.value)}
+            placeholder="Your Name"
+            className="contact-input w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+          />
+
+          <label>
+            <h2 className="my-4">Message</h2>
+          </label>
+          <textarea
+            style={{ fontFamily: "Helvetica" }}
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            placeholder="Your Message"
+            className="contact-input w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+          />
+          <button
+            type="submit"
+            value="Send"
+            className="mt-8 mb-16 flex mx-auto text-white bg-[#e6007e] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+          >
+            Send Message!
+          </button>
         </form>
 
         <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[38px] md:text-5xl italic font-bold">
