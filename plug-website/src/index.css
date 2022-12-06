@@ -246,12 +246,12 @@ body {
   height: 8px;
   position: fixed;
   bottom: 0;
-  z-index: 1;
+  z-index: 100;
 }
 
 .progress-bar {
   height: 30px;
-  background: #7a7a7a;
+  background: #e6007e;
   width: 0%;
 }
 
