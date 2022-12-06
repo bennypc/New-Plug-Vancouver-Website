@@ -182,7 +182,7 @@ function Articles() {
                 EVENTS
               </h3>
               <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                THE WEEKLY BREAKDOWN:DECEMBER 4TH-11TH
+                THE WEEKLY BREAKDOWN: DECEMBER 4TH-11TH
               </h2>
               <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
                 LAUREN BENSON | 05.12.2022
@@ -199,6 +199,7 @@ function Articles() {
           </div>
         </a>
       </div>
+
       <div className="border-solid border-b-2 mx-5">
         <a href="/articles/chalanse">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
