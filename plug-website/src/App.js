@@ -387,12 +387,12 @@ function WeeklyBreakdownStrip() {
 
 const getConfigurableProps = () => ({
   showThumbs: false,
-  centerMode: true,
   showStatus: false,
   showArrows: true,
   infiniteLoop: true,
   interval: 2000,
   stopOnHover: false,
+  swipeable: true,
 });
 
 function BestMoments() {

@@ -22,7 +22,6 @@ import {
 } from "react-share";
 const getConfigurableProps = () => ({
   showThumbs: false,
-  centerMode: true,
   showStatus: false,
   showArrows: true,
   infiniteLoop: true,
