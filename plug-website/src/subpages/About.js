@@ -124,7 +124,7 @@ const AboutPage = () => {
           </form>
         </div>
 
-        {/* <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[34px] md:text-5xl italic font-bold">
+        <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[34px] md:text-5xl italic font-bold">
           OUR PEOPLE
         </h1>
 
@@ -143,10 +143,18 @@ const AboutPage = () => {
                 <p>President</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/kalithj/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kalith/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>
@@ -168,66 +176,19 @@ const AboutPage = () => {
                 <p>Vice President</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/bradleyahoy/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/bradley-hoy/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/kevin.jpg")}
-                  alt="kevin"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Kevin</h3>
-                <h3>You</h3>
-                <p>VP Events</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/noah.jpg")}
-                  alt="noah"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Noah</h3>
-                <h3>Marciano</h3>
-                <p>VP Finance</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -246,14 +207,19 @@ const AboutPage = () => {
                 <p>VP Marketing</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/karmenleong/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/karmenleong/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -262,24 +228,60 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/benny.jpg")}
-                  alt="benny"
+                  src={require("../images/team-members/kevin.jpg")}
+                  alt="kevin"
                 />
               </div>
-              <div className="caption">
-                <h3>Benny</h3>
-                <h3>Chinvanich</h3>
-                <p>VP Technology</p>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Kevin</h3>
+                <h3>You</h3>
+                <p>VP Events</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/yokev1n/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kevin-you-587841253/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
+                </div>
+              </div>
+            </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/noah.jpg")}
+                  alt="noah"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Noah</h3>
+                <h3>Marciano</h3>
+                <p>VP Finance</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/noahmarciano/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/noahmarciano/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>
               </div>
@@ -298,14 +300,19 @@ const AboutPage = () => {
                 <p>AVP Events</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/prajwallchadha/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/prajwalchadha/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -324,14 +331,19 @@ const AboutPage = () => {
                 <p>AVP Events</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://instagram.com/luana_desousa_carvalho?igshid=YmMyMTA2M2Y="
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/luana-de-sousa-carvalho-bega-93900a207/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -350,14 +362,19 @@ const AboutPage = () => {
                 <p>Events Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/hana.2k/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/hana-kim-33611223b/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -376,13 +393,56 @@ const AboutPage = () => {
                 <p>Media Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/oliver.m.o/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/olivermoesokun/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
-                  <a href="#">
+                </div>
+              </div>
+            </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/benny.jpg")}
+                  alt="benny"
+                />
+              </div>
+              <div className="caption">
+                <h3>Benny</h3>
+                <h3>Chinvanich</h3>
+                <p>Lead Developer</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/bennychinvanich/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/benny-chinvanich/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/bennypc"
+                  >
                     <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
@@ -402,14 +462,19 @@ const AboutPage = () => {
                 <p>Marketing Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/jeshin_t/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/jeshin-toor/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -428,14 +493,19 @@ const AboutPage = () => {
                 <p>Editorial Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/lauren.bensonn/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/laurenmbenson/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -454,14 +524,19 @@ const AboutPage = () => {
                 <p>Events Manager</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/kevinl.i/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kevin-m-li/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -480,14 +555,19 @@ const AboutPage = () => {
                 <p>Events Manager</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/cindygao__/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/cindy-gao-11341b1a4/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -506,14 +586,19 @@ const AboutPage = () => {
                 <p>Editorial Manager</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/berly118/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/berlindadoan/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -532,14 +617,19 @@ const AboutPage = () => {
                 <p>Editorial Sr. Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/stephanie.jiang/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/stephanie-yj-jiang/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -558,14 +648,19 @@ const AboutPage = () => {
                 <p>Events Sr. Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/estherrlu/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/esther-lu-b174a4198/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -584,14 +679,12 @@ const AboutPage = () => {
                 <p>Creative Sr. Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/kevinhuang2/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -610,14 +703,19 @@ const AboutPage = () => {
                 <p>Creative Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/m.alex2002/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/alex-olyaiy-5296321aa/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -636,14 +734,19 @@ const AboutPage = () => {
                 <p>Marketing Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/dominikakruszyna/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/dominikakruszyna/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -662,14 +765,19 @@ const AboutPage = () => {
                 <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/ryanbisaso/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/ryan-bisaso-kiggundu-761245207/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -688,14 +796,19 @@ const AboutPage = () => {
                 <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/zoie.sm/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/zoiemcclymont/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -714,14 +827,19 @@ const AboutPage = () => {
                 <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/luke.mudrylee/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/lukelee3/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -740,14 +858,19 @@ const AboutPage = () => {
                 <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/_daijahutchings/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/daija-hutchings/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
@@ -766,20 +889,25 @@ const AboutPage = () => {
                 <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/ryanhclark/"
+                  >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
-                  <a href="#">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/r-h-clark/"
+                  >
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </div>
   );
