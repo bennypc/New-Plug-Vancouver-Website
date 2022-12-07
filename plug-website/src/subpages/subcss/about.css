@@ -83,7 +83,7 @@
   color: #0c52a1;
 }
 
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 768px) {
   .profile-card:hover {
     border-radius: 10px;
     height: 260px;
