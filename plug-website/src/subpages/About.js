@@ -43,7 +43,7 @@ const AboutPage = () => {
         </h1>
 
         <div className="text-center ml-6 mr-6">
-          <div className="about-bannner mb-4 lg:my-12">
+          <div className="about-banner mb-4 lg:my-12">
             <img
               className="about-strip-image"
               src={require("../images/aboutbanner1.jpg")}
@@ -53,7 +53,7 @@ const AboutPage = () => {
         </div>
 
         <p className="text-xl md:text-[22px] ml-6 mr-6 my-6">
-          Bradley Hoy Plug Vancouver, formerly “ThePlugUBC,” was dreamed up in a
+          Plug Vancouver, formerly “ThePlugUBC,” was dreamed up in a
           small coffee shop in Kitsilano in 2019, with the goal of providing UBC
           students with access to local events and “all things campus.” From
           humble beginnings of $50 pizza giveaways to our flagship Weekly
@@ -64,7 +64,7 @@ const AboutPage = () => {
         </p>
 
         <div className="text-center ml-6 mr-6">
-          <div className="about-bannner mb-4  lg:my-12">
+          <div className="about-banner mb-4  lg:my-12">
             <img
               className="about-strip-image"
               src={require("../images/aboutbanner2.jpg")}
