@@ -366,7 +366,11 @@ function WeeklyBreakdownStrip() {
       </h1>
 
       <div className="absolute flex justify-around top-[120px] lg:mt-24">
-        <a href="https://www.instagram.com/p/Clhf6bPPHm2/" target="_blank">
+        <a
+          href="https://www.instagram.com/p/Clzlg4XP5Mg/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <button className="wb-button mx-2">LATEST EDITION</button>
         </a>
 
