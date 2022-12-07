@@ -53,14 +53,14 @@ const AboutPage = () => {
         </div>
 
         <p className="text-xl md:text-[22px] ml-6 mr-6 my-6">
-          Plug Vancouver, formerly “ThePlugUBC” was dreamed up in a small coffee
-          shop in Kitsilano in 2019, with the goal of providing UBC students
-          with access to local events and “all things campus.”. From humble
-          beginnings of $50 pizza giveaways and our flagship Weekly Breakdowns,
-          we've always worked tirelessly to create the highest quality content
-          we can. Despite constantly evolving, we’ve stayed true to our roots by
-          keeping the signature “Plug” elements UBC students have loved most-
-          just bigger and better than ever before.
+          Bradley Hoy Plug Vancouver, formerly “ThePlugUBC,” was dreamed up in a
+          small coffee shop in Kitsilano in 2019, with the goal of providing UBC
+          students with access to local events and “all things campus.” From
+          humble beginnings of $50 pizza giveaways to our flagship Weekly
+          Breakdowns, we've always worked tirelessly to create the highest
+          quality content for our City. Despite constantly evolving, we’ve
+          stayed true to our roots by keeping the signature “Plug” elements UBC
+          students have loved most — just bigger and better than ever before.
         </p>
 
         <div className="text-center ml-6 mr-6">
@@ -77,7 +77,7 @@ const AboutPage = () => {
           So where are we currently? Over the years we've fine-tuned our craft
           to reach new audiences and expand our brand. Now, the Plug Vancouver
           is dedicated to providing the best events, media, and entertainment
-          city can find. We throw the parties you'll keep coming back to,
+          the city can find. We throw the events you'll keep coming back to,
           collaborate with the most exciting groups, and create the content you
           won't want to miss.
         </p>
@@ -148,9 +148,6 @@ const AboutPage = () => {
                   </a>
                   <a href="#">
                     <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a href="#">
-                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                 </div>
               </div>
