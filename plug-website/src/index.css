@@ -187,9 +187,8 @@ body {
 
 .about-strip-image {
   overflow: hidden;
-  height: 100%;
+  height: auto;
   width: 100%;
-  width: auto;
   object-fit: cover;
 }
 
