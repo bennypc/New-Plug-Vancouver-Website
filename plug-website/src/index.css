@@ -56,6 +56,24 @@ body {
   }
 }
 
+.mobile-carousel {
+  display: block;
+}
+
+.desktop-carousel {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .mobile-carousel {
+    display: none;
+  }
+
+  .desktop-carousel {
+    display: block;
+  }
+}
+
 .thumbnail {
   object-fit: cover;
   width: 120px;

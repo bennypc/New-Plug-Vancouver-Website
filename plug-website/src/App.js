@@ -385,7 +385,8 @@ function WeeklyBreakdownStrip() {
   );
 }
 
-const getConfigurableProps = () => ({
+var getConfigurableProps = () => ({
+  centerMode: false,
   showThumbs: false,
   showStatus: false,
   showArrows: true,
@@ -414,7 +415,31 @@ function BestMoments() {
 
       <Carousel
         {...getConfigurableProps()}
-        className="mt-4 mb-8"
+        className="mobile-carousel mt-4 mb-8"
+        autoPlay
+        centerSlidePercentage={60}
+      >
+        <div>
+          <img src={require("./images/moments/hello1.jpg")} alt="hello1" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello2.jpg")} alt="hello2" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello3.jpg")} alt="hello3" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello4.jpg")} alt="hello4" />
+        </div>
+        <div>
+          <img src={require("./images/moments/hello5.jpg")} alt="hello5" />
+        </div>
+      </Carousel>
+
+      <Carousel
+        {...getConfigurableProps()}
+        className="desktop-carousel mt-4 mb-8"
+        centerMode
         autoPlay
         centerSlidePercentage={60}
       >
@@ -449,7 +474,79 @@ function FeaturedVideos() {
 
       <Carousel
         {...getConfigurableProps()}
-        className="mt-4 mb-8"
+        className="mobile-carousel mt-4 mb-8"
+        autoPlay
+        centerSlidePercentage={60}
+        infiniteLoop={true}
+      >
+        <a
+          href="https://www.instagram.com/reel/CkuFW3tOsmy/?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/4-c.jpg")}
+              alt="bundafest-vid"
+            />
+          </div>
+        </a>
+
+        <a
+          href="https://www.instagram.com/reel/ClRqjsHDYZq/?igshid=YmMyMTA2M2Y=
+          "
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/1-c.jpg")}
+              alt="rating-3"
+            />
+          </div>
+        </a>
+        <a
+          href="https://youtu.be/3e1FfEKiniQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/5-c.jpg")}
+              alt="ldoc-vid"
+            />
+          </div>
+        </a>
+        <a
+          href="https://www.instagram.com/reel/CjGgDh_Olfb/?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/3-c.jpg")}
+              alt="rating-2"
+            />
+          </div>
+        </a>
+        <a
+          href="https://www.instagram.com/reel/CiyGonzNGW8/?igshid=YmMyMTA2M2Y="
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div>
+            <img
+              src={require("./images/video-thumbnails/compressed/2-c.jpg")}
+              alt="rating-1"
+            />
+          </div>
+        </a>
+      </Carousel>
+
+      <Carousel
+        {...getConfigurableProps()}
+        className="desktop-carousel mt-4 mb-8"
+        centerMode
         autoPlay
         centerSlidePercentage={60}
         infiniteLoop={true}
