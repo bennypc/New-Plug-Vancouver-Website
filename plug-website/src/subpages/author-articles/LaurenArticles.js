@@ -93,7 +93,7 @@ const LaurenArticles = () => {
 
   return (
     <div className="mx-2">
-      <div className="author-container flex justify-center mt-8">
+      <div className="author-container flex justify-center mt-8 ">
         <div className="flex-col flex justify-center m-auto">
           <div className="flex justify-center mb-2 md:mb-4">
             <img
@@ -115,7 +115,7 @@ const LaurenArticles = () => {
       </div>
 
       <div className="text-center flex justify-center articles-container">
-        <div className="text-left">
+        <div className="text-left mx-2">
           <div
             className={`border-solid border-b-2 mx-5 ${
               showEvents ? undefined : "hidden"
@@ -128,7 +128,7 @@ const LaurenArticles = () => {
                     EVENTS
                   </h3>
                   <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
-                    THE WEEKLY BREAKDOWN:DECEMBER 4TH-11TH
+                    THE WEEKLY BREAKDOWN: DECEMBER 4TH-11TH
                   </h2>
                   <h2 className="italic resize-none align-middle text-xs font-[600]">
                     LAUREN BENSON | 03.12.2022

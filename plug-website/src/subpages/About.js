@@ -38,21 +38,21 @@ const AboutPage = () => {
   return (
     <div className="flex justify-center">
       <div className="about-container">
-        <div className="text-center">
-          <div className="wb-strip mb-4 h-full sm:h-[450px] lg:h-[750px] lg:my-12">
+        <h1 className="mt-4 md:mt-8 mb-8 text-black text-center text-[39px] leading-[50px] md:text-6xl italic font-bold">
+          UBC BORN. VANCOUVER BRED.
+        </h1>
+
+        <div className="text-center ml-6 mr-6">
+          <div className="wb-strip mb-4 h-full  sm:h-[450px] lg:h-[750px] lg:my-12">
             <img
               className="about-strip-image"
-              src={require("../images/plugmobile.jpg")}
+              src={require("../images/aboutbanner1.jpg")}
               alt="crowd"
             />
           </div>
         </div>
 
-        <h1 className="mt-4 md:mt-8 mb-8 text-black text-center text-[40px] md:text-6xl italic font-bold">
-          UBC BORN. VANCOUVER BRED.
-        </h1>
-
-        <p className="text-xl md:text-[22px] ml-6 mr-8 my-6">
+        <p className="text-xl md:text-[22px] ml-6 mr-6 my-6">
           Plug Vancouver, formerly “ThePlugUBC” was dreamed up in a small coffee
           shop in Kitsilano in 2019, with the goal of providing UBC students
           with access to local events and “all things campus.”. From humble
@@ -63,7 +63,17 @@ const AboutPage = () => {
           just bigger and better than ever before.
         </p>
 
-        <p className="text-xl md:text-[22px] ml-6 mr-8 my-6">
+        <div className="text-center ml-6 mr-6">
+          <div className="wb-strip mb-4 h-full sm:h-[450px] lg:h-[750px] lg:my-12">
+            <img
+              className="about-strip-image"
+              src={require("../images/aboutbanner2.jpg")}
+              alt="crowd"
+            />
+          </div>
+        </div>
+
+        <p className="text-xl md:text-[22px] ml-6 mr-6 my-6">
           So where are we currently? Over the years we've fine-tuned our craft
           to reach new audiences and expand our brand. Now, the Plug Vancouver
           is dedicated to providing the best events, media, and entertainment
@@ -72,8 +82,8 @@ const AboutPage = () => {
           won't want to miss.
         </p>
 
-        <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[38px] md:text-5xl italic font-bold">
-          CONTACT US
+        <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[34px] md:text-5xl italic font-bold">
+          GET IN TOUCH
         </h1>
 
         <div className="flex align-middle justify-center">
@@ -114,7 +124,7 @@ const AboutPage = () => {
           </form>
         </div>
 
-        <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[38px] md:text-5xl italic font-bold">
+        <h1 className="mt-4 md:mt-8 mb-2 text-black text-center text-[34px] md:text-5xl italic font-bold">
           OUR PEOPLE
         </h1>
 

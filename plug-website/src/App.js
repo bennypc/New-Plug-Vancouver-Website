@@ -173,7 +173,7 @@ function Home() {
 
 function Articles() {
   return (
-    <div id="latest-articles">
+    <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-december-4">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
@@ -774,7 +774,7 @@ function ImageSlideshow() {
         />
         <img
           className="desktop-banner"
-          src={require("./images/ldoc-banner-reduced.jpg")}
+          src={require("./images/LDOC-Website-Banner.jpg")}
           alt=""
         />
       </a>

@@ -86,6 +86,7 @@
   .author-container {
     justify-content: center;
     width: 800px;
+    margin: 32px auto 16px;
   }
 
   .author-page-image {

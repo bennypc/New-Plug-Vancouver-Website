@@ -63,6 +63,24 @@ body {
   min-width: 160px;
 }
 
+@media (max-width: 393px) {
+  .thumbnail {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 330px) {
+  .thumbnail {
+    min-width: 80px;
+  }
+}
+
+@media (max-width: 315px) {
+  .thumbnail {
+    display: none;
+  }
+}
+
 .article-heading {
   font-family: "Helvetica";
   font-size: 22px;
