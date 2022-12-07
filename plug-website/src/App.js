@@ -67,7 +67,7 @@ function Header() {
           <div className="flex mt-5">
             <a href="https://www.instagram.com/plugvancouver/" target="_blank">
               <img
-                className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
+                className="w-[40px] h-auto my-3 mr-1 md:w-[56px]"
                 src={require("./images/logos/social/instagram.png")}
                 alt="Instagram logo"
               />
@@ -79,7 +79,7 @@ function Header() {
               target="_blank"
             >
               <img
-                className="w-[40px] h-auto my-3 mr-1 lg:w-[56px]"
+                className="w-[40px] h-auto my-3 mr-1 md:w-[56px]"
                 src={require("./images/logos/social/tiktok.png")}
                 alt="Tiktok logo"
               />
@@ -91,7 +91,7 @@ function Header() {
               target="_blank"
             >
               <img
-                className="h-[40px] w-auto my-3 mr-1 lg:h-[56px]"
+                className="h-[40px] w-auto my-3 mr-1 md:h-[56px]"
                 src={require("./images/logos/social/youtube.png")}
                 alt="YouTube logo"
               />
@@ -100,7 +100,7 @@ function Header() {
             <div className="dropdown dropdown-end mr-4 align-middle items-center pt-[7px]	md:w-24">
               <label
                 tabIndex={0}
-                className="btn-sm md:btn-md md:w-[48px] btn btn-square p-[3px] lg:mt-[9px] bg-white m-1 text-black"
+                className="btn-sm md:btn-md md:w-[48px] btn btn-square p-[3px] md:mt-[9px] bg-white m-1 text-black"
               >
                 <div className="burger md:px-[12px]"></div>
                 <div className="burger md:px-[12px]"></div>
