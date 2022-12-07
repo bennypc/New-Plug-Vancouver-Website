@@ -137,7 +137,7 @@
   }
 }
 
-@media only screen and (min-width: 720px) and (max-width: 1299px) {
+/* @media only screen and (min-width: 720px) and (max-width: 1299px) {
   .profile-card:hover {
     border-radius: 10px;
     height: 260px;
@@ -158,4 +158,4 @@
     opacity: 0;
     transition: 0.6s;
   }
-}
+} */

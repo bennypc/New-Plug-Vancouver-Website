@@ -43,7 +43,7 @@ const AboutPage = () => {
         </h1>
 
         <div className="text-center ml-6 mr-6">
-          <div className="wb-strip mb-4 h-full  sm:h-[450px] lg:h-[750px] lg:my-12">
+          <div className="about-bannner mb-4 lg:my-12">
             <img
               className="about-strip-image"
               src={require("../images/aboutbanner1.jpg")}
@@ -64,7 +64,7 @@ const AboutPage = () => {
         </p>
 
         <div className="text-center ml-6 mr-6">
-          <div className="wb-strip mb-4 h-full sm:h-[450px] lg:h-[750px] lg:my-12">
+          <div className="about-bannner mb-4  lg:my-12">
             <img
               className="about-strip-image"
               src={require("../images/aboutbanner2.jpg")}
