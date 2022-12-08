@@ -41,15 +41,15 @@ app.get("*", function (req, res) {
   });
 });
 
-app.use(bodyParser.json());
-app.use("/.netlify/functions/server", router); // path must route to lambda
-app.use("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
-
 router.get("*", (req, res) => {
   res.sendFile("index.html", {
     root: path.join(__dirname, "../plug-website/build/"),
   });
 });
+
+app.use(bodyParser.json());
+app.use("/.netlify/functions/server", router); // path must route to lambda
+app.use("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
 
 //app.listen(4242, () => console.log("Running on port 4242"));
 
