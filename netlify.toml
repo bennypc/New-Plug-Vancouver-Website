@@ -6,4 +6,3 @@
 [build]
   command = "npm install && npm run build"
   functions = "functions"
-  publish = "out"
