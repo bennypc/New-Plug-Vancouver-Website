@@ -13,7 +13,9 @@ import SongsList from "./songs-form/songs-list";
 import Auth from "./subpages/Auth";
 import AccountCreation from "./subpages/AccountCreation";
 
+import AboutPage from "./subpages/About";
 import ArticlesPage from "./subpages/articles";
+import ShopPage from "./subpages/shop/Shop";
 
 import HonestlyNevermindArticle from "./articles/honestlyNevermindArticle";
 import EyewearArticle from "./articles/eyewearArticle";
@@ -33,7 +35,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import DashboardSettings from "./dashboard/DashboardSettings";
 import DashboardCalendar from "./dashboard/DashboardCalendar";
 import DashboardTeams from "./dashboard/DashboardTeams";
-import AboutPage from "./subpages/About";
+
 import LaurenArticles from "./subpages/author-articles/LaurenArticles";
 import ZoieArticles from "./subpages/author-articles/ZoieArticles";
 
@@ -65,7 +67,11 @@ function Header() {
       <div>
         <div className="flex justify-between">
           <div className="flex mt-5">
-            <a href="https://www.instagram.com/plugvancouver/" target="_blank">
+            <a
+              href="https://www.instagram.com/plugvancouver/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="w-[40px] h-auto my-3 mr-1 md:w-[56px]"
                 src={require("./images/logos/social/instagram.png")}
@@ -77,6 +83,7 @@ function Header() {
               className=""
               href="https://www.tiktok.com/@plugvancouver"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-[40px] h-auto my-3 mr-1 md:w-[56px]"
@@ -89,6 +96,7 @@ function Header() {
               className=""
               href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="h-[40px] w-auto my-3 mr-1 md:h-[56px]"
@@ -377,6 +385,7 @@ function WeeklyBreakdownStrip() {
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSfaVbHeLjA0HQYeYVYaTjYBZYYN0fxR5MO6-a0cIq5xT7Teaw/viewform"
           target="_blank"
+          rel="noreferrer"
         >
           <button className="wb-button mx-2">SUBMIT YOUR EVENT</button>
         </a>
@@ -406,6 +415,7 @@ function BestMoments() {
         <a
           href="https://www.facebook.com/theplugvancouver/photos/?ref=page_internal&tab=album"
           target="_blank"
+          rel="noreferrer"
         >
           <button className="bg-black text-white rounded-[20px] px-3 py-1 mr-3">
             VIEW ALBUMS
@@ -970,7 +980,11 @@ function Footer() {
         </div>
         <div className="ml-[20px] flex-col align-middle items-center">
           <div className="flex h-[30px] justify-left items-center mt-8 ">
-            <a href="https://www.instagram.com/plugvancouver/" target="_blank">
+            <a
+              href="https://www.instagram.com/plugvancouver/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
                 src={require("./images/logos/social/instagram.png")}
@@ -981,6 +995,7 @@ function Footer() {
               className=""
               href="https://www.tiktok.com/@plugvancouver"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
@@ -992,6 +1007,7 @@ function Footer() {
               className=""
               href="https://www.youtube.com/channel/UCISFbPdJgz7JriR6io6uLBQ"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
@@ -1003,6 +1019,7 @@ function Footer() {
               className=""
               href="https://www.facebook.com/theplugvancouver/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
@@ -1014,6 +1031,7 @@ function Footer() {
               className=""
               href="https://www.linkedin.com/company/plugvancouver/mycompany/"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
@@ -1026,6 +1044,7 @@ function Footer() {
               className=""
               href="mailto:info@theplugvancouver.com"
               target="_blank"
+              rel="noreferrer"
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
@@ -1145,6 +1164,7 @@ function App() {
             />
             <Route path="/articles/zoie-mcclymont" element={<ZoieArticles />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/shop" element={<ShopPage />} />
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />
 

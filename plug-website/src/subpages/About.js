@@ -53,8 +53,8 @@ const AboutPage = () => {
         </div>
 
         <p className="text-xl md:text-[22px] ml-6 mr-6 my-6">
-          Plug Vancouver, formerly “ThePlugUBC,” was dreamed up in a
-          small coffee shop in Kitsilano in 2019, with the goal of providing UBC
+          Plug Vancouver, formerly “ThePlugUBC,” was dreamed up in a small
+          coffee shop in Kitsilano in 2019, with the goal of providing UBC
           students with access to local events and “all things campus.” From
           humble beginnings of $50 pizza giveaways to our flagship Weekly
           Breakdowns, we've always worked tirelessly to create the highest
