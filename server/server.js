@@ -55,6 +55,9 @@ app.use("*", (req, res) =>
   })
 );
 
+module.exports = app;
+module.exports.handler = serverless(app);
+
 //app.listen(4242, () => console.log("Running on port 4242"));
 
 // const storeItems = new Map([
