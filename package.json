@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "netlify-lambda build server",
-    "start": "node server-local.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

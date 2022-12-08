@@ -4,6 +4,4 @@
   status = 200
 
 [build]
-  command = "npm install && npm run build"
-  functions = "functions"
-  build = "build"
+  command = "npm run build"
