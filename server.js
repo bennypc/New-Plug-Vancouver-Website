@@ -8,10 +8,6 @@ const app = express();
 
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("hello world");
-});
-
 app.use(express.static(path.join(__dirname, "..", "plug-website", "build")));
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
 
@@ -36,14 +32,19 @@ app.post("/create-checkout-session", async (req, res) => {
   res.redirect(303, session.url);
 });
 
-// create a GET route
-app.get("*", function (req, res) {
-  res.sendFile("index.html", {
-    root: path.join(__dirname, "../plug-website/build/"),
-  });
+// // create a GET route
+// app.get("*", function (req, res) {
+//   res.sendFile("index.html", {
+//     root: path.join(__dirname, "../plug-website/build/"),
+//   });
+// });
+
+// Right before your app.listen(), add this:
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 8000, () => {
   console.log(
     "Express server listening on port %d in %s mode",
     this.address().port,
