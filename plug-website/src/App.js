@@ -1123,6 +1123,9 @@ const HeaderFooterLayout = () => (
 );
 
 function App() {
+  fetch("https://plug-vancvouer.herokuapp.com/")
+    .then((res) => res.json())
+    .then((data) => console.log(data));
   React.useEffect(() => {
     const menuWrap = document.querySelector(".bm-menu-wrap");
     if (menuWrap) {
