@@ -4,7 +4,9 @@
   "description": "Website for Plug Vancouver built with React.js + Tailwind CSS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/netlify-lambda serve server",
+    "build": "./node_modules/.bin/netlify-lambda build server"
   },
   "repository": {
     "type": "git",

@@ -6,12 +6,15 @@ const stripe = require("stripe")(
 const express = require("express");
 const path = require("path");
 const app = express();
-var router = express.Router();
+const router = express.Router();
+const serverless = require("serverless-http");
+const bodyParser = require("body-parser");
 
 app.use(express.static(path.join(__dirname, "..", "plug-website", "build")));
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
 
-const YOUR_DOMAIN = "http://localhost:4242";
+//const YOUR_DOMAIN = "http://localhost:4242";
+const YOUR_DOMAIN = "http://plugvancouver.com";
 
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -38,7 +41,17 @@ app.get("*", function (req, res) {
   });
 });
 
-app.listen(4242, () => console.log("Running on port 4242"));
+app.use(bodyParser.json());
+app.use("/.netlify/functions/server", router); // path must route to lambda
+app.use("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
+
+router.get("*", (req, res) => {
+  res.sendFile("index.html", {
+    root: path.join(__dirname, "../plug-website/build/"),
+  });
+});
+
+//app.listen(4242, () => console.log("Running on port 4242"));
 
 // const storeItems = new Map([
 //   [1, { priceInCents: 1000, name: "Event ticket 1" }],
