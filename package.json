@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/netlify-lambda serve server",
-    "build": "./node_modules/.bin/netlify-lambda build server"
+    "build": "netlify-lambda build server"
   },
   "repository": {
     "type": "git",
@@ -20,6 +19,7 @@
   },
   "homepage": "https://github.com/bennypc/New-Plug-Vancouver-Website#readme",
   "dependencies": {
+    "netlify-lambda": "^2.0.15",
     "pg": "^8.8.0"
   }
 }

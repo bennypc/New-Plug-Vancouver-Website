@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devStart": "node server.js",
-    "start": "./node_modules/.bin/netlify-lambda serve",
-    "build": "./node_modules/.bin/netlify-lambda build"
+    "devStart": "node server.js"
   },
   "keywords": [],
   "author": "",
