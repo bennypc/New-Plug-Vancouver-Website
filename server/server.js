@@ -49,7 +49,11 @@ router.get("*", (req, res) => {
 
 app.use(bodyParser.json());
 app.use("/.netlify/functions/server", router); // path must route to lambda
-app.use("/", (req, res) => res.sendFile(path.join(__dirname, "../index.html")));
+app.use("/", (req, res) =>
+  res.sendFile("index.html", {
+    root: path.join(__dirname, "../plug-website/build/"),
+  })
+);
 
 //app.listen(4242, () => console.log("Running on port 4242"));
 
