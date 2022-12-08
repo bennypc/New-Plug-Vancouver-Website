@@ -159,13 +159,6 @@ const ChalanseArticle = () => {
               alt="chalanse8"
             />
           </div>
-
-          <div>
-            <img
-              src={require("./article_media/chalanse/carousel/chalanse8.jpg")}
-              alt="chalanse8"
-            />
-          </div>
           <div>
             <img
               src={require("./article_media/chalanse/carousel/chalanse9.jpg")}
