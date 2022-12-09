@@ -47,11 +47,7 @@ app.get("*", (req, res) => {
 });
 
 app.listen(process.env.PORT || 8000, () => {
-  console.log(
-    "Express server listening on port %d in %s mode",
-    this.address().port,
-    app.settings.env
-  );
+  console.log("Express server is running");
 });
 
 // const storeItems = new Map([
