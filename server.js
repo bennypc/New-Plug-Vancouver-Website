@@ -43,7 +43,7 @@ app.post("/create-checkout-session", async (req, res) => {
 
 // Right before your app.listen(), add this:
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "plug-website", "build", "index.html"));
 });
 
 app.listen(process.env.PORT || 8000, () => {
