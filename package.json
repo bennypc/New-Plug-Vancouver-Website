@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/bennypc/New-Plug-Vancouver-Website#readme",
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.3",
     "netlify-lambda": "^2.0.15",
     "pg": "^8.8.0"
   },
