@@ -1123,7 +1123,7 @@ const HeaderFooterLayout = () => (
 );
 
 function App() {
-  fetch("https://plug-vancvouer.herokuapp.com/")
+  fetch("https://plug-vancouver.herokuapp.com/")
     .then((res) => res.json())
     .then((data) => console.log(data));
   React.useEffect(() => {

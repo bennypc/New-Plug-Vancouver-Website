@@ -27,12 +27,21 @@ app.post("/create-checkout-session", async (req, res) => {
       },
     ],
     mode: "payment",
-    success_url: `${YOUR_DOMAIN}?success=true`,
-    cancel_url: `${YOUR_DOMAIN}?canceled=true`,
+    success_url: `${YOUR_DOMAIN}/order/success?session_id={CHECKOUT_SESSION_ID}`,
+    cancel_url: `${YOUR_DOMAIN}?cancelled=true`,
     automatic_tax: { enabled: true },
   });
 
   res.redirect(303, session.url);
+});
+
+app.get("/order/success", async (req, res) => {
+  const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
+  const customer = await stripe.customers.retrieve(session.customer);
+
+  res.send(
+    `<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`
+  );
 });
 
 // Handle React routing, return all requests to React app
