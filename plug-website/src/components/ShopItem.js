@@ -200,7 +200,7 @@ export default function Example() {
               </div> */}
               <div className="mt-10">
                 <form
-                  action="https://plug-vancvouer.herokuapp.com//create-checkout-session"
+                  action="https://plug-vancvouer.herokuapp.com/create-checkout-session"
                   method="POST"
                 >
                   <button
