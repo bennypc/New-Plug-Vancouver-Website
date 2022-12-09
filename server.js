@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.static(path.join(__dirname, "..", "plug-website/build")));
+app.use(express.static(path.join(__dirname, "plug-website/build")));
 
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
 
@@ -34,20 +34,6 @@ app.post("/create-checkout-session", async (req, res) => {
 
   res.redirect(303, session.url);
 });
-
-// // create a GET route
-// app.get("*", function (req, res) {
-//   res.sendFile("index.html", {
-//     root: path.join(__dirname, "../plug-website/build/"),
-//   });
-// });
-
-// // Right before your app.listen(), add this:
-// app.get("*", function (req, res) {
-//   res.sendFile("index.html", {
-//     root: path.join(__dirname, "/plug-website/build/"),
-//   });
-// });
 
 // Handle React routing, return all requests to React app
 app.get("*", function (req, res) {
