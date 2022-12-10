@@ -12,8 +12,8 @@ const bodyParser = require("body-parser");
 var QRCode = require("qrcode");
 
 const supabase = require("@supabase/supabase-js").createClient(
-  SUPABASE_URL,
-  SUPABASE_ANON_KEY
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_ANON_KEY
 );
 
 app.use(cors());
@@ -36,7 +36,7 @@ function makeID(length) {
   return result;
 }
 
-sgMail.setApiKey(SENDGRID_API_KEY);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 const endpointSecret =
