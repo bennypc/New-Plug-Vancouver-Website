@@ -1,7 +1,7 @@
 require("dotenv").config();
 
 const stripe = require("stripe")(
-  process.env.STRIPE.KEY
+  process.env.STRIPE_KEY
 );
 const cors = require("cors");
 const express = require("express");
