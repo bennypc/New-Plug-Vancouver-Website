@@ -18,6 +18,9 @@ const supabase = require("@supabase/supabase-js").createClient(
 
 app.use(cors());
 
+console.log(SUPABASE_URL);
+console.log(SUPABASE_ANON_KEY);
+
 app.use(express.static(path.join(__dirname, "plug-website/build")));
 
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
