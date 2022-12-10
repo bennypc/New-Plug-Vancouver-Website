@@ -1,8 +1,7 @@
 import React from "react";
-import "./subcss/about.css";
 import ShopItem from "../../components/ShopItem.js";
 
-const ShopPage = () => {
+const OrderSuccess = () => {
   return (
     <div className="flex justify-center">
       <div className="about-container">
@@ -16,4 +15,4 @@ const ShopPage = () => {
   );
 };
 
-export default ShopPage;
+export default OrderSuccess;

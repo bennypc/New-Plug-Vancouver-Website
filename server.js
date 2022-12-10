@@ -7,6 +7,10 @@ const cors = require("cors");
 const express = require("express");
 const path = require("path");
 const app = express();
+const sgMail = require("@sendgrid/mail");
+sgMail.setApiKey(
+  "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"
+);
 
 app.use(cors());
 
@@ -14,8 +18,8 @@ app.use(express.static(path.join(__dirname, "plug-website/build")));
 
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
 
-//const YOUR_DOMAIN = "http://localhost:4242";
-const YOUR_DOMAIN = "http://plugvancouver.com";
+const YOUR_DOMAIN = "http://localhost:3000";
+//const YOUR_DOMAIN = "http://plugvancouver.com";
 
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -32,16 +36,23 @@ app.post("/create-checkout-session", async (req, res) => {
     automatic_tax: { enabled: true },
   });
 
+  const msg = {
+    to: "benny.pincha@gmail.com", // Change to your recipient
+    from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
+    subject: "Your Ticket",
+    text: "and easy to do anywhere, even with Node.js",
+    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
+  };
+
+  sgMail
+    .send(msg)
+    .then(() => {
+      console.log("Email sent");
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   res.redirect(303, session.url);
-});
-
-app.get("/order/success", async (req, res) => {
-  const session = await stripe.checkout.sessions.retrieve(req.query.session_id);
-  const customer = await stripe.customers.retrieve(session.customer);
-
-  res.send(
-    `<html><body><h1>Thanks for your order, ${customer.name}!</h1></body></html>`
-  );
 });
 
 // Handle React routing, return all requests to React app

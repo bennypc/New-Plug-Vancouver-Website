@@ -1,5 +1,4 @@
 import React from "react";
-import "../subcss/about.css";
 import ShopItem from "../../components/ShopItem.js";
 
 const ShopPage = () => {

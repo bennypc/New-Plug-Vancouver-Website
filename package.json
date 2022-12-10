@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/bennypc/New-Plug-Vancouver-Website#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "@tailwindcss/forms": "^0.5.3",
     "babel-preset-react": "^6.24.1",
     "cors": "^2.8.5",
     "netlify-lambda": "^2.0.15",
     "pg": "^8.8.0",
+    "qrcode": "^1.5.1",
     "stripe": "^11.3.0"
   },
   "devDependencies": {

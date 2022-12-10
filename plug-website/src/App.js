@@ -38,6 +38,7 @@ import DashboardTeams from "./dashboard/DashboardTeams";
 
 import LaurenArticles from "./subpages/author-articles/LaurenArticles";
 import ZoieArticles from "./subpages/author-articles/ZoieArticles";
+import OrderSuccess from "./subpages/shop/OrderSuccess";
 
 function Logo() {
   return (
@@ -1167,9 +1168,12 @@ function App() {
             />
             <Route path="/articles/zoie-mcclymont" element={<ZoieArticles />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/shop" element={<ShopPage />} />
+
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />
+
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/order/success" element={<OrderSuccess />} />
 
             <Route
               path="/articles/community-coffee-and-classy-eyewear"
