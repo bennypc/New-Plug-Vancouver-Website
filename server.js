@@ -21,8 +21,8 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "plug-website/build")));
 
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
-const YOUR_DOMAIN = "http://localhost:3000";
-//const YOUR_DOMAIN = "http://plugvancouver.com";
+//const YOUR_DOMAIN = "http://localhost:3000";
+const YOUR_DOMAIN = "http://plugvancouver.com";
 // Use body-parser to retrieve the raw body as a buffer
 
 function makeID(length) {
