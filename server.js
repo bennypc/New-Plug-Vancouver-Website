@@ -1,20 +1,109 @@
 require("dotenv").config();
 
+const stripe = require("stripe")(
+  "sk_test_51MAkEuJeUNpSjLZtGFmsNzg6sK5WGhVNHz7pwk2eLrayo4dlt4VkuLppl8XaEvLZtfUwt9833CtqoXcnvLsHketX00EOeGR8TZ"
+);
 const cors = require("cors");
 const express = require("express");
 const path = require("path");
 const app = express();
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const bodyParser = require("body-parser");
+var QRCode = require("qrcode");
+
+const supabase = require("@supabase/supabase-js").createClient(
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+);
 
 app.use(cors());
 
 app.use(express.static(path.join(__dirname, "plug-website/build")));
 
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
-
 const YOUR_DOMAIN = "http://localhost:3000";
 //const YOUR_DOMAIN = "http://plugvancouver.com";
+// Use body-parser to retrieve the raw body as a buffer
+
+function makeID(length) {
+  var result = "";
+  var characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
+sgMail.setApiKey(SENDGRID_API_KEY);
+
+// This is your Stripe CLI webhook secret for testing your endpoint locally.
+const endpointSecret =
+  "whsec_958bc6757424e14c97b89e5dee66c29d6f6e5f6f4d7a8a5402f9cda9c5604411";
+
+app.post(
+  "/webhook",
+  express.raw({ type: "application/json" }),
+  async (request, response) => {
+    const sig = request.headers["stripe-signature"];
+
+    let event;
+
+    try {
+      event = stripe.webhooks.constructEvent(request.body, sig, endpointSecret);
+    } catch (err) {
+      response.status(400).send(`Webhook Error: ${err.message}`);
+      return;
+    }
+
+    // Handle the checkout.session.completed event
+    if (event.type === "checkout.session.completed") {
+      // Retrieve the session. If you require line items in the response, you may include them by expanding line_items.
+    }
+
+    // Handle the event
+    switch (event.type) {
+      case "checkout.session.completed":
+        const session = event.data.object;
+
+        console.log(session);
+
+        var ticketCode = makeID(16);
+
+        const { error } = await supabase.from("tickets").insert({
+          ticket_code: ticketCode,
+          name: session.customer_details.name,
+          email: session.customer_details.email,
+          payment_intent: session.payment_intent,
+        });
+
+        const msg = {
+          to: session.customer_details.email, // Change to your recipient
+          from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
+          subject: "Your Ticket",
+          text: "TEXT",
+          html: "<strong>HTML</strong>",
+        };
+
+        sgMail
+          .send(msg)
+          .then(() => {
+            console.log("Email sent");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+        break;
+      // ... handle other event types
+      default:
+        console.log(`Unhandled event type ${event.type}`);
+    }
+
+    // Return a 200 response to acknowledge receipt of the event
+    response.send().end();
+  }
+);
 
 app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
@@ -30,25 +119,12 @@ app.post("/create-checkout-session", async (req, res) => {
     cancel_url: `${YOUR_DOMAIN}?cancelled=true`,
     automatic_tax: { enabled: true },
   });
+  //console.log(session);
 
-  const msg = {
-    to: "benny.pincha@gmail.com", // Change to your recipient
-    from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
-    subject: "Your Ticket",
-    text: "and easy to do anywhere, even with Node.js",
-    html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-  };
-
-  sgMail
-    .send(msg)
-    .then(() => {
-      console.log("Email sent");
-    })
-    .catch((error) => {
-      console.error(error);
-    });
   res.redirect(303, session.url);
 });
+
+function sendTicket() {}
 
 // Handle React routing, return all requests to React app
 app.get("*", function (req, res) {
