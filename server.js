@@ -1,4 +1,4 @@
-//require("dotenv").config();
+require("dotenv").config();
 
 const stripe = require("stripe")(
   "sk_test_51MAkEuJeUNpSjLZtGFmsNzg6sK5WGhVNHz7pwk2eLrayo4dlt4VkuLppl8XaEvLZtfUwt9833CtqoXcnvLsHketX00EOeGR8TZ"
@@ -8,9 +8,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(
-  "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"
-);
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 app.use(cors());
 
