@@ -78,6 +78,10 @@ app.post(
           payment_intent: session.payment_intent,
         });
 
+        if(!!error) {
+          console.log(error);
+        }
+
         const msg = {
           to: session.customer_details.email, // Change to your recipient
           from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
