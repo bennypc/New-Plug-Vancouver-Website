@@ -40,8 +40,7 @@ function makeID(length) {
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-const endpointSecret =
-  "whsec_958bc6757424e14c97b89e5dee66c29d6f6e5f6f4d7a8a5402f9cda9c5604411";
+const endpointSecret = "whsec_LZdIpqja5G8UStddvevGD3Si0fmVTzen";
 
 app.post(
   "/webhook",
