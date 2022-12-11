@@ -71,10 +71,8 @@ app.post(
           email: session.customer_details.email,
           payment_intent: session.payment_intent,
         });
-        var QR;
-        QRCode.toDataURL("I am a pony!", function (err, url) {
-          QR = url;
-        });
+
+        let QR = await QRCode.toDataURL("test");
 
         if (!!error) {
           console.log(error);
@@ -85,7 +83,7 @@ app.post(
           from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
           subject: "Your Ticket",
           text: "TEXT" + QR,
-          html: "<strong>HTML</strong>",
+          html: QR,
         };
 
         sgMail
