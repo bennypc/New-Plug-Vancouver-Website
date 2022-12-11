@@ -63,7 +63,7 @@ app.post(
         const session = event.data.object;
         console.log(session);
 
-        var ticketCode = makeID(16);
+        var ticketCode = makeID(32);
 
         const { error } = await supabase.from('tickets').insert({
           ticket_code: ticketCode,
@@ -72,7 +72,7 @@ app.post(
           payment_intent: session.payment_intent,
         });
 
-        let QR = await QRCode.toDataURL('test');
+        let QR = await QRCode.toDataURL(ticketCode);
 
         if (!!error) {
           console.log(error);
