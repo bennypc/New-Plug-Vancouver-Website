@@ -8,6 +8,7 @@ const app = express();
 const sgMail = require("@sendgrid/mail");
 const bodyParser = require("body-parser");
 var QRCode = require("qrcode");
+const { url } = require("inspector");
 
 const supabase = require("@supabase/supabase-js").createClient(
   process.env.SUPABASE_URL,
@@ -71,6 +72,10 @@ app.post(
           email: session.customer_details.email,
           payment_intent: session.payment_intent,
         });
+        var QRCode;
+        QRCode.toString("I am a pony!", function (err, url) {
+          QRCode = url;
+        });
 
         if (!!error) {
           console.log(error);
@@ -80,7 +85,7 @@ app.post(
           to: session.customer_details.email, // Change to your recipient
           from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
           subject: "Your Ticket",
-          text: "TEXT",
+          text: "TEXT" + QRCode,
           html: "<strong>HTML</strong>",
         };
 
