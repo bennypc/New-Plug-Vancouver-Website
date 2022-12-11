@@ -82,15 +82,12 @@ app.post(
           to: session.customer_details.email, // Change to your recipient
           from: 'theplugvancouvergeneral@gmail.com', // Change to your verified sender
           subject: 'Your Ticket',
-          personalizations: [
-            {
-              'dynamic_template_data': {
-                'qrCode': QR,
-              },
-            },
-          ],
 
           template_id: 'd-f2397c7037ab4916a2241019f83fb91e',
+
+          dynamic_template_data: {
+            qrCode: QR,
+          },
         };
 
         sgMail
