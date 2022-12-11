@@ -87,13 +87,14 @@ app.post(
 
           dynamic_template_data: {
             qrCode: QR,
+            name: session.customer_details.name,
           },
         };
 
         sgMail
           .send(msg)
           .then(() => {
-            console.log('Email sent');
+            console.log(msg);
           })
           .catch((error) => {
             console.error(error);
