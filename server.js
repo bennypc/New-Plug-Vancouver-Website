@@ -74,6 +74,9 @@ app.post(
 
         let QR = await QRCode.toDataURL("test");
 
+        const img = new Image();
+        img.src = QR;
+
         if (!!error) {
           console.log(error);
         }
@@ -83,7 +86,7 @@ app.post(
           from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
           subject: "Your Ticket",
           text: "TEXT" + QR,
-          html: <img src={QR} />,
+          html: img,
         };
 
         sgMail
