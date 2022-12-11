@@ -84,7 +84,7 @@ app.post(
           subject: 'Your Ticket',
           personalizations: [
             {
-              dynamic_template_data: {
+              'dynamic_template_data': {
                 'qrCode': QR,
               },
             },
