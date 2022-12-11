@@ -73,7 +73,7 @@ app.post(
           payment_intent: session.payment_intent,
         });
         var QRCode;
-        QRCode.toString("I am a pony!", function (err, url) {
+        QRCode.toDataURL("I am a pony!", function (err, url) {
           QRCode = url;
         });
 
