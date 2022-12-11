@@ -83,7 +83,7 @@ app.post(
           from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
           subject: "Your Ticket",
           text: "TEXT" + QR,
-          html: QR,
+          html: <img src={QR} />,
         };
 
         sgMail
