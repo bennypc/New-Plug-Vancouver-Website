@@ -1,8 +1,6 @@
 require("dotenv").config();
 
-const stripe = require("stripe")(
-  process.env.STRIPE_KEY
-);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 const cors = require("cors");
 const express = require("express");
 const path = require("path");
@@ -18,8 +16,8 @@ const supabase = require("@supabase/supabase-js").createClient(
 
 app.use(cors());
 
-console.log(SUPABASE_URL);
-console.log(SUPABASE_ANON_KEY);
+console.log(process.env.SUPABASE_URL);
+console.log(process.env.SUPABASE_ANON_KEY);
 
 app.use(express.static(path.join(__dirname, "plug-website/build")));
 
@@ -81,7 +79,7 @@ app.post(
           payment_intent: session.payment_intent,
         });
 
-        if(!!error) {
+        if (!!error) {
           console.log(error);
         }
 
