@@ -46,7 +46,7 @@ const endpointSecret =
 app.post(
   "/webhook",
   express.raw({ type: "application/json" }),
-  async (request, response) => {
+  (request, response) => {
     const sig = request.headers["stripe-signature"];
 
     let event;
@@ -58,16 +58,10 @@ app.post(
       return;
     }
 
-    // Handle the checkout.session.completed event
-    if (event.type === "checkout.session.completed") {
-      // Retrieve the session. If you require line items in the response, you may include them by expanding line_items.
-    }
-
     // Handle the event
     switch (event.type) {
       case "checkout.session.completed":
         const session = event.data.object;
-
         console.log(session);
 
         var ticketCode = makeID(16);
@@ -106,7 +100,7 @@ app.post(
     }
 
     // Return a 200 response to acknowledge receipt of the event
-    response.send().end();
+    response.send();
   }
 );
 
