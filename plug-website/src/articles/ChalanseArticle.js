@@ -1,8 +1,8 @@
-import React from "react";
-import "./articles.css";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
-import { Carousel } from "react-responsive-carousel";
+import React from 'react';
+import './articles.css';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import { Carousel } from 'react-responsive-carousel';
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -10,7 +10,7 @@ import {
   LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
-} from "react-share";
+} from 'react-share';
 
 import {
   EmailIcon,
@@ -19,7 +19,7 @@ import {
   RedditIcon,
   TwitterIcon,
   WhatsappIcon,
-} from "react-share";
+} from 'react-share';
 const getConfigurableProps = () => ({
   showThumbs: false,
   showStatus: false,
@@ -81,7 +81,7 @@ const ChalanseArticle = () => {
 
         <img
           className="article-image mt-6 mb-2"
-          src={require("./article_media/chalanse/chalanse.jpeg")}
+          src={require('./article_media/chalanse/chalanse.jpeg')}
           alt="chalanse"
         />
 
@@ -92,7 +92,7 @@ const ChalanseArticle = () => {
         <p className="article-body text-lg font-normal">
           Based in Vancouver, BC, Chalanse is a rising luxury women’s wear brand
           started by designer, stylist, creative director, university student,
-          and all around creative Serena Kealy.{" "}
+          and all around creative Serena Kealy.{' '}
         </p>
 
         <p className="article-body text-lg font-normal mt-[30px]">
@@ -119,61 +119,61 @@ const ChalanseArticle = () => {
         >
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse1.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse1.jpg')}
               alt="chalanse1"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse3.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse3.jpg')}
               alt="chalanse3"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse4.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse4.jpg')}
               alt="chalanse4"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse5.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse5.jpg')}
               alt="chalanse5"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse6.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse6.jpg')}
               alt="chalanse6"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse7.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse7.jpg')}
               alt="chalanse7"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse8.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse8.jpg')}
               alt="chalanse8"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse9.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse9.jpg')}
               alt="chalanse9"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse10.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse10.jpg')}
               alt="chalanse10"
             />
           </div>
           <div>
             <img
-              src={require("./article_media/chalanse/carousel/chalanse11.jpg")}
+              src={require('./article_media/chalanse/carousel/chalanse11.jpg')}
               alt="chalanse11"
             />
           </div>
@@ -197,16 +197,13 @@ const ChalanseArticle = () => {
           queen based in Vancouver, BC.
         </p>
 
-        <p className="article-body text-lg font-normal mt-[30px]"></p>
-
-        <p className="article-body text-lg font-normal mt-[30px]"></p>
         <div className="border-solid border-b-[1px] mx-2 my-6" />
         <a href="/articles/zoie-mcclymont">
           <div className="flex h-[75px] mb-4">
             <img
               className="rounded-full mr-6"
-              src={require("../images/team-members/zoie.jpg")}
-              alt="lauren"
+              src={require('../images/team-members/zoie.jpg')}
+              alt="zoie"
             />
             <div className="flex align-middle justify-center flex-col">
               <h2 className="">
