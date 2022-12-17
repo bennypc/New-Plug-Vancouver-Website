@@ -20,7 +20,7 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-const WeeklyBreakdownDecember4Article = () => {
+const WeeklyBreakdownDecember12Article = () => {
   return (
     <div className="mx-6 mt-6 ">
       <div className="article-container">
@@ -32,12 +32,14 @@ const WeeklyBreakdownDecember4Article = () => {
 
         <h1 className="text-4xl mb-1 mt-1">The Weekly Breakdown</h1>
 
-        <h2 className="text-lg font-medium italic mb-1">December 5th - 11th</h2>
+        <h2 className="text-lg font-medium italic mb-1">
+          December 12th - 18th
+        </h2>
 
         <a href="/articles/lauren-benson">
           <button className="astext">
             <p className="text-sm italic font-[600]">
-              LAUREN BENSON | 04.12.2022
+              LAUREN BENSON | 12.12.2022
             </p>
           </button>
         </a>
@@ -70,23 +72,38 @@ const WeeklyBreakdownDecember4Article = () => {
 
         <img
           className="article-image mt-6 mb-2"
-          src={require("./article_media/wb-1/wb1-banner.jpg")}
+          src={require("./article_media/wb-2/wb2-banner.jpg")}
           alt="glasses"
         />
 
-        <div className="text-center text-xs mb-4">
-          <p>Glitch Vancouver.</p>
-        </div>
-
         <p className="article-body text-lg font-normal">
-          Calendar looking kind of empty? Pack your social calendar with the
-          Plug Vancouver’s signature Weekly Breakdown to make your week a whole
-          lot better. Stuck on campus? Scroll to the bottom for our College
-          Edition!
+          Need some excitement to carry you to the winter break? Fill your
+          schedule with the Plug Vancouver’s signature Weekly Breakdown to spice
+          up your holiday season. No College Edition this time, grind out those
+          finals instead!
         </p>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          MONDAY, DECEMBER 5TH{" "}
+          MONDAY, DECEMBER 12TH{" "}
+        </p>
+
+        <p className="article-body text-lg italic font-medium mt-[30px]">
+          TINSELTOWN CHRISTMAS POP UP BAR
+        </p>
+
+        <p className="article-body text-lg font-normal mt-4">
+          Everyday is Christmas at this seasonal pop-up bar! With every inch
+          decked out with festive decorations, you’ll feel that you’ve walked
+          right into a Hallmark movie!
+        </p>
+
+        <p className="article-body text-lg font-norma mt-4">
+          <span className="font-medium">When: </span>Until Dec 31
+        </p>
+
+        <p className="article-body text-lg font-normal mb-2">
+          <span className="font-medium">Where: </span>Vancouver Alpen Club
+          (Deutsches Haus) – 4875 Victoria Drive
         </p>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
@@ -100,7 +117,7 @@ const WeeklyBreakdownDecember4Article = () => {
         </p>
 
         <p className="article-body text-lg font-norma mt-4">
-          <span className="font-medium">When: </span>Mon, Dec 5th: 10 PM — 2 AM
+          <span className="font-medium">When: </span>Mon, Dec 12th: 10 PM — 2 AM
         </p>
 
         <p className="article-body text-lg font-normal mb-2">
@@ -117,37 +134,8 @@ const WeeklyBreakdownDecember4Article = () => {
         </a>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          TUESDAY, DECEMBER 6TH{" "}
+          TUESDAY, DECEMBER 13TH{" "}
         </p>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            TNT TRIVIA
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Trivia on Tuesdays, a weekly thing! Don’t forget to book a table to
-            secure your spot.
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Tues, Dec 6th: 8 PM - 10
-            PM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Glitch Vancouver
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/glitchvancouver/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @glitchvancouver
-          </a>
-        </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
@@ -161,7 +149,7 @@ const WeeklyBreakdownDecember4Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Tues, Dec 6th: 9 PM - 3
+            <span className="font-medium">When: </span>Tues, Dec 13th: 9 PM - 3
             AM
           </p>
 
@@ -188,40 +176,8 @@ const WeeklyBreakdownDecember4Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          WEDNESDAY, DECEMBER 7TH{" "}
+          WEDNESDAY, DECEMBER 14TH{" "}
         </p>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            Plug Vancouver Presents: LDOC 4.0 [Winter Break Edition]
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            We’ve been working on bringing you an LDOC event like you’ve never
-            experienced before. Hosted by yours truly at the incomparable
-            Celebrities Vancouver. Join legendary Vancity DJ’s @djmarvel
-            @mrfloetic @chelsiedelr & @bdotdilla, as they spin non-stop Hip Hop,
-            Drill, R&B, and Afrobeats all night long.
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Dec 7th: 10 PM -
-            Late
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Celebrities Nightclub
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/celebrities_van /"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @celebrities_van
-          </a>
-        </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
@@ -234,7 +190,7 @@ const WeeklyBreakdownDecember4Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Dec 7th: 11 PM - 3
+            <span className="font-medium">When: </span>Wed, Dec 14th: 11 PM - 3
             AM
           </p>
 
@@ -254,80 +210,65 @@ const WeeklyBreakdownDecember4Article = () => {
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            DRAG ME TO HELL
+            BLAST WEDNESDAYS [HIPHOP | AFROBEAT | DANCEHALL] @STUDIO
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            The name says it all, this hell-raising show is not one to miss!
+            Bringing one of the best Hiphop/Afro nights to Granville
+            Entertainment District! Enjoy $4 Shots, Highballs, and $5
+            Heineken's.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Dec 7th: 11 PM - 2
-            AM
+            <span className="font-medium">When: </span>Wed, Dec 14th: 9:30 PM -
+            Late
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>The Junction Pub
+            <span className="font-medium">Where: </span>Studio Lounge &
+            Nightclub
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/missunderstood.89/"
+            href="https://www.instagram.com/studionightclub/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @missunderstood.89 &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/thejunctionpub/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @thejunctionpub
+            @studionightclub
           </a>
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          THURSDAY, DECEMBER 8TH{" "}
+          THURSDAY, DECEMBER 15TH{" "}
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            THURSDAY KARAOKE
+            COPA CABANA
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Hey Vancouver! Try out Karaoke at this 80s & 90s inspired Retro Bar
-            & Game Room.
+            Every Thursday join Vancouver’s top Latin DJ’s spinning the best in
+            Reggaeton, Latin, Top 40 and more!
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Thurs, Dec 8th: 8 PM - 12
-            PM
+            <span className="font-medium">When: </span>Thurs, Dec 15th: 10 PM -
+            1 AM PM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Glitch Vancouver
+            <span className="font-medium">Where: </span>Cabana Lounge
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/glitchvancouver/"
+            href="https://www.instagram.com/cabanavancouver/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @glitchvancouver &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/triumphent/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @triumphent
+            @cabanavancouver
           </a>
         </div>
 
@@ -337,13 +278,13 @@ const WeeklyBreakdownDecember4Article = () => {
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Thursday night plans up in the air (see what we did there)? Check
-            out this vibe-y bar in Yaletown.
+            Thursday night plans up in the air? Check out this vibe-y bar in
+            Yaletown.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Thurs, Dec 8th: 10 PM - 1
-            AM
+            <span className="font-medium">When: </span>Thurs, Dec 15th: 10 PM -
+            1 AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
@@ -361,8 +302,59 @@ const WeeklyBreakdownDecember4Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          FRIDAY, DECEMBER 9TH{" "}
+          FRIDAY, DECEMBER 16TH{" "}
         </p>
+
+        <div>
+          <p className="article-body text-lg italic font-medium mt-[30px]">
+            THE ICONIC 80'S VINTAGE XMAS RAVE
+          </p>
+
+          <p className="article-body text-lg font-normal mt-4">
+            The one of a kind 80's Party that brings two cultures together. 80's
+            fashion and house music! Talk about the best of both worlds.
+          </p>
+
+          <p className="article-body text-lg font-norma mt-4">
+            <span className="font-medium">When: </span>Fri, Dec 16th: 8 PM - 1
+            AM
+          </p>
+
+          <p className="article-body text-lg font-normal mb-2">
+            <span className="font-medium">Where: </span>El Guapo 1009 Hamilton
+            Street Vancouver
+          </p>
+        </div>
+
+        <div>
+          <p className="article-body text-lg italic font-medium mt-[30px]">
+            EDM FRIDAYS
+          </p>
+
+          <p className="article-body text-lg font-normal mt-4">
+            Your Friday nights just got a whole lot better…Mansion Nightclub has
+            an unprecedented convergence of sight and sound with vibrant
+            lighting, a state-of-the- art sound system, rooftop patio, and pool.
+          </p>
+
+          <p className="article-body text-lg font-norma mt-4">
+            <span className="font-medium">When: </span>Fri, Dec 16th: 9 PM -
+            LATE
+          </p>
+
+          <p className="article-body text-lg font-normal mb-2">
+            <span className="font-medium">Where: </span>Mansion Nightclub
+          </p>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/mansionclubvan/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @mansionclubvan
+          </a>
+        </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
@@ -370,13 +362,12 @@ const WeeklyBreakdownDecember4Article = () => {
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            YVR's Biggest Bar Crawl, ranked #1 in Canada. Catch it every Friday
-            at Twelve West & Levels. Includes skip-the-line VIP, free drinks &
-            more!
+            YVR's Biggest Bar Crawl, Ranked #1 in Canada. Every Friday at Twelve
+            West X Levels. Includes skip-the-line VIP, free drinks & more!
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Dec 9th: 9:30 PM -
+            <span className="font-medium">When: </span>Fri, Dec 16th: 9:30 PM -
             LATE
           </p>
 
@@ -394,259 +385,129 @@ const WeeklyBreakdownDecember4Article = () => {
           </a>
         </div>
 
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            CINEMA PRESENTS WHAT’S THE MOVE
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Join What’s The Move as they take over the Granville Strip this
-            Friday!
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Dec 9th: 10 PM - 3
-            AM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Cinema Public House
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/whatsthemovevan/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @whatsthemovevan
-          </a>
-        </div>
-
         <p className="article-body text-xl font-bold mt-[30px]">
-          SATURDAY, DECEMBER 10TH{" "}
+          SATURDAY, DECEMBER 17TH{" "}
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            SUBculture
+            TWELVE WEST SATURDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            A collab between Vancouver's leading bass music promotion brand and
-            Vancouver's favourite party destination, this event promises to
-            provide only the best in low-end bass music spectrum genres weekly.
+            Undeniably the hottest spot in Vancouver, Saturday nights at Twelve
+            West are wild.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sat, Dec 10th: 10:30 PM -
+            <span className="font-medium">When: </span>Sat, Dec 17th: 9:30 PM -
             3 AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>The Red Room
+            <span className="font-medium">Where: </span>Twelve West Nightclub
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/digitalmotionevents/"
+            href="https://www.instagram.com/twelve_west/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @digitalmotionevents &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/jantsenr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @jantsenr &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/redroomvancity/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @redroomvancity
+            @twelve_west
           </a>
         </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            SUP FU? SATURDAYS
+            CHRISTMAS BOOZE CRUISE
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Hit the dance floor at Vancouver’s longest-running HIP HOP ONLY
-            night!
+            Have a jolly boat party with Santa on this two-level
+            boat-turned-nightclub.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sat, Dec 10th: 10 PM - 2
-            AM
+            <span className="font-medium">When: </span>Sat, Dec 17th: 8 PM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Fortune Sound Club
+            <span className="font-medium">Where: </span>760 Pacific Blvd
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/hyphyevents/"
+            href="https://www.instagram.com/vancouverboatparties/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @hyphyevents &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/fortunesound/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @fortunesound
+            @vancouverboatparties
           </a>
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          SUNDAY, DECEMBER 11TH{" "}
+          SUNDAY, DECEMBER 18TH{" "}
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            HOUSE PARTY SUNDAYS
+            SUNDAY NIGHT STAND-UP COMEDY
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            House Party Sundays wraps up the week with DJ's Tico and Tylo.
+            Featuring a new lineup of Vancouver's funniest stand-up comedians
+            each week!
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sun, Dec 11th: 10 PM - 2
-            AM
+            <span className="font-medium">When: </span>Sun, Dec 18th: EARLY
+            SHOW: 7:30 PM LATE SHOW: 10 PM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Bar None Nightclub
-          </p>
-        </div>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            AFROBEATS SUNDAYS
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Afrobeats Sundays at Cabana Lounge feature DJ Rockstar, DJ Chelsea,
-            DJ Vinnie Bugatti and Bazenga, special guest performances and more!
-            Go out and support the culture every Sunday!
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sun, Dec 11th: 10 PM - 2
-            AM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Cabana Lounge
+            <span className="font-medium">Where: </span>117 West Pender Street
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/afrobeatsundays/"
+            href="https://www.instagram.com/comedyafterdarkyvr/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @afrobeatsundays &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/afrojoint/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @afrojoint
-          </a>
-        </div>
-
-        <p className="article-body text-xl font-bold mt-[30px]">
-          COLLEGE EDITION
-        </p>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            CASA and UTSAV Present: Taal: A Curated Night of Your Favourite
-            Bollywood and Punjabi
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Spinning nostalgic Bollywood & Punjabi hits all night long (with a
-            special UK Garage set), and paying respects to the legend
-            @sidhu_moosewala with a power hour of Sidhu from 11 pm - Midnight!
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Tues, Dec 6th: 10 PM - 2
-            AM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Fortune Sound Club
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/casayvr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @casayvr &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/ubcutsav/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @ubcutsav
+            @comedyafterdarkyvr
           </a>
         </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            UBC DRAG: QUEER LDOC
+            SUNDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            The end of term just got a whole lot more queer! Go check out
-            Vancouver’s top drag talent on UBC campus.
+            Sunday Industry Nights at Pierre’s Champagne Lounge end the week in
+            high fashion.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Dec 7th: 7 PM - 10
-            PM AM
+            <span className="font-medium">When: </span>Sun, Dec 18th: 8 PM -
+            LATE
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Koerner's Pub
+            <span className="font-medium">Where: </span>Pierre’s Lounge
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/casayvr/"
+            href="https://www.instagram.com/pierreslounge/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @ubcdrag
+            @pierreslounge &nbsp;
           </a>
         </div>
+
         <div className="border-solid border-b-[1px] mx-2 my-6" />
         <a href="/articles/lauren-benson">
           <div className="flex h-[75px] mb-4">
@@ -669,4 +530,4 @@ const WeeklyBreakdownDecember4Article = () => {
   );
 };
 
-export default WeeklyBreakdownDecember4Article;
+export default WeeklyBreakdownDecember12Article;
