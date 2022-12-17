@@ -129,64 +129,66 @@ const AboutPage = () => {
         </h1>
 
         <div>
-          <div className="flex justify-center">
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:mt-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/kalith.jpg")}
-                  alt="kalith"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Kalith</h3>
-                <h3>Nanayakkara</h3>
-                <p>President</p>
+          
 
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/kalithj/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/kalith/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div className="main flex flex-wrap mb-[40px]">
+
+          <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/ryanclark.jpg")}
+                  alt="ryanclark"
+                />
+              </div>
+              <div className="caption mb-4 md:mt-0 pd-4">
+                <h4>Ryan</h4>
+                <h4>Hamilton-Clark</h4>
+                <p>Events Associate</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/ryanhclark/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/r-h-clark/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/brad.jpg")}
-                  alt="brad"
+                  src={require("../images/team-members/daija.jpg")}
+                  alt="daija"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Bradley</h3>
-                <h3>Hoy</h3>
-                <p>Vice President</p>
+                <h3>Daija</h3>
+                <h3>Hutchings</h3>
+                <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/bradleyahoy/"
+                    href="https://www.instagram.com/_daijahutchings/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/bradley-hoy/"
+                    href="https://www.linkedin.com/in/daija-hutchings/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -197,27 +199,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/karmen.jpg")}
-                  alt="karmen"
+                  src={require("../images/team-members/zoie.jpg")}
+                  alt="zoie"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Karmen</h3>
-                <h3>Leong</h3>
-                <p>VP Marketing</p>
+                <h3>Zoie</h3>
+                <h3>McClymont</h3>
+                <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/karmenleong/"
+                    href="https://www.instagram.com/zoie.sm/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/karmenleong/"
+                    href="https://www.linkedin.com/in/zoiemcclymont/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -228,27 +230,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/kevin.jpg")}
-                  alt="kevin"
+                  src={require("../images/team-members/ryan.jpg")}
+                  alt="ryan"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Kevin</h3>
-                <h3>You</h3>
-                <p>VP Events</p>
+                <h3>Ryan</h3>
+                <h3>Bisaso</h3>
+                <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/yokev1n/"
+                    href="https://www.instagram.com/ryanbisaso/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/kevin-you-587841253/"
+                    href="https://www.linkedin.com/in/ryan-bisaso-kiggundu-761245207/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -259,27 +261,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/noah.jpg")}
-                  alt="noah"
+                  src={require("../images/team-members/luke.jpg")}
+                  alt="luke"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Noah</h3>
-                <h3>Marciano</h3>
-                <p>VP Finance</p>
+                <h3>Luke</h3>
+                <h3>Lee</h3>
+                <p>Events Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/noahmarciano/"
+                    href="https://www.instagram.com/luke.mudrylee/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/noahmarciano/"
+                    href="https://www.linkedin.com/in/lukelee3/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -290,27 +292,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/praj.jpg")}
-                  alt="praj"
+                  src={require("../images/team-members/dominika.jpg")}
+                  alt="dominika"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Prajwal</h3>
-                <h3>Chadha</h3>
-                <p>AVP Events</p>
+                <h3>Dominika</h3>
+                <h3>Kruszyna</h3>
+                <p>Marketing Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/prajwallchadha/"
+                    href="https://www.instagram.com/dominikakruszyna/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/prajwalchadha/"
+                    href="https://www.linkedin.com/in/dominikakruszyna/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -321,27 +323,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/luana.jpg")}
-                  alt="luana"
+                  src={require("../images/team-members/alex.jpg")}
+                  alt="alex"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Luana</h3>
-                <h3>Carvalho</h3>
-                <p>AVP Events</p>
+                <h3>Alex</h3>
+                <h3>Olyaiy</h3>
+                <p>Creative Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://instagram.com/luana_desousa_carvalho?igshid=YmMyMTA2M2Y="
+                    href="https://www.instagram.com/m.alex2002/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/luana-de-sousa-carvalho-bega-93900a207/"
+                    href="https://www.linkedin.com/in/alex-olyaiy-5296321aa/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -352,189 +354,82 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/hana.jpg")}
-                  alt="hana"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Hana</h3>
-                <h3>Kim</h3>
-                <p>Events Director</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/hana.2k/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/hana-kim-33611223b/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/oliver.jpg")}
-                  alt="oliver"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Oliver</h3>
-                <h3>Moes-Kun</h3>
-                <p>Media Director</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/oliver.m.o/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/olivermoesokun/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/benny.jpg")}
-                  alt="benny"
-                />
-              </div>
-              <div className="caption">
-                <h3>Benny</h3>
-                <h3>Chinvanich</h3>
-                <p>Lead Developer</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/bennychinvanich/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/benny-chinvanich/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/bennypc"
-                  >
-                    <FontAwesomeIcon icon={faGithub} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/jeshin.jpg")}
-                  alt="jeshin"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Jesin</h3>
-                <h3>Toor</h3>
-                <p>Marketing Director</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/jeshin_t/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/jeshin-toor/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/lauren.jpg")}
-                  alt="lauren"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Lauren</h3>
-                <h3>Benson</h3>
-                <p>Editorial Director</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/lauren.bensonn/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/laurenmbenson/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/kevinli.jpg")}
-                  alt="kevinli"
+                  src={require("../images/team-members/kevinhuang.jpg")}
+                  alt="kevinhuang"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
                 <h3>Kevin</h3>
-                <h3>Li</h3>
-                <p>Events Manager</p>
+                <h3>Huang</h3>
+                <p>Creative Sr. Associate</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/kevinl.i/"
+                    href="https://www.instagram.com/kevinhuang2/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/steph.jpg")}
+                  alt="steph"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Stephanie</h3>
+                <h3>Jiang</h3>
+                <p>Editorial Sr. Associate</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/stephanie.jiang/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/kevin-m-li/"
+                    href="https://www.linkedin.com/in/stephanie-yj-jiang/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/esther.jpg")}
+                  alt="esther"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Esther</h3>
+                <h3>Lu</h3>
+                <p>Events Sr. Associate</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/estherrlu/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/esther-lu-b174a4198/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -607,84 +502,29 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/steph.jpg")}
-                  alt="steph"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Stephanie</h3>
-                <h3>Jiang</h3>
-                <p>Editorial Sr. Associate</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/stephanie.jiang/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/stephanie-yj-jiang/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/esther.jpg")}
-                  alt="esther"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Esther</h3>
-                <h3>Lu</h3>
-                <p>Events Sr. Associate</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/estherrlu/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/esther-lu-b174a4198/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/kevinhuang.jpg")}
-                  alt="kevinhuang"
+                  src={require("../images/team-members/kevinli.jpg")}
+                  alt="kevinli"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
                 <h3>Kevin</h3>
-                <h3>Huang</h3>
-                <p>Creative Sr. Associate</p>
+                <h3>Li</h3>
+                <p>Events Manager</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/kevinhuang2/"
+                    href="https://www.instagram.com/kevinl.i/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kevin-m-li/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>
               </div>
@@ -693,27 +533,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/alex.jpg")}
-                  alt="alex"
+                  src={require("../images/team-members/jeshin.jpg")}
+                  alt="jeshin"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Alex</h3>
-                <h3>Olyaiy</h3>
-                <p>Creative Associate</p>
+                <h3>Jeshin</h3>
+                <h3>Toor</h3>
+                <p>Marketing Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/m.alex2002/"
+                    href="https://www.instagram.com/jeshin_t/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/alex-olyaiy-5296321aa/"
+                    href="https://www.linkedin.com/in/jeshin-toor/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -724,27 +564,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/dominika.jpg")}
-                  alt="dominika"
+                  src={require("../images/team-members/lauren.jpg")}
+                  alt="lauren"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Dominika</h3>
-                <h3>Kruszyna</h3>
-                <p>Marketing Associate</p>
+                <h3>Lauren</h3>
+                <h3>Benson</h3>
+                <p>Editorial Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/dominikakruszyna/"
+                    href="https://www.instagram.com/lauren.bensonn/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/dominikakruszyna/"
+                    href="https://www.linkedin.com/in/laurenmbenson/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -755,27 +595,65 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/ryan.jpg")}
-                  alt="ryan"
+                  src={require("../images/team-members/benny.jpg")}
+                  alt="benny"
+                />
+              </div>
+              <div className="caption">
+                <h3>Benny</h3>
+                <h3>Chinvanich</h3>
+                <p>Lead Developer</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/bennychinvanich/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/benny-chinvanich/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/bennypc"
+                  >
+                    <FontAwesomeIcon icon={faGithub} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/oliver.jpg")}
+                  alt="oliver"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Ryan</h3>
-                <h3>Bisaso</h3>
-                <p>Events Associate</p>
+                <h3>Oliver</h3>
+                <h3>Moes-Kun</h3>
+                <p>Media Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/ryanbisaso/"
+                    href="https://www.instagram.com/oliver.m.o/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/ryan-bisaso-kiggundu-761245207/"
+                    href="https://www.linkedin.com/in/olivermoesokun/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -786,27 +664,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/zoie.jpg")}
-                  alt="zoie"
+                  src={require("../images/team-members/hana.jpg")}
+                  alt="hana"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Zoie</h3>
-                <h3>McClymont</h3>
-                <p>Events Associate</p>
+                <h3>Hana</h3>
+                <h3>Kim</h3>
+                <p>Events Director</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/zoie.sm/"
+                    href="https://www.instagram.com/hana.2k/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/zoiemcclymont/"
+                    href="https://www.linkedin.com/in/hana-kim-33611223b/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -817,27 +695,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/luke.jpg")}
-                  alt="luke"
+                  src={require("../images/team-members/luana.jpg")}
+                  alt="luana"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Luke</h3>
-                <h3>Lee</h3>
-                <p>Events Associate</p>
+                <h3>Luana</h3>
+                <h3>Carvalho</h3>
+                <p>AVP Events</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/luke.mudrylee/"
+                    href="https://instagram.com/luana_desousa_carvalho?igshid=YmMyMTA2M2Y="
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/lukelee3/"
+                    href="https://www.linkedin.com/in/luana-de-sousa-carvalho-bega-93900a207/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -848,27 +726,27 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/daija.jpg")}
-                  alt="daija"
+                  src={require("../images/team-members/praj.jpg")}
+                  alt="praj"
                 />
               </div>
               <div className="caption mt-2 md:mt-0">
-                <h3>Daija</h3>
-                <h3>Hutchings</h3>
-                <p>Events Associate</p>
+                <h3>Prajwal</h3>
+                <h3>Chadha</h3>
+                <p>AVP Events</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/_daijahutchings/"
+                    href="https://www.instagram.com/prajwallchadha/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/daija-hutchings/"
+                    href="https://www.linkedin.com/in/prajwalchadha/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
@@ -879,33 +757,160 @@ const AboutPage = () => {
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
-                  src={require("../images/team-members/ryanclark.jpg")}
-                  alt="ryanclark"
+                  src={require("../images/team-members/noah.jpg")}
+                  alt="noah"
                 />
               </div>
-              <div className="caption mb-4 md:mt-0 pd-4">
-                <h4>Ryan</h4>
-                <h4>Hamilton-Clark</h4>
-                <p>Events Associate</p>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Noah</h3>
+                <h3>Marciano</h3>
+                <p>VP Finance</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.instagram.com/ryanhclark/"
+                    href="https://www.linkedin.com/in/noahmarciano/"
                   >
                     <FontAwesomeIcon icon={faInstagram} />
                   </a>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/r-h-clark/"
+                    href="https://www.instagram.com/noahmarciano/"
                   >
                     <FontAwesomeIcon icon={faLinkedin} />
                   </a>
                 </div>
               </div>
             </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/kevin.jpg")}
+                  alt="kevin"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Kevin</h3>
+                <h3>You</h3>
+                <p>VP Events</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/yokev1n/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kevin-you-587841253/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/karmen.jpg")}
+                  alt="karmen"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Karmen</h3>
+                <h3>Leong</h3>
+                <p>VP Marketing</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/karmenleong/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/karmenleong/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/brad.jpg")}
+                  alt="brad"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Bradley</h3>
+                <h3>Hoy</h3>
+                <p>Vice President</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/bradleyahoy/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/bradley-hoy/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:mt-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-img">
+                <img
+                  src={require("../images/team-members/kalith.jpg")}
+                  alt="kalith"
+                />
+              </div>
+              <div className="caption mt-2 md:mt-0">
+                <h3>Kalith</h3>
+                <h3>Nanayakkara</h3>
+                <p>President</p>
+
+                <div className="social-links ml-2 md:ml-3">
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.instagram.com/kalithj/"
+                  >
+                    <FontAwesomeIcon icon={faInstagram} />
+                  </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://www.linkedin.com/in/kalith/"
+                  >
+                    <FontAwesomeIcon icon={faLinkedin} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>            
           </div>
         </div>
       </div>

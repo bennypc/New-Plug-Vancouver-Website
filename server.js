@@ -9,6 +9,7 @@ const sgMail = require('@sendgrid/mail');
 const bodyParser = require('body-parser');
 const QRCode = require('qrcode');
 
+
 const supabase = require('@supabase/supabase-js').createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_ANON_KEY
