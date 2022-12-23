@@ -1,14 +1,14 @@
-import Button from "@mui/material/Button";
-import { ThemeProvider, createTheme } from "@mui/material";
-import { Typography } from "@mui/material";
+import Button from '@mui/material/Button';
+import { ThemeProvider, createTheme } from '@mui/material';
+import { Typography } from '@mui/material';
 
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
-import React, { useState } from "react";
-import "../../articles/articles.css";
+import React, { useState } from 'react';
+import '../../articles/articles.css';
 
 const LaurenArticles = () => {
   //const [showAll, setShowAll] = React.useState(true);
@@ -65,28 +65,28 @@ const LaurenArticles = () => {
   const theme = createTheme({
     typography: {
       fontFamily: [
-        "Helvetica Neue",
-        "BlinkMacSystemFont",
+        'Helvetica Neue',
+        'BlinkMacSystemFont',
         '"Segoe UI"',
-        "Roboto",
-        "Arial",
-        "sans-serif",
+        'Roboto',
+        'Arial',
+        'sans-serif',
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-      ].join(","),
+      ].join(','),
     },
   });
 
   const styles = {
     button: {
-      backgroundColor: "#ab39cc",
+      backgroundColor: '#ab39cc',
       margin: 4,
       text: 10,
       padding: 5,
-      "&:hover": {
-        backgroundColor: "#cb6ce6",
-        color: "#3c52b2",
+      '&:hover': {
+        backgroundColor: '#cb6ce6',
+        color: '#3c52b2',
       },
     },
   };
@@ -98,7 +98,7 @@ const LaurenArticles = () => {
           <div className="flex justify-center mb-2 md:mb-4">
             <img
               className="author-page-image rounded-full flex  justify-center"
-              src={require("../../articles/article_media/authors/laurenbenson.png")}
+              src={require('../../articles/article_media/authors/laurenbenson.png')}
               alt="lauren"
             />
           </div>
@@ -118,7 +118,37 @@ const LaurenArticles = () => {
         <div className="text-left mx-2">
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showEvents ? undefined : "hidden"
+              showEvents ? undefined : 'hidden'
+            }`}
+          >
+            <a href="/articles/weekly-breakdown-december-19">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    EVENTS
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
+                    THE WEEKLY BREAKDOWN: DECEMBER 19TH-25TH
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 19.12.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require('../../articles/article_media/wb-3/wb3-banner.png')}
+                    alt="cabin"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            className={`border-solid border-b-2 mx-5 ${
+              showEvents ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/student-seasonal">
@@ -138,7 +168,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/student-seasonal/seasonal-banner.jpg")}
+                    src={require('../../articles/article_media/student-seasonal/seasonal-banner.jpg')}
                     alt="cabin"
                   />
                 </div>
@@ -148,7 +178,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showEvents ? undefined : "hidden"
+              showEvents ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/weekly-breakdown-december-12">
@@ -168,7 +198,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/wb-2/wb2-banner.jpg")}
+                    src={require('../../articles/article_media/wb-2/wb2-banner.jpg')}
                     alt="glasses"
                   />
                 </div>
@@ -178,7 +208,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showEvents ? undefined : "hidden"
+              showEvents ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/weekly-breakdown-december-4">
@@ -198,7 +228,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/wb-1/wb1-banner.jpg")}
+                    src={require('../../articles/article_media/wb-1/wb1-banner.jpg')}
                     alt="glasses"
                   />
                 </div>
@@ -208,7 +238,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showFashion ? undefined : "hidden"
+              showFashion ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/vancouver-fashion-week-trends">
@@ -228,7 +258,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/vfwtrends/vfwtrendsbanner.jpg")}
+                    src={require('../../articles/article_media/vfwtrends/vfwtrendsbanner.jpg')}
                     alt="glasses"
                   />
                 </div>
@@ -237,7 +267,7 @@ const LaurenArticles = () => {
           </div>
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showLifestyle ? undefined : "hidden"
+              showLifestyle ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/community-coffee-and-classy-eyewear">
@@ -257,7 +287,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../images/thumbnails/eyewear.png")}
+                    src={require('../../images/thumbnails/eyewear.png')}
                     alt="glasses"
                   />
                 </div>
@@ -267,7 +297,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showMusic ? undefined : "hidden"
+              showMusic ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/meet-naduh">
@@ -287,7 +317,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../images/thumbnails/naduh.jpg")}
+                    src={require('../../images/thumbnails/naduh.jpg')}
                     alt="naduh"
                   />
                 </div>
@@ -297,7 +327,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showMusic ? undefined : "hidden"
+              showMusic ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/honestly-nevermind">
@@ -317,7 +347,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/honestlynevermind.png")}
+                    src={require('../../articles/article_media/honestlynevermind.png')}
                     alt="naduh"
                   />
                 </div>
@@ -327,7 +357,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showMusic ? undefined : "hidden"
+              showMusic ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/kardinal">
@@ -349,7 +379,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../images/thumbnails/kardinal.jpg")}
+                    src={require('../../images/thumbnails/kardinal.jpg')}
                     alt="kardinal interview"
                   />
                 </div>
@@ -359,7 +389,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showFashion ? undefined : "hidden"
+              showFashion ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/vancouver-vintage">
@@ -381,7 +411,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/vancouver-vintage/top-banner.webp")}
+                    src={require('../../articles/article_media/vancouver-vintage/top-banner.webp')}
                     alt="vintage"
                   />
                 </div>
@@ -391,7 +421,7 @@ const LaurenArticles = () => {
 
           <div
             className={`border-solid border-b-2 mx-5 ${
-              showEvents ? undefined : "hidden"
+              showEvents ? undefined : 'hidden'
             }`}
           >
             <a href="/articles/blockchain-bottle">
@@ -413,7 +443,7 @@ const LaurenArticles = () => {
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require("../../articles/article_media/blockchain-bottle/koji-hand.webp")}
+                    src={require('../../articles/article_media/blockchain-bottle/koji-hand.webp')}
                     alt="vintage"
                   />
                 </div>
