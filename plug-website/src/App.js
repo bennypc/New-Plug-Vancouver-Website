@@ -42,6 +42,7 @@ import OrderSuccess from './subpages/shop/OrderSuccess';
 import SeasonalStudentBudgetArticle from './articles/SeasonalStudentBudgetArticle';
 import WeeklyBreakdownDecember12Article from './articles/WeeklyBreakdownDecember12Article';
 import WeeklyBreakdownDecember19Article from './articles/WeeklyBreakdownDecember19Article';
+import WeeklyBreakdownDecember26Article from './articles/WeeklyBreakdownDecember26Article';
 
 function Logo() {
   return (
@@ -187,6 +188,32 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/weekly-breakdown-december-26">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                EVENTS
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                THE WEEKLY BREAKDOWN: DECEMBER 26TH - JANUARY 1ST
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 26.12.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/wb-4/wb4-banner.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-december-19">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -282,32 +309,6 @@ function Articles() {
               <img
                 className="thumbnail"
                 src={require('./articles/article_media/wb-1/wb1-banner.jpg')}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/chalanse">
-          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                FASHION
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                CHALANSE: FASHION THAT EMPOWERS - THE BRAND TO WATCH
-              </h2>
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                ZOIE MCCLYMONT | 04.12.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require('./articles/article_media/chalanse/chalanse.jpeg')}
                 alt="glasses"
               />
             </div>
@@ -1171,13 +1172,10 @@ function App() {
             />
             <Route path="/articles/zoie-mcclymont" element={<ZoieArticles />} />
             <Route path="/about" element={<AboutPage />} />
-
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />
-
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/order/success" element={<OrderSuccess />} />
-
             <Route
               path="/articles/community-coffee-and-classy-eyewear"
               element={<EyewearArticle />}
@@ -1192,12 +1190,10 @@ function App() {
               path="/articles/vancouver-vintage"
               element={<VancouverVintageArticle />}
             />
-
             <Route
               path="/articles/student-seasonal"
               element={<SeasonalStudentBudgetArticle />}
             />
-
             <Route
               path="/articles/blockchain-bottle"
               element={<BlockchainBottleArticle />}
@@ -1206,15 +1202,18 @@ function App() {
               path="/articles/weekly-breakdown-december-4"
               element={<WeeklyBreakdownDecember4Article />}
             />
-
             <Route
               path="/articles/weekly-breakdown-december-12"
               element={<WeeklyBreakdownDecember12Article />}
             />
-
             <Route
               path="/articles/weekly-breakdown-december-19"
               element={<WeeklyBreakdownDecember19Article />}
+            />
+            \
+            <Route
+              path="/articles/weekly-breakdown-december-26"
+              element={<WeeklyBreakdownDecember26Article />}
             />
             <Route path="/articles/chalanse" element={<ChalanseArticle />} />
             <Route
