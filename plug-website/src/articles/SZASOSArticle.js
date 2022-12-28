@@ -113,18 +113,21 @@ const SZASOSArticle = () => {
           Perhaps that’s why I felt extra drawn to “Snooze”, the song that
           follows “Used”. I found that “Snooze” triggers that all too familiar
           feeling of hitting your alarm for the thousandth time, just to realize
-          it’s a Saturday so it didn’t matter in the first place. This feels as
-          though this is another nod to SZA’s coming-of-age audience, pairing
-          perfectly with ”Gone Girl”, which verbalizes growing pains in ways I
-          didn’t know possible. SZA’s bittersweet lyrics call to something of
-          the past, “Squeezing too tight boy you’re losing me… get around you
-          and I regress… tired of repeating myself I digress… trying to grow
-          without hating the process”. Every young adult knows all too well the
-          throbbing pang of trying to grow into yourself while *perfectly*
-          balancing relationships, a career, and your own wellbeing- all while
-          trying not to miss a younger, more innocent version of yourself too
-          much. The key change at the end almost symbolizes the melody evolving
-          in itself.
+          it’s a Saturday so it didn’t matter in the first place.
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          This feels as though this is another nod to SZA’s coming-of-age
+          audience, pairing perfectly with ”Gone Girl”, which verbalizes growing
+          pains in ways I didn’t know possible. SZA’s bittersweet lyrics call to
+          something of the past, “Squeezing too tight boy you’re losing me… get
+          around you and I regress… tired of repeating myself I digress… trying
+          to grow without hating the process”. Every young adult knows all too
+          well the throbbing pang of trying to grow into yourself while
+          *perfectly* balancing relationships, a career, and your own wellbeing-
+          all while trying not to miss a younger, more innocent version of
+          yourself too much. The key change at the end almost symbolizes the
+          melody evolving in itself.
         </p>
 
         <p className="text-lg font-normal mt-[30px]">
@@ -135,8 +138,11 @@ const SZASOSArticle = () => {
           you but I miss you” dichotomy is chock-full of nostalgia in the best
           way possible. “Nobody Gets Me” keeps the throwback vibe going, and is
           simply the R&B, NSFW version of a Hannah Montana song. If that doesn’t
-          tell you that I’m obsessed with it, I simply don’t know what would. I
-          will say I was hoping this energy would carry throughout more of the
+          tell you that I’m obsessed with it, I simply don’t know what would.
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          I will say I was hoping this energy would carry throughout more of the
           album, but “Conceited” felt just a bit basic in comparison to the last
           few tracks before it. There are a few songs that blur together, but I
           suppose that’s somewhat to be expected when writing 23 tracks. That’s
@@ -145,6 +151,7 @@ const SZASOSArticle = () => {
           standing alone, as each is a course in the meal- not a side dish on a
           plate.
         </p>
+
         <p className="text-lg font-normal mt-[30px]">
           “Open Arms” redeems the last song with a feature, with comforting and
           dreamy melodies that easily cascaded into Travis Scott’s verses. In
@@ -152,9 +159,12 @@ const SZASOSArticle = () => {
           well. Of course the album rounds out “I Hate U” and “Good Days”, which
           are already hits and have taken the internet by storm. Then
           “Forgiveless” sounds like the perfect song for a breakup, or more
-          fittingly, when I realize I can’t actually date this album. All in
-          all, the emotion and sheer depth of “SOS” will have people who have
-          never even heard of SZA fall in love with this album. With
+          fittingly, when I realize I can’t actually date this album.
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          All in all, the emotion and sheer depth of “SOS” will have people who
+          have never even heard of SZA fall in love with this album. With
           twenty-three tracks of thoughtful lyrics enveloped in such rich
           melodies, “SOS” truly has something for everyone. Each song feels so
           intentional and purposeful, and it’s clear the star’s audience is
