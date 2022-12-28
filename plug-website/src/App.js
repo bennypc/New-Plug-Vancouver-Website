@@ -43,6 +43,7 @@ import SeasonalStudentBudgetArticle from './articles/SeasonalStudentBudgetArticl
 import WeeklyBreakdownDecember12Article from './articles/WeeklyBreakdownDecember12Article';
 import WeeklyBreakdownDecember19Article from './articles/WeeklyBreakdownDecember19Article';
 import WeeklyBreakdownDecember26Article from './articles/WeeklyBreakdownDecember26Article';
+import SZASOSArticle from './articles/SZASOSArticle';
 
 function Logo() {
   return (
@@ -188,6 +189,32 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/sza-sos">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                MUSIC
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
+                Why I’m in a Committed Relationship with SZA’s New Album “SOS”
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 28.12.2022
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/sza-sos/sza-banner.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-december-26">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -284,31 +311,6 @@ function Articles() {
               <img
                 className="thumbnail"
                 src={require('./articles/article_media/wb-2/wb2-banner.jpg')}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/weekly-breakdown-december-4">
-          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                EVENTS
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                THE WEEKLY BREAKDOWN: DECEMBER 5TH-11TH
-              </h2>
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 05.12.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require('./articles/article_media/wb-1/wb1-banner.jpg')}
                 alt="glasses"
               />
             </div>
@@ -1185,6 +1187,7 @@ function App() {
               path="/articles/honestly-nevermind"
               element={<HonestlyNevermindArticle />}
             />
+            <Route path="/articles/sza-sos" element={<SZASOSArticle />} />
             <Route path="/articles/kardinal" element={<KardinalArticle />} />
             <Route
               path="/articles/vancouver-vintage"
