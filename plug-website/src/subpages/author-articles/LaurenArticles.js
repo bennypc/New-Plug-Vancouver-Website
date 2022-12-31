@@ -118,6 +118,36 @@ const LaurenArticles = () => {
         <div className="text-left mx-2">
           <div
             className={`border-solid border-b-2 mx-5 ${
+              showFashion ? undefined : 'hidden'
+            }`}
+          >
+            <a href="/articles/2022-from-your-closet">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    FASHION
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px] uppercase">
+                    2022 From Your Closet
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 31.12.2022
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require('../../articles/article_media/closet-2022/closet-banner.jpg')}
+                    alt="cabin"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div
+            className={`border-solid border-b-2 mx-5 ${
               showMusic ? undefined : 'hidden'
             }`}
           >
