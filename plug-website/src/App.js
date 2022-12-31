@@ -382,7 +382,7 @@ function WeeklyBreakdownStrip() {
 
       <div className="absolute flex justify-around top-[120px] lg:mt-24">
         <a
-          href="https://www.instagram.com/p/Clzlg4XP5Mg/"
+          href="https://www.instagram.com/p/Cmp9PaWrQw4/"
           target="_blank"
           rel="noreferrer"
         >
