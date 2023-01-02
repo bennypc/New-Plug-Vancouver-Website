@@ -32,7 +32,7 @@ const Closet2022Article = () => {
         />
 
         <p className="text-lg font-normal">
-          2023 was a year packed with trends, some of them coming in and out of
+          2022 was a year packed with trends, some of them coming in and out of
           vogue faster than most of us could keep up. Check out how many of
           these styles made it into your closet this year with our list of the
           top trends for 2022!
