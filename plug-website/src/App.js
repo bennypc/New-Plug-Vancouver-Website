@@ -45,6 +45,7 @@ import WeeklyBreakdownDecember19Article from './articles/WeeklyBreakdownDecember
 import WeeklyBreakdownDecember26Article from './articles/WeeklyBreakdownDecember26Article';
 import SZASOSArticle from './articles/SZASOSArticle';
 import Closet2022Article from './articles/Closet2022Article';
+import WeeklyBreakdownJanuary2Article from './articles/WeeklyBreakdownJanuary2Article';
 
 function Logo() {
   return (
@@ -190,6 +191,32 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/weekly-breakdown-january-2">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                EVENTS
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                THE WEEKLY BREAKDOWN: JANUARY 2ND - JANUARY 8TH
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 02.01.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/wb-5/wb5-banner.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/2022-from-your-closet">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -287,33 +314,6 @@ function Articles() {
                 className="thumbnail"
                 src={require('./articles/article_media/wb-3/wb3-banner.png')}
                 alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/student-seasonal">
-          <div className="flex mx-[2px] my-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                EVENTS
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
-                HOW TO BE SEASONAL ON A STUDENT BUDGET
-              </h2>
-
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 13.12.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require('./articles/article_media/student-seasonal/seasonal-banner.jpg')}
-                alt="cabin"
               />
             </div>
           </div>
@@ -1223,6 +1223,10 @@ function App() {
             <Route
               path="/articles/weekly-breakdown-december-26"
               element={<WeeklyBreakdownDecember26Article />}
+            />
+            <Route
+              path="/articles/weekly-breakdown-january-2"
+              element={<WeeklyBreakdownJanuary2Article />}
             />
             <Route path="/articles/chalanse" element={<ChalanseArticle />} />
             <Route
