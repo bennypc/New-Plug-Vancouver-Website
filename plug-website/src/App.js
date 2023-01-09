@@ -6,6 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import BurgerMenu from './components/burger';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 import SongsVote from './songs-form/songs-vote';
 import SongsList from './songs-form/songs-list';
@@ -46,6 +47,9 @@ import WeeklyBreakdownDecember26Article from './articles/WeeklyBreakdownDecember
 import SZASOSArticle from './articles/SZASOSArticle';
 import Closet2022Article from './articles/Closet2022Article';
 import WeeklyBreakdownJanuary2Article from './articles/WeeklyBreakdownJanuary2Article';
+const url =
+  'https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0';
+const SimpleForm = () => <MailchimpSubscribe url={url} />;
 
 function Logo() {
   return (
@@ -366,6 +370,77 @@ function Culture() {
   );
 }
 
+// a basic form
+const CustomForm = ({ status, message, onValidated }) => {
+  let email, name;
+  const submit = () =>
+    email &&
+    name &&
+    email.value.indexOf('@') > -1 &&
+    onValidated({
+      EMAIL: email.value,
+      NAME: name.value,
+    });
+
+  return (
+    <div
+      style={{
+        background: '#efefef',
+        borderRadius: 2,
+        padding: 10,
+        display: 'inline-block',
+      }}
+    >
+      {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
+      {status === 'error' && (
+        <div
+          style={{ color: 'red' }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      {status === 'success' && (
+        <div
+          style={{ color: 'green' }}
+          dangerouslySetInnerHTML={{ __html: message }}
+        />
+      )}
+      <input
+        style={{ fontSize: '2em', padding: 5 }}
+        ref={(node) => (name = node)}
+        type="text"
+        placeholder="Your name"
+      />
+      <br />
+      <input
+        style={{ fontSize: '2em', padding: 5 }}
+        ref={(node) => (email = node)}
+        type="email"
+        placeholder="Your email"
+      />
+      <br />
+      <button style={{ fontSize: '2em', padding: 5 }} onClick={submit}>
+        Submit
+      </button>
+    </div>
+  );
+};
+
+function SignUpForm() {
+  return (
+    <div>
+      <MailchimpSubscribe
+        url={url}
+        render={({ subscribe, status, message }) => (
+          <CustomForm
+            status={status}
+            message={message}
+            onValidated={(formData) => subscribe(formData)}
+          />
+        )}
+      />
+    </div>
+  );
+}
 function WeeklyBreakdownStrip() {
   return (
     <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[500px] w-full">
