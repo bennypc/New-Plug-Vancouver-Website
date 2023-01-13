@@ -960,18 +960,18 @@ function ImageSlideshow() {
     // </div>
     <div>
       <a
-        href="https://www.ticketweb.ca/event/plug-presents-ldoc-40-winter-celebrities-nightclub-tickets/12708925"
+        href="https://www.youtube.com/watch?v=h3Zu64qPWBI"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
           className="mobile-banner"
-          src={require("./images/LDOC-Website-Banner.jpg")}
+          src={require("./images/asian-struggles-banner.jpg")}
           alt=""
         />
         <img
           className="desktop-banner"
-          src={require("./images/LDOC-Website-Banner.jpg")}
+          src={require("./images/asian-struggles-banner.jpg")}
           alt=""
         />
       </a>
@@ -1238,7 +1238,7 @@ function App() {
               path="/"
               element={
                 <>
-                  {/* <ImageSlideshow /> */}
+                  <ImageSlideshow />
                   <Articles />
                   <WeeklyBreakdownStrip />
                   <BestMoments />
