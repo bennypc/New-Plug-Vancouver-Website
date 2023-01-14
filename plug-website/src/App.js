@@ -48,6 +48,7 @@ import SZASOSArticle from "./articles/SZASOSArticle";
 import Closet2022Article from "./articles/Closet2022Article";
 import WeeklyBreakdownJanuary2Article from "./articles/WeeklyBreakdownJanuary2Article";
 import WeeklyBreakdownJanuary9Article from "./articles/WeeklyBreakdownJanuary9Article";
+import BestDrinkArticle from "./articles/BestDrink";
 
 const url =
   "https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0";
@@ -196,6 +197,33 @@ function Home() {
 function Articles() {
   return (
     <div id="latest-articles mx-2">
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/group4">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                CULTURE
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
+                Raising the Bar: Group 4 Mixes Up the Competition as Vancouver's
+                Top Bartenders
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                BENNY CHINVANICH | 13.01.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./articles/article_media/wb-6/wb6-banner.jpeg")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
       <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-january-9">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
@@ -1280,6 +1308,7 @@ function App() {
               path="/articles/student-seasonal"
               element={<SeasonalStudentBudgetArticle />}
             />
+            <Route path="/articles/group4" element={<BestDrinkArticle />} />
             <Route
               path="/articles/blockchain-bottle"
               element={<BlockchainBottleArticle />}

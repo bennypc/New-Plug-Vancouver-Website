@@ -750,7 +750,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            {/* <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
                   src={require("../images/team-members/noah.jpg")}
@@ -760,7 +760,7 @@ const AboutPage = () => {
               <div className="caption mt-2 md:mt-0">
                 <h3>Noah</h3>
                 <h3>Marciano</h3>
-                <p>CEO</p>
+                <p>VP Finance</p>
 
                 <div className="social-links ml-2 md:ml-3">
                   <a
@@ -779,7 +779,7 @@ const AboutPage = () => {
                   </a>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
@@ -842,36 +842,6 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:mt-8 md:mx-8 md:w-[180px] md:h-[180px]">
-              <div className="profile-img">
-                <img
-                  src={require("../images/team-members/kalith.jpg")}
-                  alt="kalith"
-                />
-              </div>
-              <div className="caption mt-2 md:mt-0">
-                <h3>Kalith</h3>
-                <h3>Nanayakkara</h3>
-                <p>President</p>
-
-                <div className="social-links ml-2 md:ml-3">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.instagram.com/kalithj/"
-                  >
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.linkedin.com/in/kalith/"
-                  >
-                    <FontAwesomeIcon icon={faLinkedin} />
-                  </a>
-                </div>
-              </div>
-            </div>
 
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
@@ -905,7 +875,7 @@ const AboutPage = () => {
             </div>
 
             <div className="flex justify-center">
-              {/* <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:mt-8 md:mx-8 md:w-[180px] md:h-[180px]">
+              <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:mt-8 md:mx-8 md:w-[180px] md:h-[180px]">
                 <div className="profile-img">
                   <img
                     src={require("../images/team-members/kalith.jpg")}
@@ -929,37 +899,6 @@ const AboutPage = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       href="https://www.linkedin.com/in/kalith/"
-                    >
-                      <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                  </div>
-                </div>
-              </div> */}
-
-              <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
-                <div className="profile-img">
-                  <img
-                    src={require("../images/team-members/noah.jpg")}
-                    alt="noah"
-                  />
-                </div>
-                <div className="caption mt-2 md:mt-0">
-                  <h3>Noah</h3>
-                  <h3>Marciano</h3>
-                  <p>CEO</p>
-
-                  <div className="social-links ml-2 md:ml-3">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.linkedin.com/in/noahmarciano/"
-                    >
-                      <FontAwesomeIcon icon={faInstagram} />
-                    </a>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href="https://www.instagram.com/noahmarciano/"
                     >
                       <FontAwesomeIcon icon={faLinkedin} />
                     </a>
