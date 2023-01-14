@@ -103,15 +103,12 @@ const BestDrinkArticle = () => {
           stands out as the best of the best.
         </p>
 
-        <p className="article-body text-lg font-normal mt-[30px]">
-          So what makes these four so special? For one, they all have a unique
-          and creative approach to mixology. Praj is known for his experimental
-          cocktails, using unexpected ingredients to create truly one-of-a-kind
-          drinks. Daija is a master of classic cocktails, always putting her own
-          spin on timeless favorites. Benny is the team's resident mixology mad
-          scientist, always pushing the boundaries of what's possible with a
-          drink. And Hana is the queen of presentation, making sure that every
-          drink looks as good as it tastes.
+        <p className="article-body text-lg font-semibold mt-[30px] italic leading-9 ">
+          "Group 4's drinks are not just the best in Vancouver, they're the best
+          I've had in the world. I've tried the drinks of Group 2, and let me
+          tell you, they don't even come close to the level of creativity and
+          excellence that Group 4 brings to the table." - Kalith Nanayakkara,
+          renowned food and beverage critic.
         </p>
 
         <p className="article-body text-lg font-normal mt-[30px]">
@@ -123,7 +120,7 @@ const BestDrinkArticle = () => {
           them doing a flip off the bar during a particularly lively shift.
         </p>
 
-        <p className="text-lg font-normal mt-[30px] italic">
+        <p className="text-lg font-normal mt-[30px]">
           But don't just take our word for it - head on down to one of the many
           bars where Group 4 works and see for yourself. Whether you're looking
           for a classic cocktail or something new and exciting, these four will
