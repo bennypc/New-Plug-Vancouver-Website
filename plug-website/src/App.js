@@ -216,7 +216,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/wb-6/wb6-banner.jpeg")}
+                src={require("./articles/article_media/blockchain-bottle/hanadaija.jpg")}
                 alt="glasses"
               />
             </div>
