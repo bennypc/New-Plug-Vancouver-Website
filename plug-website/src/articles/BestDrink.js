@@ -76,14 +76,13 @@ const BestDrinkArticle = () => {
 
         <img
           className="article-image mt-6 mb-2"
-          src={require("./article_media/blockchain-bottle/koji-hand.webp")}
+          src={require("./article_media/blockchain-bottle/hanadaija.jpg")}
           alt="glasses"
         />
 
         <div className="text-center text-xs mb-4">
           <p>
-            Plug Vancouver’s St. Patty’s Day Party at Enso. Photos courtesy of
-            Oliver Moes-Okun.
+            Mixologists Hana and Daija working on their greatest creation yet
           </p>
         </div>
 
@@ -121,11 +120,12 @@ const BestDrinkArticle = () => {
         </p>
 
         <p className="text-lg font-normal mt-[30px]">
-          But don't just take our word for it - head on down to one of the many
-          bars where Group 4 works and see for yourself. Whether you're looking
+          But don't just take our word for it - take a sip of the delicious
+          drink in your hand that was crafted by Group 4. Whether you're looking
           for a classic cocktail or something new and exciting, these four will
-          have something that's perfect for you. And if you're lucky, they might
-          even give you a little taste of their bartending acrobatics.
+          have something that's perfect for you. And if you're lucky, you might
+          even get a little taste of their bartending acrobatics as they whip up
+          your beverage.
         </p>
 
         <p className="article-body text-lg font-normal mt-[30px]">
