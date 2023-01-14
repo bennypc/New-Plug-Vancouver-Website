@@ -1,16 +1,15 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const stripe = require('stripe')(process.env.STRIPE_KEY);
-const cors = require('cors');
-const express = require('express');
-const path = require('path');
+const stripe = require("stripe")(process.env.STRIPE_KEY);
+const cors = require("cors");
+const express = require("express");
+const path = require("path");
 const app = express();
-const sgMail = require('@sendgrid/mail');
-const bodyParser = require('body-parser');
-const QRCode = require('qrcode');
+const sgMail = require("@sendgrid/mail");
+const bodyParser = require("body-parser");
+const QRCode = require("qrcode");
 
-
-const supabase = require('@supabase/supabase-js').createClient(
+const supabase = require("@supabase/supabase-js").createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_ANON_KEY
 );
@@ -20,17 +19,17 @@ app.use(cors());
 console.log(process.env.SUPABASE_URL);
 console.log(process.env.SUPABASE_ANON_KEY);
 
-app.use(express.static(path.join(__dirname, 'plug-website/build')));
+app.use(express.static(path.join(__dirname, "plug-website/build")));
 
 //app.use(express.static(path.join(__dirname, "..", "plug-website")));
 //const YOUR_DOMAIN = "http://localhost:3000";
-const YOUR_DOMAIN = 'http://plugvancouver.com';
+const YOUR_DOMAIN = "http://plugvancouver.com";
 // Use body-parser to retrieve the raw body as a buffer
 
 function makeID(length) {
-  var result = '';
+  var result = "";
   var characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   var charactersLength = characters.length;
   for (var i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -41,13 +40,13 @@ function makeID(length) {
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
-const endpointSecret = 'whsec_LZdIpqja5G8UStddvevGD3Si0fmVTzen';
+const endpointSecret = "whsec_LZdIpqja5G8UStddvevGD3Si0fmVTzen";
 
 app.post(
-  '/webhook',
-  express.raw({ type: 'application/json' }),
+  "/webhook",
+  express.raw({ type: "application/json" }),
   async (request, response) => {
-    const sig = request.headers['stripe-signature'];
+    const sig = request.headers["stripe-signature"];
 
     let event;
 
@@ -60,13 +59,13 @@ app.post(
 
     // Handle the event
     switch (event.type) {
-      case 'checkout.session.completed':
+      case "checkout.session.completed":
         const session = event.data.object;
         console.log(session);
 
         var ticketCode = makeID(32);
 
-        const { error } = await supabase.from('tickets').insert({
+        const { error } = await supabase.from("tickets").insert({
           ticket_code: ticketCode,
           name: session.customer_details.name,
           email: session.customer_details.email,
@@ -81,10 +80,10 @@ app.post(
 
         const msg = {
           to: session.customer_details.email, // Change to your recipient
-          from: 'theplugvancouvergeneral@gmail.com', // Change to your verified sender
-          subject: 'Your Ticket',
+          from: "theplugvancouvergeneral@gmail.com", // Change to your verified sender
+          subject: "Your Ticket",
 
-          template_id: 'd-f2397c7037ab4916a2241019f83fb91e',
+          template_id: "d-f2397c7037ab4916a2241019f83fb91e",
 
           dynamic_template_data: {
             qrCode: QR,
@@ -111,16 +110,16 @@ app.post(
   }
 );
 
-app.post('/create-checkout-session', async (req, res) => {
+app.post("/create-checkout-session", async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: [
       {
         // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-        price: 'price_1MAlN7JeUNpSjLZt3Jd4dfJ9',
+        price: "price_1MAlN7JeUNpSjLZt3Jd4dfJ9",
         quantity: 1,
       },
     ],
-    mode: 'payment',
+    mode: "payment",
     success_url: `${YOUR_DOMAIN}/order/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${YOUR_DOMAIN}?cancelled=true`,
     automatic_tax: { enabled: true },
@@ -133,12 +132,12 @@ app.post('/create-checkout-session', async (req, res) => {
 function sendTicket() {}
 
 // Handle React routing, return all requests to React app
-app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'plug-website/build', 'index.html'));
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "plug-website/build", "index.html"));
 });
 
 app.listen(process.env.PORT || 8000, () => {
-  console.log('Express server is running');
+  console.log("Express server is running");
 });
 
 // const storeItems = new Map([
