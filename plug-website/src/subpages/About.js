@@ -433,7 +433,7 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
+            {/* <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
                 <img
                   src={require("../images/team-members/cindy.jpg")}
@@ -462,7 +462,7 @@ const AboutPage = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="profile-card w-[110px] h-[110px] my-4 mx-3 md:my-8 md:mx-8 md:w-[180px] md:h-[180px]">
               <div className="profile-img">
