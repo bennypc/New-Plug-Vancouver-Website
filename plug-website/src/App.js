@@ -198,33 +198,6 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/group4">
-          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                CULTURE
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
-                Raising the Bar: Group 4 Mixes Up the Competition as Vancouver's
-                Top Bartenders
-              </h2>
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                BENNY CHINVANICH | 13.01.2023
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require("./articles/article_media/blockchain-bottle/hanadaija.jpg")}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-january-9">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
