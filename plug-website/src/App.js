@@ -49,6 +49,7 @@ import Closet2022Article from "./articles/Closet2022Article";
 import WeeklyBreakdownJanuary2Article from "./articles/WeeklyBreakdownJanuary2Article";
 import WeeklyBreakdownJanuary9Article from "./articles/WeeklyBreakdownJanuary9Article";
 import BestDrinkArticle from "./articles/BestDrink";
+import WeeklyBreakdownJanuary16Article from "./articles/WeeklyBreakdownJanuary16Article";
 
 const url =
   "https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0";
@@ -1310,6 +1311,10 @@ function App() {
             <Route
               path="/articles/weekly-breakdown-january-9"
               element={<WeeklyBreakdownJanuary9Article />}
+            />
+            <Route
+              path="/articles/weekly-breakdown-january-16"
+              element={<WeeklyBreakdownJanuary16Article />}
             />
             <Route path="/articles/chalanse" element={<ChalanseArticle />} />
             <Route
