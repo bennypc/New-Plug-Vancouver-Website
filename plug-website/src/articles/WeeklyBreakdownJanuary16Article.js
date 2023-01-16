@@ -37,7 +37,7 @@ const WeeklyBreakdownJanuary16Article = () => {
         <a href="/articles/lauren-benson">
           <button className="astext">
             <p className="text-sm italic font-[600]">
-              LAUREN BENSON | 09.01.2023
+              LAUREN BENSON | 16.01.2023
             </p>
           </button>
         </a>
@@ -70,21 +70,45 @@ const WeeklyBreakdownJanuary16Article = () => {
 
         <img
           className="article-image mt-6 mb-4 w-full"
-          src={require("./article_media/wb-6/wb6-banner.jpeg")}
+          src={require("./article_media/wb-7/wb7-banner.jpeg")}
           alt="wb3 banner"
         />
 
         <p className="article-body text-lg font-normal">
-          Need some nostalgic music to help you grasp the reality that it’s
-          2023? Want to test out your trivia skills? Satisfy all your party
-          needs with the Plug Vancouver’s signature Weekly Breakdown. The
-          College Edition is finally back, scroll to the bottom of the article
-          to check it out!
+          Swifties, Directioners, and throwback fans alike- unite! Fulfill your
+          throwback dreams with the Plug Vancouver’s signature Weekly Breakdown.
+          Scroll to the bottom of the article to check out the College Edition!
         </p>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          MONDAY, JANUARY 9TH{" "}
+          MONDAY, JANUARY 16TH{" "}
         </p>
+
+        <p className="article-body text-lg italic font-medium mt-[30px]">
+          TAYLOR SWIFT: TRACK 5’S
+        </p>
+
+        <p className="article-body text-lg font-normal mt-4">
+          This Drag show night celebrates the one and only: Taylor Swift!
+        </p>
+
+        <p className="article-body text-lg font-norma mt-4">
+          <span className="font-medium">When: </span>Mon, Jan 16th, 9:00 PM -
+          12:30 AM
+        </p>
+
+        <p className="article-body text-lg font-normal mb-2">
+          <span className="font-medium">Where: </span>1181 Davie St
+        </p>
+
+        <a
+          className="mt-4 text-blue-500"
+          href="https://www.instagram.com/the.alma.be/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @the.alma.be &nbsp;
+        </a>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
           MILLENNIAL MONDAY | ROXY
@@ -95,7 +119,7 @@ const WeeklyBreakdownJanuary16Article = () => {
         </p>
 
         <p className="article-body text-lg font-norma mt-4">
-          <span className="font-medium">When: </span>Mon, Jan 9th: 9 PM - 3 AM
+          <span className="font-medium">When: </span>Mon, Jan 16th: 9 PM - 3 AM
         </p>
 
         <p className="article-body text-lg font-normal mb-2">
@@ -112,127 +136,99 @@ const WeeklyBreakdownJanuary16Article = () => {
         </a>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          TUESDAY, JANUARY 10TH{" "}
+          TUESDAY, JANUARY 17TH{" "}
         </p>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
-          TEE'D UP TUESDAY
+          ONE DIRECTION NIGHT
         </p>
 
         <p className="article-body text-lg font-normal mt-4">
-          Turn up on a Tuesday at your favourite arcade bar with $20 unlimited
-          gaming.
+          Get ready, get dressed, get your fellow directioners and come party
+          all night to the best song ever (get it?)!
         </p>
 
         <p className="article-body text-lg font-norma mt-4">
-          <span className="font-medium">When: </span>Tues, Jan 10th: 3 PM - 2 AM
+          <span className="font-medium">When: </span>Tues, Jan 17th: 8 PM - 1 AM
         </p>
 
         <p className="article-body text-lg font-normal mb-2">
-          <span className="font-medium">Where: </span>Greta Bar YVR
+          <span className="font-medium">Where: </span>Levels Nightclub
         </p>
 
         <a
           className="mt-4 text-blue-500"
-          href="https://www.instagram.com/fortunesound/"
+          href="https://www.instagram.com/levelsvancouver/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @gretabaryvr
+          @levelsvancouver
         </a>
 
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            TNT TRIVIA
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Trivia on Tuesdays, a weekly thing! Don’t forget to book a table to
-            secure your spot.
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Tues, Jan 10th: 8 PM - 10
-            PM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Glitch Vancouver
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/glitchvancouver/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @glitchvancouver
-          </a>
-        </div>
-
         <p className="article-body text-xl font-bold mt-[30px]">
-          WEDNESDAY, JANUARY 11TH{" "}
+          WEDNESDAY, JANUARY 18TH{" "}
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            RENDEZ VOUS
+            WORLD-FAMOUS RUTS WEDNESDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Dawn brings you to an escape to Paris. An exclusive pop-up will
-            transport you to a once in a lifetime night that illuminates Paris
-            chic.
+            Cheap bottles and $5 tequila shots, every Wednesday ‘til 3AM Demon
+            Time. What could be better than $5 shots?
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Jan 11th: 10 PM - 2
+            <span className="font-medium">When: </span>Wed, Jan 18th: 11 PM - 3
             AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Isabelle’s Bar & Lounge
+            <span className="font-medium">Where: </span>Granville Room
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/dawnvancouver/"
+            href="https://www.instagram.com/rutsworldwide/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @dawnvancouver
+            @rutsworldwide
           </a>
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          THURSDAY, JANUARY 12TH{" "}
+          THURSDAY, JANUARY 19TH{" "}
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            KPOP THURSDAYS
+            WILD THURSDAYS @GALLERY
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            The Hottest KPOP Party in Vancouver!
+            Vancouver’s only hybrid nightclub and destination for a
+            one-of-a-kind experience in the city.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Thurs, Jan 12th: 8 PM -
-            LATE
+            <span className="font-medium">When: </span> Thurs, Jan 19th: 7 PM -
+            10 PM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Celebrities Nightclub
+            <span className="font-medium">Where: </span>Junction 1138 Davie
+            Street Vancouver
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/celebrities_van/"
+            href="https://www.instagram.com/gallery_vancouver/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @celebrities_van &nbsp;
+            @gallery_vancouver &nbsp;
           </a>
         </div>
 
@@ -246,7 +242,7 @@ const WeeklyBreakdownJanuary16Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Thurs, Jan 12th: 10 PM -
+            <span className="font-medium">When: </span>Thurs, Jan 19th: 10 PM -
             2 AM
           </p>
 
@@ -265,7 +261,7 @@ const WeeklyBreakdownJanuary16Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          FRIDAY, JANUARY 13TH{" "}
+          FRIDAY, JANUARY 20TH{" "}
         </p>
 
         <div>
@@ -280,7 +276,7 @@ const WeeklyBreakdownJanuary16Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Jan 13th
+            <span className="font-medium">When: </span>Fri, Jan 20th
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
@@ -313,7 +309,7 @@ const WeeklyBreakdownJanuary16Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sat, Jan 14th: 10 PM - 2
+            <span className="font-medium">When: </span>Sat, Jan 21st: 10 PM - 2
             AM
           </p>
 
@@ -341,84 +337,22 @@ const WeeklyBreakdownJanuary16Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          SUNDAY, JANUARY 8TH{" "}
+          SUNDAY, JANUARY 22ND{" "}
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            SUNDAYS
+            AFROBEATS SUNDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Sunday Industry Nights at Pierre’s Champagne Lounge end the week in
-            high fashion.
+            Afrobeats Sundays at cabana lounge offering an unparalleled adult
+            nightlife experience in Vancouver.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sun, Jan 15th: 8 PM -
-            LATE
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Pierre’s Lounge
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/pierreslounge/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @pierreslounge &nbsp;
-          </a>
-        </div>
-
-        <p className="article-body text-xl font-bold mt-[30px]">
-          COLLEGE EDITION
-        </p>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            UBC DRAG: AMATEUR HOUR
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Experience the Next Era of Drag Talent with this All-UBC cast at UBC
-            Drag!
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Jan 11th: 7 PM - 10
-            PM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Koerner's Pub
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/UBCDrag/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @UBCDrag &nbsp;
-          </a>
-        </div>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            FROST WEEK APRÈS SKI
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Join 300+ students for UBC, SFU, CAP U & LC's BIGGEST Back 2 School
-            Banger.
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Jan 13th: 10 PM -
-            2:30 AM
+            <span className="font-medium">When: </span>Sun, Jan 22nd: 10 PM - 2
+            AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
@@ -427,12 +361,22 @@ const WeeklyBreakdownJanuary16Article = () => {
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/5thyearparties.van/"
+            href="https://www.instagram.com/afrobeatsundays/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @5thyearparties.van &nbsp;
+            @afrobeatsundays &nbsp;
           </a>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/afrojoint/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @afrojoint &nbsp;
+          </a>
+
           <a
             className="mt-4 text-blue-500"
             href="https://www.instagram.com/cabanavancouver/"
@@ -443,25 +387,92 @@ const WeeklyBreakdownJanuary16Article = () => {
           </a>
         </div>
 
+        <p className="article-body text-xl font-bold mt-[30px]">
+          COLLEGE EDITION
+        </p>
+
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            BACK 2 SCHOOL AT THE PIT
+            PIT NIGHTS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            SEND SZN is coming to Vancouver for the first time, and they're
-            partnering up with CASA YVR and the Plug Vancouver (that’s us) to
-            bring you the biggest Back 2 School party at your favourite spot on
-            campus.
+            It’s that time of the week- you know the drill- round up your
+            friends and head to the Pit!
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Jan 13th: 10 PM - 2
+            <span className="font-medium">When: </span>Wed, Jan 18th: 10 PM -
+            LATE
+          </p>
+
+          <p className="article-body text-lg font-normal mb-2">
+            <span className="font-medium">Where: </span>The Pit UBC
+          </p>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/thepitubc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @thepitubc &nbsp;
+          </a>
+        </div>
+
+        <div>
+          <p className="article-body text-lg italic font-medium mt-[30px]">
+            COURTSIDE FESTIVAL
+          </p>
+
+          <p className="article-body text-lg font-normal mt-4">
+            UBC Thunderbird's biggest basketball event of the year. Watch them
+            take on the University of Regina Cougars!
+          </p>
+
+          <p className="article-body text-lg font-norma mt-4">
+            <span className="font-medium">When: </span>Fri, Jan 20th: 5 PM -
+            Women’s Game 7 PM - Men's Game
+          </p>
+
+          <p className="article-body text-lg font-normal mb-2">
+            <span className="font-medium">Where: </span>UBC War Memorial Gym
+          </p>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/ubc_mbb/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @ubc_mbb &nbsp;
+          </a>
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/ubcwbball/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @ubcwbball &nbsp;
+          </a>
+        </div>
+
+        <div>
+          <p className="article-body text-lg italic font-medium mt-[30px]">
+            ODYSSEY III: WE'RE BACK!
+          </p>
+
+          <p className="article-body text-lg font-normal mt-4">
+            A Boiler Room inspired experience: House + Techno + D&B + more!
+          </p>
+
+          <p className="article-body text-lg font-norma mt-4">
+            <span className="font-medium">When: </span>Fri, Jan 20th: 10 PM - 3
             AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>The Pit Pub UBC
+            <span className="font-medium">Where: </span>Cabana Lounge
           </p>
 
           <a
@@ -472,129 +483,33 @@ const WeeklyBreakdownJanuary16Article = () => {
           >
             @casayvr &nbsp;
           </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/pierreslounge/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @sendsznevents &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/pierreslounge/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @plugvancouver &nbsp;
-          </a>
         </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            ALL NIGHTER - SFU'S WINTER BACK TO SCHOOL
+            BACK TO SCHOOL @TWELVEWEST
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            The Forum and CAC are joining forces again to take over Friday to
-            SFU's Winter Back to School Party.
+            Back to school stress already got you down? Drop those textbooks and
+            head downtown.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Jan 13th: 10 PM - 3
-            AM
+            <span className="font-medium">When: </span>Fri, Jan 20th: 9 PM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Levels Nightclub
+            <span className="font-medium">Where: </span>Twelve West
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/pierreslounge/"
+            href="https://www.instagram.com/twelve_west/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @theforumsfu &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/sfucac/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @sfucac &nbsp;
-          </a>
-        </div>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            PARTY LIKE IT’S 1999
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Don’t miss out on UBC PATHS x UBC HSF’s Party Like It’s 1999 with
-            your favourite #tb songs!
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sat, Jan 14th: 10 PM - 2
-            AM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>The Pit Pub UBC
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/ubc_paths/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @ubc_paths &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/ubchsf/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @ubchsf &nbsp;
-          </a>
-        </div>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            DKE SFU BACK TO SCHOOL MANSION PARTY
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            Tired of school already? We hear you. The brothers of DKE present
-            Back 2 School.
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sat, Jan 14th: 10 PM -
-            Late
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>DKE MANSION 7235 Bayview
-            Drive
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/DKESFU/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @DKESFU &nbsp;
+            @twelve_west &nbsp;
           </a>
         </div>
 
