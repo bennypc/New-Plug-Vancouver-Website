@@ -972,7 +972,7 @@ function ImageSlideshow() {
         />
         <img
           className="desktop-banner"
-          src={require("./images/asian-struggles-banner.jpg")}
+          src={require("./images/asian-desktop-banner.jpeg")}
           alt=""
         />
       </a>
