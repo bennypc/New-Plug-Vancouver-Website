@@ -64,9 +64,9 @@ const WeeklyBreakdownJanuary16Article = () => {
     if (ok) {
       try {
         const { data } = await supabase.from("comments").delete().match({ id });
-        window.alert("Deleted Comment :)");
+        window.location.reload();
       } catch (error) {
-        window.alert(error.message);
+        window.location.reload();
       }
     }
   };
