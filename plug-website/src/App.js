@@ -50,6 +50,7 @@ import WeeklyBreakdownJanuary2Article from "./articles/WeeklyBreakdownJanuary2Ar
 import WeeklyBreakdownJanuary9Article from "./articles/WeeklyBreakdownJanuary9Article";
 import BestDrinkArticle from "./articles/BestDrink";
 import WeeklyBreakdownJanuary16Article from "./articles/WeeklyBreakdownJanuary16Article";
+import NotFoundPage from "./subpages/NotFoundPage";
 
 const url =
   "https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0";
@@ -1254,6 +1255,7 @@ function App() {
               element={<LaurenArticles />}
             />
             <Route path="/articles/zoie-mcclymont" element={<ZoieArticles />} />
+            <Route path="*" element={<NotFoundPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/songs-vote" element={<SongsVote />} />
             <Route path="/songs-list" element={<SongsList />} />

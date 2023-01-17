@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./articles.css";
 import Popup from "reactjs-popup";
+import supabase from "../supabase";
 import "reactjs-popup/dist/index.css";
 import {
   EmailShareButton,
@@ -12,6 +13,12 @@ import {
 } from "react-share";
 
 import {
+  CheckIcon,
+  QuestionMarkCircleIcon,
+  StarIcon,
+} from "@heroicons/react/24/outline";
+
+import {
   EmailIcon,
   FacebookIcon,
   FacebookMessengerIcon,
@@ -21,6 +28,80 @@ import {
 } from "react-share";
 
 const WeeklyBreakdownJanuary16Article = () => {
+  const [comment, setComment] = useState("");
+  const [commentList, setCommentList] = useState([]);
+  const [editComment, setEditComment] = useState({
+    id: "",
+    payload: "",
+  });
+  const [replyOf, setReplyOf] = useState(null);
+
+  const onChangeEditComment = (event) => {
+    const payload = event.target.value;
+    setEditComment({ ...editComment, payload });
+  };
+
+  const confirmEdit = async () => {
+    const { data, error } = await supabase
+      .from("comments")
+      .update({
+        payload: editComment.payload,
+      })
+      .match({ id: editComment.id });
+
+    if (!error && data) {
+      // If succeed
+      window.location.reload();
+    } else {
+      // If failed
+      console.log(error?.message);
+      window.location.reload();
+    }
+  };
+
+  const confirmDelete = async (id) => {
+    const ok = window.confirm("Delete comment?");
+    if (ok) {
+      try {
+        const { data } = await supabase.from("comments").delete().match({ id });
+        window.alert("Deleted Comment :)");
+      } catch (error) {
+        window.alert(error.message);
+      }
+    }
+  };
+
+  const getCommentList = async () => {
+    const { data, error } = await supabase.from("comments").select("*");
+    if (!error && data) {
+      setCommentList(data);
+    } else {
+      setCommentList([]);
+    }
+  };
+
+  useEffect(() => {
+    getCommentList();
+  }, []);
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const { data, error } = await supabase.from("comments").insert({
+      username: "Anonymous",
+      payload: comment,
+      reply_of: replyOf,
+    });
+
+    if (!error && data) {
+      // If succeed
+      window.location.reload();
+    } else {
+      // If failed
+      console.log(error?.message);
+      window.location.reload();
+    }
+  }
+
   return (
     <div className="mx-6 mt-6 ">
       <div className="article-container">
@@ -41,32 +122,6 @@ const WeeklyBreakdownJanuary16Article = () => {
             </p>
           </button>
         </a>
-
-        {/* <Popup className="rounded-md" trigger={<button > <img className="width-[32px]" src={require("../images/logos/social/share-button.png")} /></button>} modal>
-<div className="rounded-md">
-<h1 className="text-center">
-  Share
-</h1>
-<div lassName="text-center items-center flex justify-center">
-  <FacebookShareButton url="">
-      <FacebookIcon size={32} round={true} />
-  </FacebookShareButton>
-  <TwitterShareButton url="">
-      <TwitterIcon size={32} round={true} />
-  </TwitterShareButton>
-  <LinkedinShareButton url="">
-      <LinkedinIcon size={32} rtound={true} />
-  </LinkedinShareButton>
-  <WhatsappShareButton url="">
-      <WhatsappIcon size={32} round={true} />
-  </WhatsappShareButton>
-  <EmailShareButton url="">
-      <EmailIcon size={32} round={true} />
-  </EmailShareButton>
-</div>
-
-</div>
-</Popup> */}
 
         <img
           className="article-image mt-6 mb-4 w-full"
@@ -535,6 +590,135 @@ const WeeklyBreakdownJanuary16Article = () => {
             </div>
           </div>
         </a>
+
+        <div className="my-8 flex justify-center">
+          <div className="min-w-[600px]">
+            <h1 className="text-4xl font-bold ">Comments</h1>
+            <form onSubmit={handleSubmit} className="mt-8 flex gap-8">
+              <div className="w-full">
+                {replyOf && (
+                  <div className="flex gap-4 my-2 items-center justify-start">
+                    <p className="text-xs font-extralight italic text-gray-600">
+                      Reply of:{" "}
+                      {commentList.find((comment) => comment.id === replyOf)
+                        ?.payload ?? ""}
+                    </p>
+                    <button
+                      onClick={() => setReplyOf(null)}
+                      className="text-xs font-light text-red-600"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                )}
+                <input
+                  type="text"
+                  placeholder="Add a comment"
+                  className="p-2 border-b focus:border-b-gray-700 w-full outline-none"
+                  value={comment}
+                  onChange={(e) => setComment(e.target.value)}
+                />
+              </div>
+              <button className="px-4 py-2 bg-green-500 rounded-lg text-white">
+                Submit
+              </button>
+            </form>
+            <div className="flex flex-col gap-4 pt-12">
+              {commentList
+                //sort by newest
+                .sort((b, a) => {
+                  const aDate = new Date(a.created_at);
+                  const bDate = new Date(b.created_at);
+                  return +aDate - +bDate;
+                })
+                .map((comment) => (
+                  <div key={comment.id} className="border rounded-md p-4">
+                    {comment.reply_of && (
+                      <p className="font-extralight italic text-gray-600 text-xs">
+                        Reply of:{" "}
+                        {commentList.find((c) => c.id === comment.reply_of)
+                          ?.payload ?? ""}
+                      </p>
+                    )}
+                    <p className="font-semibold mb-2">
+                      {comment.username}
+                      {comment.updated_at !== comment.created_at && (
+                        <span className="ml-4 text-sm italic font-extralight">
+                          edited
+                        </span>
+                      )}
+                    </p>
+                    <div className="flex items-center gap-2 justify-between">
+                      {comment.id === editComment.id ? (
+                        <input
+                          type="text"
+                          value={editComment.payload}
+                          onChange={onChangeEditComment}
+                          className="pb-1 border-b w-full"
+                        />
+                      ) : (
+                        <p className="font-light">{comment.payload}</p>
+                      )}
+                      {editComment.id === comment.id ? (
+                        <div className="flex gap-2">
+                          <button
+                            type="button"
+                            onClick={confirmEdit}
+                            disabled={editComment.payload === comment.payload}
+                            className={`${
+                              editComment.payload === comment.payload
+                                ? `text-gray-300`
+                                : `text-green-500`
+                            }`}
+                          >
+                            Confirm
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setEditComment({ id: "", payload: "" })
+                            }
+                            className="text-gray-500"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      ) : (
+                        <div>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setEditComment({
+                                id: comment.id,
+                                payload: comment.payload,
+                              })
+                            }
+                            className="text-green-500 mr-3"
+                          >
+                            Edit
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => confirmDelete(comment.id)}
+                            className="text-gray-700 mr-3"
+                          >
+                            Delete
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setReplyOf(comment.id)}
+                            className="text-orange-500"
+                          >
+                            Reply
+                          </button>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
