@@ -592,8 +592,8 @@ const WeeklyBreakdownJanuary16Article = () => {
         </a>
 
         <div className="my-8 flex justify-center">
-          <div className="min-w-[600px]">
-            <h1 className="text-4xl font-bold ">Comments</h1>
+          <div className="min-w-full">
+            <h1 className="text-2xl font-bold ">Comments</h1>
             <form onSubmit={handleSubmit} className="mt-8 flex gap-8">
               <div className="w-full">
                 {replyOf && (
