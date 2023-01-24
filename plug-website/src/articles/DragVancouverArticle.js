@@ -248,10 +248,10 @@ const DragVancouverArticle = () => {
         </p>
 
         <p className="text-lg font-normal mt-[30px] italic">
-          Catch Hazel-Nut live in action her monthly show at Eleven-81 at
-          Hazel’s Birthday Brunch on February 10th at 8:30PM, and make sure you
-          follow her on Instagram @names.hazel to keep up with all things
-          Hazel-Nut!
+          Catch Hazel-Nut live in action her monthly show at Eleven-81, at
+          Hazel’s Birthday Brunch on February 10th at 8:30PM at the Cambie, and
+          make sure you follow her on Instagram @names.hazel to keep up with all
+          things Hazel-Nut!
         </p>
 
         <div className="border-solid border-b-[1px] mx-2 my-6" />
