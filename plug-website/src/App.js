@@ -200,6 +200,32 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/vancovuer-drag">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                LIFESTYLE
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                DRAG IN VANCOUVER, ACCORDING TO HAZEL-NUT
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 23.01.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require("./articles/article_media/drag-vancouver/drag-cover.jpg")}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-january-16">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -296,32 +322,6 @@ function Articles() {
               <img
                 className="thumbnail"
                 src={require("./articles/article_media/closet-2022/closet-banner.jpg")}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/sza-sos">
-          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                MUSIC
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
-                Why I’m in a Committed Relationship with SZA’s New Album “SOS”
-              </h2>
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 28.12.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require("./articles/article_media/sza-sos/sza-banner.jpg")}
                 alt="glasses"
               />
             </div>

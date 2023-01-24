@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import './articles.css';
-import Popup from 'reactjs-popup';
-import supabase from '../supabase';
-import 'reactjs-popup/dist/index.css';
+import React, { useEffect, useState } from "react";
+import "./articles.css";
+import Popup from "reactjs-popup";
+import supabase from "../supabase";
+import "reactjs-popup/dist/index.css";
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -10,13 +10,13 @@ import {
   LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
-} from 'react-share';
+} from "react-share";
 
 import {
   CheckIcon,
   QuestionMarkCircleIcon,
   StarIcon,
-} from '@heroicons/react/24/outline';
+} from "@heroicons/react/24/outline";
 
 import {
   EmailIcon,
@@ -25,15 +25,15 @@ import {
   RedditIcon,
   TwitterIcon,
   WhatsappIcon,
-} from 'react-share';
-import InstagramEmbed from '../components/InstagramEmbed';
+} from "react-share";
+import InstagramEmbed from "../components/InstagramEmbed";
 
 const WeeklyBreakdownJanuary16Article = () => {
-  const [comment, setComment] = useState('');
+  const [comment, setComment] = useState("");
   const [commentList, setCommentList] = useState([]);
   const [editComment, setEditComment] = useState({
-    id: '',
-    payload: '',
+    id: "",
+    payload: "",
   });
   const [replyOf, setReplyOf] = useState(null);
 
@@ -44,7 +44,7 @@ const WeeklyBreakdownJanuary16Article = () => {
 
   const confirmEdit = async () => {
     const { data, error } = await supabase
-      .from('comments')
+      .from("comments")
       .update({
         payload: editComment.payload,
       })
@@ -61,10 +61,10 @@ const WeeklyBreakdownJanuary16Article = () => {
   };
 
   const confirmDelete = async (id) => {
-    const ok = window.confirm('Delete comment?');
+    const ok = window.confirm("Delete comment?");
     if (ok) {
       try {
-        const { data } = await supabase.from('comments').delete().match({ id });
+        const { data } = await supabase.from("comments").delete().match({ id });
         window.location.reload();
       } catch (error) {
         window.location.reload();
@@ -73,7 +73,7 @@ const WeeklyBreakdownJanuary16Article = () => {
   };
 
   const getCommentList = async () => {
-    const { data, error } = await supabase.from('comments').select('*');
+    const { data, error } = await supabase.from("comments").select("*");
     if (!error && data) {
       setCommentList(data);
     } else {
@@ -87,10 +87,11 @@ const WeeklyBreakdownJanuary16Article = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const { data, error } = await supabase.from('comments').insert({
-      username: 'Anonymous',
+    const { data, error } = await supabase.from("comments").insert({
+      username: "Anonymous",
       payload: comment,
       reply_of: replyOf,
+      article_code: 2, //change for each article
     });
 
     if (!error && data) {
@@ -130,7 +131,7 @@ const WeeklyBreakdownJanuary16Article = () => {
 
         <img
           className="article-image mt-6 mb-4 w-full"
-          src={require('./article_media/drag-vancouver/drag-cover.jpg')}
+          src={require("./article_media/drag-vancouver/drag-cover.jpg")}
           alt="wb3 banner"
         />
 
@@ -206,7 +207,7 @@ const WeeklyBreakdownJanuary16Article = () => {
 
         <img
           className="article-image mt-6 mb-4 w-full"
-          src={require('./article_media/drag-vancouver/drag-1.jpg')}
+          src={require("./article_media/drag-vancouver/drag-1.jpg")}
           alt="wb3 banner"
         />
 
@@ -254,7 +255,7 @@ const WeeklyBreakdownJanuary16Article = () => {
           <div className="flex h-[75px] mb-4">
             <img
               className="rounded-full mr-6"
-              src={require('./article_media/authors/laurenbenson.png')}
+              src={require("./article_media/authors/laurenbenson.png")}
               alt="lauren"
             />
             <div className="flex align-middle justify-center flex-col">
@@ -275,9 +276,9 @@ const WeeklyBreakdownJanuary16Article = () => {
                 {replyOf && (
                   <div className="flex gap-4 my-2 items-center justify-start">
                     <p className="text-xs font-extralight italic text-gray-600">
-                      Reply of:{' '}
+                      Reply of:{" "}
                       {commentList.find((comment) => comment.id === replyOf)
-                        ?.payload ?? ''}
+                        ?.payload ?? ""}
                     </p>
                     <button
                       onClick={() => setReplyOf(null)}
@@ -311,9 +312,9 @@ const WeeklyBreakdownJanuary16Article = () => {
                   <div key={comment.id} className="border rounded-md p-4">
                     {comment.reply_of && (
                       <p className="font-extralight italic text-gray-600 text-xs">
-                        Reply of:{' '}
+                        Reply of:{" "}
                         {commentList.find((c) => c.id === comment.reply_of)
-                          ?.payload ?? ''}
+                          ?.payload ?? ""}
                       </p>
                     )}
                     <p className="font-semibold mb-2">
@@ -352,7 +353,7 @@ const WeeklyBreakdownJanuary16Article = () => {
                           <button
                             type="button"
                             onClick={() =>
-                              setEditComment({ id: '', payload: '' })
+                              setEditComment({ id: "", payload: "" })
                             }
                             className="text-gray-500"
                           >
