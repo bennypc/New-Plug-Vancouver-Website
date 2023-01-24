@@ -27,7 +27,7 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-const DragVancouverArticle = () => {
+const WeeklyBreakdownJanuary16Article = () => {
   const [comment, setComment] = useState("");
   const [commentList, setCommentList] = useState([]);
   const [editComment, setEditComment] = useState({
@@ -725,4 +725,4 @@ const DragVancouverArticle = () => {
   );
 };
 
-export default DragVancouverArticle;
+export default WeeklyBreakdownJanuary16Article;
