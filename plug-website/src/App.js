@@ -1,59 +1,60 @@
-import "./App.css";
-import React, { useEffect, useState } from "react";
-import Slider from "react-slick";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from "react-responsive-carousel";
-import BurgerMenu from "./components/burger";
-import { Routes, Route, Outlet } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import MailchimpSubscribe from "react-mailchimp-subscribe";
+import './App.css';
+import React, { useEffect, useState } from 'react';
+import Slider from 'react-slick';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import BurgerMenu from './components/burger';
+import { Routes, Route, Outlet } from 'react-router-dom';
+import 'slick-carousel/slick/slick.css';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
-import SongsVote from "./songs-form/songs-vote";
-import SongsList from "./songs-form/songs-list";
+import SongsVote from './songs-form/songs-vote';
+import SongsList from './songs-form/songs-list';
 
-import Auth from "./subpages/Auth";
-import AccountCreation from "./subpages/AccountCreation";
+import Auth from './subpages/Auth';
+import AccountCreation from './subpages/AccountCreation';
 
-import AboutPage from "./subpages/About";
-import ArticlesPage from "./subpages/articles";
-import ShopPage from "./subpages/shop/Shop";
+import AboutPage from './subpages/About';
+import ArticlesPage from './subpages/articles';
+import ShopPage from './subpages/shop/Shop';
 
-import HonestlyNevermindArticle from "./articles/honestlyNevermindArticle";
-import EyewearArticle from "./articles/eyewearArticle";
-import NaduhArticle from "./articles/naduhArticle";
-import KardinalArticle from "./articles/KardinalArticle";
-import VancouverVintageArticle from "./articles/VancouverVintageArticle";
-import BlockchainBottleArticle from "./articles/BlockchainBottleArticle";
-import VFWTrendsArticle from "./articles/VFWTrendsArticle";
-import WeeklyBreakdownDecember4Article from "./articles/WeeklyBreakdownDecember4Article";
-import ChalanseArticle from "./articles/ChalanseArticle";
+import HonestlyNevermindArticle from './articles/honestlyNevermindArticle';
+import EyewearArticle from './articles/eyewearArticle';
+import NaduhArticle from './articles/naduhArticle';
+import KardinalArticle from './articles/KardinalArticle';
+import VancouverVintageArticle from './articles/VancouverVintageArticle';
+import BlockchainBottleArticle from './articles/BlockchainBottleArticle';
+import VFWTrendsArticle from './articles/VFWTrendsArticle';
+import WeeklyBreakdownDecember4Article from './articles/WeeklyBreakdownDecember4Article';
+import ChalanseArticle from './articles/ChalanseArticle';
 
-import "slick-carousel/slick/slick-theme.css";
-import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
-import DashboardHome from "./dashboard/DashboardHome";
-import DashboardProfile from "./dashboard/DashboardProfile";
-import { ChakraProvider } from "@chakra-ui/react";
-import DashboardSettings from "./dashboard/DashboardSettings";
-import DashboardCalendar from "./dashboard/DashboardCalendar";
-import DashboardTeams from "./dashboard/DashboardTeams";
+import 'slick-carousel/slick/slick-theme.css';
+import AccountCreateSuccess from './subpages/AccountCreateSuccess';
+import DashboardHome from './dashboard/DashboardHome';
+import DashboardProfile from './dashboard/DashboardProfile';
+import { ChakraProvider } from '@chakra-ui/react';
+import DashboardSettings from './dashboard/DashboardSettings';
+import DashboardCalendar from './dashboard/DashboardCalendar';
+import DashboardTeams from './dashboard/DashboardTeams';
 
-import LaurenArticles from "./subpages/author-articles/LaurenArticles";
-import ZoieArticles from "./subpages/author-articles/ZoieArticles";
-import OrderSuccess from "./subpages/shop/OrderSuccess";
-import SeasonalStudentBudgetArticle from "./articles/SeasonalStudentBudgetArticle";
-import WeeklyBreakdownDecember12Article from "./articles/WeeklyBreakdownDecember12Article";
-import WeeklyBreakdownDecember19Article from "./articles/WeeklyBreakdownDecember19Article";
-import WeeklyBreakdownDecember26Article from "./articles/WeeklyBreakdownDecember26Article";
-import SZASOSArticle from "./articles/SZASOSArticle";
-import Closet2022Article from "./articles/Closet2022Article";
-import WeeklyBreakdownJanuary2Article from "./articles/WeeklyBreakdownJanuary2Article";
-import WeeklyBreakdownJanuary9Article from "./articles/WeeklyBreakdownJanuary9Article";
-import BestDrinkArticle from "./articles/BestDrink";
-import WeeklyBreakdownJanuary16Article from "./articles/WeeklyBreakdownJanuary16Article";
-import NotFoundPage from "./subpages/NotFoundPage";
+import LaurenArticles from './subpages/author-articles/LaurenArticles';
+import ZoieArticles from './subpages/author-articles/ZoieArticles';
+import OrderSuccess from './subpages/shop/OrderSuccess';
+import SeasonalStudentBudgetArticle from './articles/SeasonalStudentBudgetArticle';
+import WeeklyBreakdownDecember12Article from './articles/WeeklyBreakdownDecember12Article';
+import WeeklyBreakdownDecember19Article from './articles/WeeklyBreakdownDecember19Article';
+import WeeklyBreakdownDecember26Article from './articles/WeeklyBreakdownDecember26Article';
+import SZASOSArticle from './articles/SZASOSArticle';
+import Closet2022Article from './articles/Closet2022Article';
+import WeeklyBreakdownJanuary2Article from './articles/WeeklyBreakdownJanuary2Article';
+import WeeklyBreakdownJanuary9Article from './articles/WeeklyBreakdownJanuary9Article';
+import BestDrinkArticle from './articles/BestDrink';
+import WeeklyBreakdownJanuary16Article from './articles/WeeklyBreakdownJanuary16Article';
+import NotFoundPage from './subpages/NotFoundPage';
+import DragVancouverArticle from './articles/DragVancouverArticle';
 
 const url =
-  "https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0";
+  'https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0';
 const SimpleForm = () => <MailchimpSubscribe url={url} />;
 
 function Logo() {
@@ -61,7 +62,7 @@ function Logo() {
     <a href="/">
       <img
         id="main-logo"
-        src={require("./images/logos/PlugWhite.png")}
+        src={require('./images/logos/PlugWhite.png')}
         alt="Plug Logo"
       />
     </a>
@@ -74,7 +75,7 @@ function Header() {
   return (
     <div
       className={`sticky z-[1000] ${
-        scrollDirection === "down" ? "-top-28" : "top-0"
+        scrollDirection === 'down' ? '-top-28' : 'top-0'
       } h-28 transition-all duration-500 bg-black flex justify-between align-center z-[1000]" `}
     >
       <div>
@@ -91,7 +92,7 @@ function Header() {
             >
               <img
                 className="w-[40px] h-auto my-3 mr-1 md:w-[56px]"
-                src={require("./images/logos/social/instagram.png")}
+                src={require('./images/logos/social/instagram.png')}
                 alt="Instagram logo"
               />
             </a>
@@ -104,7 +105,7 @@ function Header() {
             >
               <img
                 className="w-[40px] h-auto my-3 mr-1 md:w-[56px]"
-                src={require("./images/logos/social/tiktok.png")}
+                src={require('./images/logos/social/tiktok.png')}
                 alt="Tiktok logo"
               />
             </a>
@@ -117,7 +118,7 @@ function Header() {
             >
               <img
                 className="h-[40px] w-auto my-3 mr-1 md:h-[56px]"
-                src={require("./images/logos/social/youtube.png")}
+                src={require('./images/logos/social/youtube.png')}
                 alt="YouTube logo"
               />
             </a>
@@ -167,7 +168,7 @@ function useScrollDirection() {
 
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
+      const direction = scrollY > lastScrollY ? 'down' : 'up';
       if (
         direction !== scrollDirection &&
         (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
@@ -176,9 +177,9 @@ function useScrollDirection() {
       }
       lastScrollY = scrollY > 0 ? scrollY : 0;
     };
-    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    window.addEventListener('scroll', updateScrollDirection); // add event listener
     return () => {
-      window.removeEventListener("scroll", updateScrollDirection); // clean up
+      window.removeEventListener('scroll', updateScrollDirection); // clean up
     };
   }, [scrollDirection]);
 
@@ -200,6 +201,32 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/vancouver-drag">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                LIFESTYLE
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                DRAG IN VANCOUVER, ACCORDING TO HAZEL-NUT
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 23.01.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/drag-vancouver/drag-cover.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-january-16">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -217,7 +244,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/wb-7/wb7-banner.jpeg")}
+                src={require('./articles/article_media/wb-7/wb7-banner.jpeg')}
                 alt="glasses"
               />
             </div>
@@ -243,7 +270,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/wb-6/wb6-banner.jpeg")}
+                src={require('./articles/article_media/wb-6/wb6-banner.jpeg')}
                 alt="glasses"
               />
             </div>
@@ -269,7 +296,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/wb-5/wb5-banner.jpg")}
+                src={require('./articles/article_media/wb-5/wb5-banner.jpg')}
                 alt="glasses"
               />
             </div>
@@ -295,7 +322,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/closet-2022/closet-banner.jpg")}
+                src={require('./articles/article_media/closet-2022/closet-banner.jpg')}
                 alt="glasses"
               />
             </div>
@@ -321,7 +348,7 @@ function Articles() {
             <div className="ml-2">
               <img
                 className="thumbnail"
-                src={require("./articles/article_media/sza-sos/sza-banner.jpg")}
+                src={require('./articles/article_media/sza-sos/sza-banner.jpg')}
                 alt="glasses"
               />
             </div>
@@ -365,7 +392,7 @@ function Culture() {
         <div id="two">
           <img
             className="px-4 mb-8"
-            src={require("./images/ldoc-banner-reduced.jpg")}
+            src={require('./images/ldoc-banner-reduced.jpg')}
             alt="team"
           ></img>
         </div>
@@ -381,7 +408,7 @@ const CustomForm = ({ status, message, onValidated }) => {
   const submit = () =>
     email &&
     name &&
-    email.value.indexOf("@") > -1 &&
+    email.value.indexOf('@') > -1 &&
     onValidated({
       EMAIL: email.value,
       NAME: name.value,
@@ -390,40 +417,40 @@ const CustomForm = ({ status, message, onValidated }) => {
   return (
     <div
       style={{
-        background: "#efefef",
+        background: '#efefef',
         borderRadius: 2,
         padding: 10,
-        display: "inline-block",
+        display: 'inline-block',
       }}
     >
-      {status === "sending" && <div style={{ color: "blue" }}>sending...</div>}
-      {status === "error" && (
+      {status === 'sending' && <div style={{ color: 'blue' }}>sending...</div>}
+      {status === 'error' && (
         <div
-          style={{ color: "red" }}
+          style={{ color: 'red' }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-      {status === "success" && (
+      {status === 'success' && (
         <div
-          style={{ color: "green" }}
+          style={{ color: 'green' }}
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
       <input
-        style={{ fontSize: "2em", padding: 5 }}
+        style={{ fontSize: '2em', padding: 5 }}
         ref={(node) => (name = node)}
         type="text"
         placeholder="Your name"
       />
       <br />
       <input
-        style={{ fontSize: "2em", padding: 5 }}
+        style={{ fontSize: '2em', padding: 5 }}
         ref={(node) => (email = node)}
         type="email"
         placeholder="Your email"
       />
       <br />
-      <button style={{ fontSize: "2em", padding: 5 }} onClick={submit}>
+      <button style={{ fontSize: '2em', padding: 5 }} onClick={submit}>
         Submit
       </button>
     </div>
@@ -451,7 +478,7 @@ function WeeklyBreakdownStrip() {
     <div className="wb-strip mt-10 mb-6 h-[200px] sm:h-[350px] lg:h-[500px] w-full">
       <img
         className="wb-strip-image"
-        src={require("./images/wb-strip.png")}
+        src={require('./images/wb-strip.png')}
         alt="crowd"
       />
 
@@ -519,19 +546,19 @@ function BestMoments() {
         centerSlidePercentage={60}
       >
         <div>
-          <img src={require("./images/moments/hello1.jpg")} alt="hello1" />
+          <img src={require('./images/moments/hello1.jpg')} alt="hello1" />
         </div>
         <div>
-          <img src={require("./images/moments/hello2.jpg")} alt="hello2" />
+          <img src={require('./images/moments/hello2.jpg')} alt="hello2" />
         </div>
         <div>
-          <img src={require("./images/moments/hello3.jpg")} alt="hello3" />
+          <img src={require('./images/moments/hello3.jpg')} alt="hello3" />
         </div>
         <div>
-          <img src={require("./images/moments/hello4.jpg")} alt="hello4" />
+          <img src={require('./images/moments/hello4.jpg')} alt="hello4" />
         </div>
         <div>
-          <img src={require("./images/moments/hello5.jpg")} alt="hello5" />
+          <img src={require('./images/moments/hello5.jpg')} alt="hello5" />
         </div>
       </Carousel>
 
@@ -543,19 +570,19 @@ function BestMoments() {
         centerSlidePercentage={60}
       >
         <div>
-          <img src={require("./images/moments/hello1.jpg")} alt="hello1" />
+          <img src={require('./images/moments/hello1.jpg')} alt="hello1" />
         </div>
         <div>
-          <img src={require("./images/moments/hello2.jpg")} alt="hello2" />
+          <img src={require('./images/moments/hello2.jpg')} alt="hello2" />
         </div>
         <div>
-          <img src={require("./images/moments/hello3.jpg")} alt="hello3" />
+          <img src={require('./images/moments/hello3.jpg')} alt="hello3" />
         </div>
         <div>
-          <img src={require("./images/moments/hello4.jpg")} alt="hello4" />
+          <img src={require('./images/moments/hello4.jpg')} alt="hello4" />
         </div>
         <div>
-          <img src={require("./images/moments/hello5.jpg")} alt="hello5" />
+          <img src={require('./images/moments/hello5.jpg')} alt="hello5" />
         </div>
       </Carousel>
     </div>
@@ -585,7 +612,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/4-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/4-c.jpg')}
               alt="bundafest-vid"
             />
           </div>
@@ -599,7 +626,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/1-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/1-c.jpg')}
               alt="rating-3"
             />
           </div>
@@ -611,7 +638,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/5-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/5-c.jpg')}
               alt="ldoc-vid"
             />
           </div>
@@ -623,7 +650,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/3-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/3-c.jpg')}
               alt="rating-2"
             />
           </div>
@@ -635,7 +662,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/2-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/2-c.jpg')}
               alt="rating-1"
             />
           </div>
@@ -657,7 +684,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/4-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/4-c.jpg')}
               alt="bundafest-vid"
             />
           </div>
@@ -671,7 +698,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/1-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/1-c.jpg')}
               alt="rating-3"
             />
           </div>
@@ -683,7 +710,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/5-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/5-c.jpg')}
               alt="ldoc-vid"
             />
           </div>
@@ -695,7 +722,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/3-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/3-c.jpg')}
               alt="rating-2"
             />
           </div>
@@ -707,7 +734,7 @@ function FeaturedVideos() {
         >
           <div>
             <img
-              src={require("./images/video-thumbnails/compressed/2-c.jpg")}
+              src={require('./images/video-thumbnails/compressed/2-c.jpg')}
               alt="rating-1"
             />
           </div>
@@ -763,7 +790,7 @@ function Events() {
             <div className="event-card-image-div">
               <img
                 className="event-card-image"
-                src={require("./images/events/holdthatheat.jpg")}
+                src={require('./images/events/holdthatheat.jpg')}
                 alt="hold that heat event card"
               />
             </div>
@@ -775,7 +802,7 @@ function Events() {
             <div className="event-card-image-div">
               <img
                 className="event-card-image"
-                src={require("./images/events/gymwear.jpg")}
+                src={require('./images/events/gymwear.jpg')}
                 alt="gymwear event card"
               />
             </div>
@@ -787,7 +814,7 @@ function Events() {
             <div className="event-card-image-div">
               <img
                 className="event-card-image"
-                src={require("./images/events/stampede.jpg")}
+                src={require('./images/events/stampede.jpg')}
                 alt="stampede event card"
               />
             </div>
@@ -799,7 +826,7 @@ function Events() {
             <div className="event-card-image-div">
               <img
                 className="event-card-image"
-                src={require("./images/events/poolside.jpg")}
+                src={require('./images/events/poolside.jpg')}
                 alt="poolside event card"
               />
             </div>
@@ -811,7 +838,7 @@ function Events() {
             <div className="event-card-image-div">
               <img
                 className="event-card-image"
-                src={require("./images/events/bundafest.jpg")}
+                src={require('./images/events/bundafest.jpg')}
                 alt="bundafest event card"
               />
             </div>
@@ -823,7 +850,7 @@ function Events() {
             <div className="event-card-image-div">
               <img
                 className="event-card-image"
-                src={require("./images/events/caughtin4k.jpg")}
+                src={require('./images/events/caughtin4k.jpg')}
                 alt="caughtin4k event card"
               />
             </div>
@@ -871,7 +898,7 @@ function Contact() {
   );
 }
 
-const FORM_ENDPOINT = ""; // TODO - fill on the later step
+const FORM_ENDPOINT = ''; // TODO - fill on the later step
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -969,12 +996,12 @@ function ImageSlideshow() {
       >
         <img
           className="mobile-banner"
-          src={require("./images/asian-struggles-banner.jpg")}
+          src={require('./images/asian-struggles-banner.jpg')}
           alt=""
         />
         <img
           className="desktop-banner"
-          src={require("./images/asian-desktop-banner.jpeg")}
+          src={require('./images/asian-desktop-banner.jpeg')}
           alt=""
         />
       </a>
@@ -998,7 +1025,7 @@ function AutoplayCarousel() {
     autoplay: true,
     speed: 10000,
     autoplaySpeed: 0,
-    cssEase: "linear",
+    cssEase: 'linear',
     arrows: false,
   };
   return (
@@ -1010,42 +1037,42 @@ function AutoplayCarousel() {
         <div className="flex justify-center w-[65px]">
           <img
             className=" w-[65px]"
-            src={require("./images/logos/brands/redbull-logo.png")}
+            src={require('./images/logos/brands/redbull-logo.png')}
             alt="red bull logo"
           />
         </div>
         <div className="flex justify-center">
           <img
             className=" w-[110px]"
-            src={require("./images/logos/brands/bumble-logo.png")}
+            src={require('./images/logos/brands/bumble-logo.png')}
             alt="bumble logo"
           />
         </div>
         <div className="flex justify-center">
           <img
             className="w-[65px]"
-            src={require("./images/logos/brands/canucks-logo.png")}
+            src={require('./images/logos/brands/canucks-logo.png')}
             alt="canucks logo"
           />
         </div>
         <div className="flex justify-center">
           <img
             className="w-[65px]"
-            src={require("./images/logos/brands/budlight-logo.png")}
+            src={require('./images/logos/brands/budlight-logo.png')}
             alt="bud light logo"
           />
         </div>
         <div className="flex justify-center">
           <img
             className="w-[65px]"
-            src={require("./images/logos/brands/goldsgym-logo.png")}
+            src={require('./images/logos/brands/goldsgym-logo.png')}
             alt="golds gym logo"
           />
         </div>
         <div className="flex justify-center">
           <img
             className="w-[65px]"
-            src={require("./images/logos/brands/whitecaps-logo.png")}
+            src={require('./images/logos/brands/whitecaps-logo.png')}
             alt="whitecaps logo"
           />
         </div>
@@ -1062,7 +1089,7 @@ function Footer() {
           <a href="/">
             <img
               className="w-[150px]"
-              src={require("./images/logos/PlugWhite.png")}
+              src={require('./images/logos/PlugWhite.png')}
               alt="Plug Logo"
             />
           </a>
@@ -1076,7 +1103,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
-                src={require("./images/logos/social/instagram.png")}
+                src={require('./images/logos/social/instagram.png')}
                 alt="Instagram logo"
               />
             </a>
@@ -1088,7 +1115,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
-                src={require("./images/logos/social/tiktok.png")}
+                src={require('./images/logos/social/tiktok.png')}
                 alt="Tiktok logo"
               />
             </a>
@@ -1100,7 +1127,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
-                src={require("./images/logos/social/youtube.png")}
+                src={require('./images/logos/social/youtube.png')}
                 alt="YouTube logo"
               />
             </a>
@@ -1112,7 +1139,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
-                src={require("./images/logos/social/facebook.png")}
+                src={require('./images/logos/social/facebook.png')}
                 alt="Facebook logo"
               />
             </a>
@@ -1124,7 +1151,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
-                src={require("./images/logos/social/linkedin.png")}
+                src={require('./images/logos/social/linkedin.png')}
                 alt="LinkedIn logo"
               />
             </a>
@@ -1137,7 +1164,7 @@ function Footer() {
             >
               <img
                 className="w-[30px] h-auto mr-1 lg:w-[50px]"
-                src={require("./images/logos/social/email.png")}
+                src={require('./images/logos/social/email.png')}
                 alt="Email logo"
               />
             </a>
@@ -1146,16 +1173,16 @@ function Footer() {
           <div className="flex justify-center mt-1 lg:mt-4">
             <h1 className="text-white">
               <a className="text-white font-bold" href="/">
-                HOME{" "}
+                HOME{' '}
               </a>
               |
               <a className="text-white font-bold" href="/articles">
-                {" "}
-                READ{" "}
+                {' '}
+                READ{' '}
               </a>
               |
               <a className="text-white font-bold" href="/about">
-                {" "}
+                {' '}
                 ABOUT
               </a>
             </h1>
@@ -1192,7 +1219,7 @@ function ScrollIndicator() {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
+    document.getElementById('myBar').style.width = scrolled + '%';
   }
 
   return (
@@ -1212,13 +1239,13 @@ const HeaderFooterLayout = () => (
 );
 
 function App() {
-  fetch("https://plug-vancouver.herokuapp.com/")
+  fetch('https://plug-vancouver.herokuapp.com/')
     .then((res) => res.json())
     .then((data) => console.log(data));
   React.useEffect(() => {
-    const menuWrap = document.querySelector(".bm-menu-wrap");
+    const menuWrap = document.querySelector('.bm-menu-wrap');
     if (menuWrap) {
-      menuWrap.setAttribute("aria-hidden", true);
+      menuWrap.setAttribute('aria-hidden', true);
     }
   }, []);
 
@@ -1271,6 +1298,10 @@ function App() {
               element={<HonestlyNevermindArticle />}
             />
             <Route path="/articles/sza-sos" element={<SZASOSArticle />} />
+            <Route
+              path="/articles/vancouver-drag"
+              element={<DragVancouverArticle />}
+            />
             <Route path="/articles/kardinal" element={<KardinalArticle />} />
             <Route
               path="/articles/2022-from-your-closet"
@@ -1342,7 +1373,7 @@ function App() {
 }
 
 function openNav() {
-  console.log("hi");
+  console.log('hi');
   //document.getElementById("myNav").style.width = "100%";
 }
 
