@@ -200,7 +200,7 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/vancovuer-drag">
+        <a href="/articles/vancouver-drag">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
               <h3 className="article-category resize-none align-middle italic leading-4">
