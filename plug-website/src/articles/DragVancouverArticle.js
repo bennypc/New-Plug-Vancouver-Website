@@ -73,7 +73,10 @@ const DragVancouverArticle = () => {
   };
 
   const getCommentList = async () => {
-    const { data, error } = await supabase.from("comments").select("*");
+    const { data, error } = await supabase
+      .from("comments")
+      .select("*")
+      .eq("article_code", 2);
     if (!error && data) {
       setCommentList(data);
     } else {
