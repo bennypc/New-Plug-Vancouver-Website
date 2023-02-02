@@ -4,7 +4,7 @@ import SidebarMenu from "./SidebarMenu";
 import "./dashboard.css";
 import { Navigate } from "react-router-dom";
 
-const DashboardTeams = () => {
+const OldDashboardTeams = () => {
   const [session, setSession] = useState("");
   const [firstName, setfirstName] = useState("");
   const [loading, setLoading] = useState(true);
@@ -74,4 +74,4 @@ const DashboardTeams = () => {
   );
 };
 
-export default DashboardTeams;
+export default OldDashboardTeams;

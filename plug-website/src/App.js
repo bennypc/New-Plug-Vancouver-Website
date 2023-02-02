@@ -30,12 +30,7 @@ import ChalanseArticle from "./articles/ChalanseArticle";
 
 import "slick-carousel/slick/slick-theme.css";
 import AccountCreateSuccess from "./subpages/AccountCreateSuccess";
-import DashboardHome from "./dashboard/DashboardHome";
-import DashboardProfile from "./dashboard/DashboardProfile";
 import { ChakraProvider } from "@chakra-ui/react";
-import DashboardSettings from "./dashboard/DashboardSettings";
-import DashboardCalendar from "./dashboard/DashboardCalendar";
-import DashboardTeams from "./dashboard/DashboardTeams";
 
 import LaurenArticles from "./subpages/author-articles/LaurenArticles";
 import ZoieArticles from "./subpages/author-articles/ZoieArticles";
@@ -52,6 +47,13 @@ import BestDrinkArticle from "./articles/BestDrink";
 import WeeklyBreakdownJanuary16Article from "./articles/WeeklyBreakdownJanuary16Article";
 import NotFoundPage from "./subpages/NotFoundPage";
 import DragVancouverArticle from "./articles/DragVancouverArticle";
+import OldDashboardHome from "./oldDashboard/OldDashboardHome";
+import OldDashboardCalendar from "./oldDashboard/OldDashboardCalendar";
+import OldDashboardTeams from "./oldDashboard/OldDashboardTeams";
+import OldDashboardProfile from "./oldDashboard/OldDashboardProfile";
+import OldDashboardSettings from "./oldDashboard/OldDashboardSettings";
+import DashboardHome from "./dashboard/DashboardHome";
+import DashboardSettings from "./dashboard/DashboardSettings";
 
 const url =
   "https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0";
@@ -964,18 +966,18 @@ function ImageSlideshow() {
     // </div>
     <div>
       <a
-        href="https://www.youtube.com/watch?v=h3Zu64qPWBI"
+        href="https://www.ticketweb.ca/event/sparks-2023-celebrities-nightclub-tickets/12898795"
         target="_blank"
         rel="noopener noreferrer"
       >
         <img
           className="mobile-banner"
-          src={require("./images/asian-struggles-banner.jpg")}
+          src={require("./images/sparks-banner.jpg")}
           alt=""
         />
         <img
           className="desktop-banner"
-          src={require("./images/asian-desktop-banner.jpeg")}
+          src={require("./images/sparks-banner.jpg")}
           alt=""
         />
       </a>
@@ -1333,10 +1335,22 @@ function App() {
           <Route path="/login" element={<Auth />} />
 
           <Route path="/dashboard/home" element={<DashboardHome />} />
-          <Route path="/dashboard/calendar" element={<DashboardCalendar />} />
-          <Route path="/dashboard/teams" element={<DashboardTeams />} />
-          <Route path="/dashboard/profile" element={<DashboardProfile />} />
           <Route path="/dashboard/settings" element={<DashboardSettings />} />
+
+          <Route path="/olddashboard/home" element={<OldDashboardHome />} />
+          <Route
+            path="/olddashboard/calendar"
+            element={<OldDashboardCalendar />}
+          />
+          <Route path="/olddashboard/teams" element={<OldDashboardTeams />} />
+          <Route
+            path="/olddashboard/profile"
+            element={<OldDashboardProfile />}
+          />
+          <Route
+            path="/olddashboard/settings"
+            element={<OldDashboardSettings />}
+          />
 
           <Route path="/signup" element={<AccountCreation />} />
           <Route path="/signup-success" element={<AccountCreateSuccess />} />

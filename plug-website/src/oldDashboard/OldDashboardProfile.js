@@ -3,7 +3,7 @@ import supabase from "../supabase";
 import SidebarMenu from "./SidebarMenu";
 import { Navigate, redirect } from "react-router-dom";
 
-const DashboardProfile = () => {
+const OldDashboardProfile = () => {
   const [session, setSession] = useState("");
   const [firstName, setfirstName] = useState("");
   const [loading, setLoading] = useState(true);
@@ -121,4 +121,4 @@ const DashboardProfile = () => {
   );
 };
 
-export default DashboardProfile;
+export default OldDashboardProfile;

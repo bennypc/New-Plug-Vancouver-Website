@@ -3,15 +3,15 @@ import supabase from "../supabase";
 import SidebarMenu from "./SidebarMenu";
 import { Navigate, redirect } from "react-router-dom";
 
-const DashboardCalendar = () => {
+const OldDashboardHome = () => {
   const [session, setSession] = useState("");
   const [firstName, setfirstName] = useState("");
   const [loading, setLoading] = useState(true);
 
   async function getUser() {
-    const { data, error } = await supabase.auth.getSession();
-    setSession(data);
-    setLoading(false);
+    // const { data, error } = await supabase.auth.getSession();
+    // setSession(data);
+    // setLoading(false);
   }
 
   useEffect(() => {
@@ -27,11 +27,11 @@ const DashboardCalendar = () => {
       <SidebarMenu />
       <main style={{ padding: 20 }}>
         {" "}
-        Calendar
+        Main content
         <h1>{session.session.user.user_metadata.first_name}</h1>
       </main>
     </div>
   );
 };
 
-export default DashboardCalendar;
+export default OldDashboardHome;
