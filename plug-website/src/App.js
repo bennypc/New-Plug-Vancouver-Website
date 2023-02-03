@@ -977,7 +977,7 @@ function ImageSlideshow() {
         />
         <img
           className="desktop-banner"
-          src={require('./images/sparks-banner.jpg')}
+          src={require('./images/sparksdesktop.jpg')}
           alt=""
         />
       </a>
