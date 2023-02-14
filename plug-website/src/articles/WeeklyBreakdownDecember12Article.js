@@ -1,7 +1,7 @@
-import React from "react";
-import "./articles.css";
-import Popup from "reactjs-popup";
-import "reactjs-popup/dist/index.css";
+import React from 'react';
+import './articles.css';
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 import {
   EmailShareButton,
   FacebookShareButton,
@@ -9,7 +9,7 @@ import {
   LinkedinShareButton,
   TwitterShareButton,
   WhatsappShareButton,
-} from "react-share";
+} from 'react-share';
 
 import {
   EmailIcon,
@@ -18,7 +18,7 @@ import {
   RedditIcon,
   TwitterIcon,
   WhatsappIcon,
-} from "react-share";
+} from 'react-share';
 
 const WeeklyBreakdownDecember12Article = () => {
   return (
@@ -72,7 +72,7 @@ const WeeklyBreakdownDecember12Article = () => {
 
         <img
           className="article-image mt-6 mb-2"
-          src={require("./article_media/wb-2/wb2-banner.jpg")}
+          src={require('./article_media/wb-2/wb2-banner.jpg')}
           alt="glasses"
         />
 
@@ -84,7 +84,7 @@ const WeeklyBreakdownDecember12Article = () => {
         </p>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          MONDAY, DECEMBER 12TH{" "}
+          MONDAY, DECEMBER 12TH{' '}
         </p>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
@@ -124,17 +124,8 @@ const WeeklyBreakdownDecember12Article = () => {
           <span className="font-medium">Where: </span>Fortune Sound Club
         </p>
 
-        <a
-          className="mt-4 text-blue-500"
-          href="https://www.instagram.com/fortunesound/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @fortunesound
-        </a>
-
         <p className="article-body text-xl font-bold mt-[30px]">
-          TUESDAY, DECEMBER 13TH{" "}
+          TUESDAY, DECEMBER 13TH{' '}
         </p>
 
         <div>
@@ -176,7 +167,7 @@ const WeeklyBreakdownDecember12Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          WEDNESDAY, DECEMBER 14TH{" "}
+          WEDNESDAY, DECEMBER 14TH{' '}
         </p>
 
         <div>
@@ -240,7 +231,7 @@ const WeeklyBreakdownDecember12Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          THURSDAY, DECEMBER 15TH{" "}
+          THURSDAY, DECEMBER 15TH{' '}
         </p>
 
         <div>
@@ -302,7 +293,7 @@ const WeeklyBreakdownDecember12Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          FRIDAY, DECEMBER 16TH{" "}
+          FRIDAY, DECEMBER 16TH{' '}
         </p>
 
         <div>
@@ -386,7 +377,7 @@ const WeeklyBreakdownDecember12Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          SATURDAY, DECEMBER 17TH{" "}
+          SATURDAY, DECEMBER 17TH{' '}
         </p>
 
         <div>
@@ -447,7 +438,7 @@ const WeeklyBreakdownDecember12Article = () => {
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          SUNDAY, DECEMBER 18TH{" "}
+          SUNDAY, DECEMBER 18TH{' '}
         </p>
 
         <div>
@@ -513,7 +504,7 @@ const WeeklyBreakdownDecember12Article = () => {
           <div className="flex h-[75px] mb-4">
             <img
               className="rounded-full mr-6"
-              src={require("./article_media/authors/laurenbenson.png")}
+              src={require('./article_media/authors/laurenbenson.png')}
               alt="lauren"
             />
             <div className="flex align-middle justify-center flex-col">
