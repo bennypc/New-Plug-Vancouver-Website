@@ -54,6 +54,7 @@ import OldDashboardProfile from './oldDashboard/OldDashboardProfile';
 import OldDashboardSettings from './oldDashboard/OldDashboardSettings';
 import DashboardHome from './dashboard/DashboardHome';
 import DashboardSettings from './dashboard/DashboardSettings';
+import WeeklyBreakdownFebruary13Article from './articles/WeeklyBreakdownFebruary13Article';
 
 const url =
   'https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0';
@@ -203,6 +204,32 @@ function Articles() {
   return (
     <div id="latest-articles mx-2">
       <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/weekly-breakdown-february-13">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                EVENTS
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px]">
+                THE WEEKLY BREAKDOWN: FEBRUARY 13TH - FEBRUARY 19TH
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 13.02.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/wb-8/wb8-banner.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div className="border-solid border-b-2 mx-5">
         <a href="/articles/vancouver-drag">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
             <div className="width-[100px] resize-none align-middle">
@@ -299,32 +326,6 @@ function Articles() {
               <img
                 className="thumbnail"
                 src={require('./articles/article_media/wb-5/wb5-banner.jpg')}
-                alt="glasses"
-              />
-            </div>
-          </div>
-        </a>
-      </div>
-
-      <div className="border-solid border-b-2 mx-5">
-        <a href="/articles/2022-from-your-closet">
-          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
-            <div className="width-[100px] resize-none align-middle">
-              <h3 className="article-category resize-none align-middle italic leading-4">
-                FASHION
-              </h3>
-              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
-                2022 From Your Closet
-              </h2>
-              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
-                LAUREN BENSON | 31.12.2022
-              </h2>
-            </div>
-
-            <div className="ml-2">
-              <img
-                className="thumbnail"
-                src={require('./articles/article_media/closet-2022/closet-banner.jpg')}
                 alt="glasses"
               />
             </div>
@@ -1324,6 +1325,10 @@ function App() {
             <Route
               path="/articles/weekly-breakdown-january-16"
               element={<WeeklyBreakdownJanuary16Article />}
+            />
+            <Route
+              path="/articles/weekly-breakdown-february-13"
+              element={<WeeklyBreakdownFebruary13Article />}
             />
             <Route path="/articles/chalanse" element={<ChalanseArticle />} />
             <Route
