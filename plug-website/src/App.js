@@ -55,6 +55,8 @@ import OldDashboardSettings from './oldDashboard/OldDashboardSettings';
 import DashboardHome from './dashboard/DashboardHome';
 import DashboardSettings from './dashboard/DashboardSettings';
 import WeeklyBreakdownFebruary13Article from './articles/WeeklyBreakdownFebruary13Article';
+import EstherArticles from './subpages/author-articles/EstherArticles';
+import JamalVFWArticle from './articles/JamalVFWArticle';
 
 const url =
   'https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0';
@@ -203,6 +205,32 @@ function Home() {
 function Articles() {
   return (
     <div id="latest-articles mx-2">
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/jamalvfw">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                FASHION
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
+                A conversation with the founder of Vancouver Fashion Week
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                ESTHER LU | 16.02.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/jamalvfw/jamal.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
       <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-february-13">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
@@ -1258,6 +1286,7 @@ function App() {
               path="/articles/lauren-benson"
               element={<LaurenArticles />}
             />
+            <Route path="/articles/esther-lu" element={<EstherArticles />} />
             <Route path="/articles/zoie-mcclymont" element={<ZoieArticles />} />
             <Route path="*" element={<NotFoundPage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -1274,6 +1303,7 @@ function App() {
               path="/articles/honestly-nevermind"
               element={<HonestlyNevermindArticle />}
             />
+            <Route path="/articles/jamalvfw" element={<JamalVFWArticle />} />
             <Route path="/articles/sza-sos" element={<SZASOSArticle />} />
             <Route
               path="/articles/vancouver-drag"

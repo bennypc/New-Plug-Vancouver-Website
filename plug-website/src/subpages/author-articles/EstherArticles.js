@@ -10,7 +10,7 @@ import '@fontsource/roboto/700.css';
 import React, { useState } from 'react';
 import '../../articles/articles.css';
 
-const ZoieArticles = () => {
+const EstherArticles = () => {
   //const [showAll, setShowAll] = React.useState(true);
   const [showMusic, setsShowMusic] = React.useState(true);
   const [showEvents, setShowEvents] = React.useState(true);
@@ -98,14 +98,14 @@ const ZoieArticles = () => {
           <div className="flex justify-center mb-2 md:mb-4">
             <img
               className="author-page-image rounded-full flex  justify-center"
-              src={require('../../images/team-members/zoie.jpg')}
+              src={require('../../images/team-members/esther.jpg')}
               alt="lauren"
             />
           </div>
 
           <div className="flex align-middle justify-center flex-col text-center">
             <h2 className="text-2xl md:text-4xl md:mb-1">
-              <span>Zoie McClymont</span>
+              <span>Esther Lu</span>
             </h2>
             <h2 className="text-xl md:text-[32px] md:mt-2">
               <span className="font-normal">Editorial Associate</span>
@@ -121,25 +121,25 @@ const ZoieArticles = () => {
               showFashion ? undefined : 'hidden'
             }`}
           >
-            <a href="/articles/chalanse">
+            <a href="/articles/jamalvfw">
               <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
                 <div className="width-[100px] resize-none align-middle">
                   <h3 className="article-category resize-none align-middle italic leading-4">
                     FASHION
                   </h3>
-                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
-                    CHALANSE: FASHION THAT EMPOWERS - THE BRAND TO WATCH
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px] uppercase">
+                    A conversation with the founder of Vancouver Fashion Week
                   </h2>
                   <h2 className="italic resize-none align-middle text-xs font-[600]">
-                    ZOIE MCCLYMONT | 04.12.2022
+                    ESTHER LU | 16.02.2023
                   </h2>
                 </div>
 
                 <div className="ml-2">
                   <img
                     className="thumbnail"
-                    src={require('../../articles/article_media/chalanse/chalanse.jpeg')}
-                    alt="glasses"
+                    src={require('../../articles/article_media/jamalvfw/jamal.jpg')}
+                    alt="cabin"
                   />
                 </div>
               </div>
@@ -151,4 +151,4 @@ const ZoieArticles = () => {
   );
 };
 
-export default ZoieArticles;
+export default EstherArticles;
