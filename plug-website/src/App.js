@@ -1273,7 +1273,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <ImageSlideshow />
+                  {/* <ImageSlideshow /> */}
                   <Articles />
                   <WeeklyBreakdownStrip />
                   <BestMoments />

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
   Alert,
   AlertDescription,
@@ -7,13 +7,13 @@ import {
   Box,
   ChakraProvider,
   CloseButton,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
-import supabase from "../supabase";
+import supabase from '../supabase';
 
 const Auth = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [showAlert, setShowAlert] = useState(false);
 
   function onClose(e) {
@@ -32,8 +32,8 @@ const Auth = () => {
       console.log(error.message);
       setShowAlert(true);
     } else {
-      console.log("good login");
-      window.location.href = "/dashboard/home";
+      console.log('good login');
+      window.location.href = '/dashboard/home';
     }
   }
 
@@ -44,14 +44,14 @@ const Auth = () => {
           <div>
             <img
               className="mx-auto h-[160px] w-auto"
-              src={require("../images/logos/PlugWhite.png")}
+              src={require('../images/logos/PlugWhite.png')}
               alt="Your Company"
             />
             <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-white">
               Sign in to your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-300">
-              Or{" "}
+              Or{' '}
               <a
                 href="/signup"
                 className="font-medium text-[#cb6ce6] hover:text-indigo-500"
