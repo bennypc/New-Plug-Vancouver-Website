@@ -27,7 +27,7 @@ import {
   WhatsappIcon,
 } from 'react-share';
 
-const WeeklyBreakdownFebruary20Article = () => {
+const WeeklyBreakdownFebruary27Article = () => {
   const [comment, setComment] = useState('');
   const [commentList, setCommentList] = useState([]);
   const [editComment, setEditComment] = useState({
@@ -117,35 +117,35 @@ const WeeklyBreakdownFebruary20Article = () => {
 
         <h1 className="text-4xl mb-1 mt-1">The Weekly Breakdown</h1>
 
-        <h2 className="text-lg font-medium italic mb-1">February 20th- 26th</h2>
+        <h2 className="text-lg font-medium italic mb-1">
+          February 27th - March 5th
+        </h2>
 
         <a href="/articles/lauren-benson">
           <button className="astext">
             <p className="text-sm italic font-[600]">
-              LAUREN BENSON | 20.02.2023
+              LAUREN BENSON | 27.02.2023
             </p>
           </button>
         </a>
 
         <img
           className="article-image mt-6 mb-4 w-full"
-          src={require('./article_media/wb-9/wb9-banner.jpg')}
+          src={require('./article_media/wb-10/wb10-banner.jpg')}
           alt="wb3 banner"
         />
 
         <p className="article-body text-lg font-normal">
-          Whether you're enjoying reading break or looking for a break from the
-          9-5, the Plug Vancouver’s signature Weekly Breakdown guarantees to
-          help you shake those stresses away. Scroll to the bottom for our
-          College Edition!
+          Dance off the cold this week with the Plug Vancouver’s signature
+          Weekly Breakdown. Scroll to the bottom for our College Edition!
         </p>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          MONDAY, FEBRUARY 20TH{' '}
+          MONDAY, FEBRUARY 27TH{' '}
         </p>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
-          MIDNIGHT MONDAYS- 5 YEAR ANNIVERSARY
+          MIDNIGHT MONDAYS
         </p>
 
         <p className="article-body text-lg font-normal mt-4">
@@ -155,7 +155,7 @@ const WeeklyBreakdownFebruary20Article = () => {
         </p>
 
         <p className="article-body text-lg font-norma mt-4">
-          <span className="font-medium">When: </span>Mon, Feb 20th: 10 PM — 2 AM
+          <span className="font-medium">When: </span>Mon, Feb 27th: 10 PM — 2 AM
         </p>
 
         <p className="article-body text-lg font-normal mb-2">
@@ -172,156 +172,146 @@ const WeeklyBreakdownFebruary20Article = () => {
         </a>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
-          MILLENNIAL MONDAY | ROXY
+          LIPS L Word Trivia Night
         </p>
 
         <p className="article-body text-lg font-normal mt-4">
-          Get nostalgic partying to the biggest hits from 1995-2008!
+          It's gay, it's L Word trivia, beer, and yummy food!
         </p>
 
         <p className="article-body text-lg font-norma mt-4">
-          <span className="font-medium">When: </span>Mon, Feb 20th: 9 PM - 3 AM
+          <span className="font-medium">When: </span>Mon, Feb 27th: 7 PM - 11 PM
         </p>
 
         <p className="article-body text-lg font-normal mb-2">
-          <span className="font-medium">Where: </span>The Roxy Cabaret
+          <span className="font-medium">Where: </span>East Van Brewing
         </p>
 
         <a
           className="mt-4 text-blue-500"
-          href="https://www.instagram.com/roxyvancouver/"
+          href="https://www.instagram.com/lips.events/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          @roxyvancouver &nbsp;
+          @lips.events &nbsp;
         </a>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          TUESDAY, FEBRUARY 21ST{' '}
+          TUESDAY, FEBRUARY 28TH{' '}
         </p>
 
         <p className="article-body text-lg italic font-medium mt-[30px]">
-          TEE'D UP TUESDAY
+          TUESDAYS AT CELEBS
         </p>
 
         <p className="article-body text-lg font-normal mt-4">
-          Turn up on a Tuesday at your favourite arcade bar with $20 unlimited
-          gaming.
+          The spot to go to on a Tuesday night!!
         </p>
 
         <p className="article-body text-lg font-norma mt-4">
-          <span className="font-medium">When: </span>Tues, Feb 20th
+          <span className="font-medium">When: </span>Tues, Feb 28th: 11 PM - 3
+          AM
         </p>
 
         <p className="article-body text-lg font-normal mb-2">
-          <span className="font-medium">Where: </span>Greta Bar YVR
+          <span className="font-medium">Where: </span>Celebrities Nightclub
         </p>
 
-        <a
-          className="mt-4 text-blue-500"
-          href="https://www.instagram.com/gretabaryvr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @gretabaryvr
-        </a>
-
         <p className="article-body text-xl font-bold mt-[30px]">
-          WEDNESDAY, FEBRUARY 22ND
+          WEDNESDAY, MARCH 1ST
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            PERREO
+            WORLD-FAMOUS RUTS WEDNESDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Next stop on their European tour: Barcelona. Indulge in a delicate
-            flute of Cava, bask in the rich rhythms of authentic Latin beats,
-            and experience the vibrancy of Spain!
+            Cheap bottles and $5 tequila shots, every Wednesday ‘til 3AM Demon
+            Time. What could be better than $5 shots?
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Feb 22nd: 10PM - 2AM
-          </p>
-
-          <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Hello Goodbye
-          </p>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/dawnvancouver/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @dawnvancouver
-          </a>
-        </div>
-
-        <p className="article-body text-xl font-bold mt-[30px]">
-          THURSDAY, FEBRUARY 23RD
-        </p>
-
-        <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            VANCOUVER NEXT DRAG SUPERSTAR
-          </p>
-
-          <p className="article-body text-lg font-normal mt-4">
-            24 drag artists are competing for the title of Vancouver's Next Drag
-            Superstar!
-          </p>
-
-          <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Thurs, Feb 23rd: 10PM - 3
+            <span className="font-medium">When: </span>Wed, March 1st: 11 PM - 3
             AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Celebrities Nightclub
+            <span className="font-medium">Where: </span>Granville Room
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/celebrities_van/"
+            href="https://www.instagram.com/rutsworldwide/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @celebrities_van &nbsp;
+            @rutsworldwide
+          </a>
+        </div>
+
+        <p className="article-body text-xl font-bold mt-[30px]">
+          THURSDAY, MARCH 2ND
+        </p>
+
+        <div>
+          <p className="article-body text-lg italic font-medium mt-[30px]">
+            THURSDAY KARAOKE
+          </p>
+
+          <p className="article-body text-lg font-normal mt-4">
+            Try out Karaoke at this 80s & 90s inspired retro bar and game room.
+          </p>
+
+          <p className="article-body text-lg font-norma mt-4">
+            <span className="font-medium">When: </span>Thurs, March 2nd: 8 PM -
+            12 PM
+          </p>
+
+          <p className="article-body text-lg font-normal mb-2">
+            <span className="font-medium">Where: </span>Glitch Vancouver
+          </p>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/glitchvancouver/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @glitchvancouver &nbsp;
           </a>
         </div>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            GARDEN OF EDEN
+            YALE THURSDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            High Energy. One dance floor. Techno. Trance. House, Drum and Bass.
+            $5 jager and $10 doubles!
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Thurs, Feb 23rd: 10 PM -
-            LATE
+            <span className="font-medium">When: </span>Thurs, March 2nd: 9:30 PM
+            - 2 AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Fortune Sound Club
+            <span className="font-medium">Where: </span>The Yale
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/casayvr/"
+            href="https://www.instagram.com/yalesaloon/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @casayvr &nbsp;
+            @yalesaloon &nbsp;
           </a>
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          FRIDAY, FEBRUARY 24TH
+          FRIDAY, MARCH 3RD
         </p>
 
         <div>
@@ -336,7 +326,7 @@ const WeeklyBreakdownFebruary20Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Feb 24th
+            <span className="font-medium">When: </span>Fri, March 3rd
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
@@ -356,44 +346,54 @@ const WeeklyBreakdownFebruary20Article = () => {
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            FREAKY FRIDAYS
+            JIGGY: A Y2K HIP HOP PARTY
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            You'll either be dancing, singing, enjoying nostalgic moments with
-            throwback- or all of the above!
+            A nostalgic party featuring RAP + R&B club hits from the early to
+            mid-2000’s.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Feb 24th: 10 PM - 3
+            <span className="font-medium">When: </span>Fri, March 3rd: 10 PM - 3
             AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span> Levels Nightclub
+            <span className="font-medium">Where: </span>Bar None Nightclub
           </p>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/barnoneclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @barnoneclub &nbsp;
+          </a>
         </div>
 
         <p className="article-body text-xl font-bold mt-[30px]">
-          SATURDAY, FEB 25TH
+          SATURDAY, MARCH 4TH
         </p>
 
         <div>
           <p className="article-body text-lg italic font-medium mt-[30px]">
-            SHAYO SATURDAY’S
+            SUP FU? SATURDAYS
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Curated for Afrobeats, Amapiano, Dancehall & Hip Hop!
+            Hit the dance floor at Vancouver’s longest-running HIP HOP ONLY
+            night!
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sat, Feb 25th: 9 PM - 3
+            <span className="font-medium">When: </span>Sat, March 4th: 10 PM - 2
             AM
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Cinema Public House
+            <span className="font-medium">Where: </span>Fortune Sound Club
           </p>
 
           <a
@@ -402,7 +402,16 @@ const WeeklyBreakdownFebruary20Article = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            @cinema.fc &nbsp;
+            @hyphyevents &nbsp;
+          </a>
+
+          <a
+            className="mt-4 text-blue-500"
+            href="https://www.instagram.com/fortunesound/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @fortunesound
           </a>
         </div>
 
@@ -411,40 +420,31 @@ const WeeklyBreakdownFebruary20Article = () => {
         </p>
 
         <div>
-          <p className="article-body text-lg italic font-medium mt-[30px]">
-            LOVE AFFAIR SUNDAYS
+          <p className="uppercase article-body text-lg italic font-medium mt-[30px]">
+            SUNDAYS AT PIERRE'S
           </p>
 
           <p className="article-body text-lg font-normal mt-4">
-            Party to everything Top 40, guaranteed to get you dancing on a
-            Sunday night.
+            End the week in high fashion with Industry Nights at Pierre’s
+            Champagne Lounge.
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Sun, Feb 26th: 10 PM - 3
-            AM
+            <span className="font-medium">When: </span>Sun, March 5th: 8 PM -
+            LATE
           </p>
 
           <p className="article-body text-lg font-normal mb-2">
-            <span className="font-medium">Where: </span>Gallery Vancouver
+            <span className="font-medium">Where: </span>Pierre’s Lounge
           </p>
 
           <a
             className="mt-4 text-blue-500"
-            href="https://www.instagram.com/turnt.ent/"
+            href="https://www.instagram.com/pierreslounge/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            @turnt.ent &nbsp;
-          </a>
-
-          <a
-            className="mt-4 text-blue-500"
-            href="https://www.instagram.com/gallery_vancouver/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @unlimiteddanceclub &nbsp;
+            @pierreslounge
           </a>
         </div>
 
@@ -462,7 +462,7 @@ const WeeklyBreakdownFebruary20Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Wed, Feb 22nd: 10 PM -
+            <span className="font-medium">When: </span>Wed, March 1st: 10 PM -
             LATE
           </p>
 
@@ -490,7 +490,7 @@ const WeeklyBreakdownFebruary20Article = () => {
           </p>
 
           <p className="article-body text-lg font-norma mt-4">
-            <span className="font-medium">When: </span>Fri, Feb 24th: 10 PM - 2
+            <span className="font-medium">When: </span>Fri, Feb 3rd: 10 PM - 2
             AM
           </p>
 
@@ -664,4 +664,4 @@ const WeeklyBreakdownFebruary20Article = () => {
   );
 };
 
-export default WeeklyBreakdownFebruary20Article;
+export default WeeklyBreakdownFebruary27Article;

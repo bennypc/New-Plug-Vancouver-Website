@@ -121,6 +121,35 @@ const LaurenArticles = () => {
               showEvents ? undefined : 'hidden'
             }`}
           >
+            <a href="/articles/weekly-breakdown-february-27">
+              <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+                <div className="width-[100px] resize-none align-middle">
+                  <h3 className="article-category resize-none align-middle italic leading-4">
+                    EVENTS
+                  </h3>
+                  <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] h-[60px]">
+                    THE WEEKLY BREAKDOWN: FEBRUARY 27TH-MARCH 5TH
+                  </h2>
+                  <h2 className="italic resize-none align-middle text-xs font-[600]">
+                    LAUREN BENSON | 27.02.2023
+                  </h2>
+                </div>
+
+                <div className="ml-2">
+                  <img
+                    className="thumbnail"
+                    src={require('../../articles/article_media/wb-10/wb10-banner.jpg')}
+                    alt="cabin"
+                  />
+                </div>
+              </div>
+            </a>
+          </div>
+          <div
+            className={`border-solid border-b-2 mx-5 ${
+              showEvents ? undefined : 'hidden'
+            }`}
+          >
             <a href="/articles/weekly-breakdown-february-20">
               <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
                 <div className="width-[100px] resize-none align-middle">
