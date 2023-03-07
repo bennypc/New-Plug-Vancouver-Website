@@ -139,7 +139,7 @@ const LaurenArticles = () => {
                   <img
                     className="thumbnail"
                     src={require('../../articles/article_media/wb-10/wb10-banner.jpg')}
-                    alt="cabin"
+                    alt="banner"
                   />
                 </div>
               </div>
