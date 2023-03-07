@@ -59,6 +59,7 @@ import EstherArticles from './subpages/author-articles/EstherArticles';
 import JamalVFWArticle from './articles/JamalVFWArticle';
 import WeeklyBreakdownFebruary20Article from './articles/WeeklyBreakdownFebruary20Article';
 import WeeklyBreakdownFebruary27Article from './articles/WeeklyBreakdownFebruary27Article';
+import WeeklyBreakdownMarch6Article from './articles/WeeklyBreakdownMarch6';
 
 const url =
   'https://plugvancouver.us8.list-manage.com/subscribe/post?u=ae713f23e836b02604e8d5a91&amp;id=9b9c53bead&amp;f_id=007c75e0f0';
@@ -207,6 +208,32 @@ function Home() {
 function Articles() {
   return (
     <div id="latest-articles mx-2">
+      <div className="border-solid border-b-2 mx-5">
+        <a href="/articles/weekly-breakdown-march-6">
+          <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
+            <div className="width-[100px] resize-none align-middle">
+              <h3 className="article-category resize-none align-middle italic leading-4">
+                EVENTS
+              </h3>
+              <h2 className="article-heading resize-none align-middle leading-[20px] text-[20px] uppercase">
+                THE WEEKLY BREAKDOWN: March 6th - March 12th
+              </h2>
+              <h2 className="article-info italic resize-none align-middle text-xs font-[600]">
+                LAUREN BENSON | 06.03.2023
+              </h2>
+            </div>
+
+            <div className="ml-2">
+              <img
+                className="thumbnail"
+                src={require('./articles/article_media/wb-11/wb11-banner.jpg')}
+                alt="glasses"
+              />
+            </div>
+          </div>
+        </a>
+      </div>
+
       <div className="border-solid border-b-2 mx-5">
         <a href="/articles/weekly-breakdown-february-27">
           <div className="flex mx-[2px] mt-[20px] mb-[10px] justify-between">
@@ -1342,6 +1369,10 @@ function App() {
             <Route
               path="/articles/weekly-breakdown-february-27"
               element={<WeeklyBreakdownFebruary27Article />}
+            />
+            <Route
+              path="/articles/weekly-breakdown-march-6"
+              element={<WeeklyBreakdownMarch6Article />}
             />
             <Route path="/articles/chalanse" element={<ChalanseArticle />} />
             <Route
