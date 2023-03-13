@@ -26,9 +26,8 @@ import {
   TwitterIcon,
   WhatsappIcon,
 } from "react-share";
-import InstagramEmbed from "../components/InstagramEmbed";
 
-const JamalVFWArticle = () => {
+const WeeklyBreakdownMarch6Article = () => {
   const [comment, setComment] = useState("");
   const [commentList, setCommentList] = useState([]);
   const [editComment, setEditComment] = useState({
@@ -76,7 +75,7 @@ const JamalVFWArticle = () => {
     const { data, error } = await supabase
       .from("comments")
       .select("*")
-      .eq("article_code", 3);
+      .eq("article_code", 51);
     if (!error && data) {
       setCommentList(data);
     } else {
@@ -94,7 +93,7 @@ const JamalVFWArticle = () => {
       username: "Anonymous",
       payload: comment,
       reply_of: replyOf,
-      article_code: 3, //change for each article
+      article_code: 51, //change for each article
     });
 
     if (!error && data) {
@@ -112,145 +111,187 @@ const JamalVFWArticle = () => {
       <div className="article-container">
         <a href="/articles">
           <button className="astext">
-            <p className="article-topic italic">FASHION</p>
+            <p className="article-topic  italic">FASHION</p>
           </button>
         </a>
 
-        <h1 className="text-4xl mb-1 mt-1">“I had zero qualifications,”</h1>
+        <h1 className="text-4xl mb-1 mt-1">Worth a Thousand Words?</h1>
 
-        <h2 className="text-lg font-medium italic mb-1">
-          A conversation with the founder of Vancouver Fashion Week
+        <h2 className="text-lg font-medium italic">
+          A Snapshot of the World of Fashion Photography
         </h2>
 
-        <a href="/articles/esther-lu">
+        <a href="/articles/lauren-benson">
           <button className="astext">
-            <p className="text-sm italic font-[600]">ESTHER LU | 16.02.2023</p>
+            <p className="text-sm italic font-[600]">
+              LAUREN BENSON | 10.03.2022
+            </p>
           </button>
         </a>
 
         <img
-          className="article-image mt-6 mb-4 w-full"
-          src={require("./article_media/jamalvfw/jamal2.jpg")}
-          alt="wb3 banner"
+          className="my-6 w-full"
+          src={require("./article_media/cassidy-interview/cassidy-cover.jpg")}
+          alt="Cover Image"
         />
-        <div className="text-center text-sm">
-          <p>
-            Photos by Esther Lu, featuring designs by the brand Chalanse and
-            CoCo Création
-          </p>
-        </div>
-        <p className="text-lg font-normal mt-[30px]">
-          The glitz and the glamour, the blinding lights, the extravagance of it
-          all, it’s almost overwhelming. Who is the man behind the runway, and
-          how does it come together?
+
+        <p className="text-lg font-normal">
+          What do Vogue, Elle, Harper’s Bazaar, and every other major fashion
+          publication have in common? Alluring cover shots adorn each glossy
+          cover. Every celebrity and designer shoot is meticulously curated by a
+          team who brings the vision to life. So, who’s behind the camera? Check
+          out a snapshot (no pun intended) of the Vancouver photography industry
+          with fashion photographer Cassidy Chen!
         </p>
 
         <p className="text-lg font-normal mt-[30px]">
-          Jamal Abdourahman, founder of Vancouver Fashion Week (VFW) and Global
-          Fashion Collective sat down with Plug Vancouver to talk about the
-          development of VFW and his emergence in the industry.
-        </p>
-
-        <p className="text-lg font-normal mt-[30px]">
-          “I had zero qualifications,” said Abdourahman referring to his lack of
-          experience in the fashion industry prior to the inception of VFW.
-          Abdourahman originally started his career in the entertainment
-          industry as a club promoter, but found himself searching for a novel
-          way to elevate and “add some excitement” to these events. After his
-          first fashion show at Paris Fashion Week in 1999 he was inspired to
-          take measures into his own hands. The success Abdourahman has amassed
-          over the past 20 years is attributed to three traits: confidence,
-          drive and persistence – regardless of preexisting credentials.
+          Working four jobs in a fast-paced industry, Chen is truly a jack of
+          all trades. She tells us she’s a freelance photographer specializing
+          in fashion and editorial, but casually mentions that she also does
+          event and lifestyle photography- all while being a full-time student
+          at UBC. If that wasn’t enough, Chen is also a model scout, works at a
+          marketing agency, and is a media director for a networking
+          organization. In her words, she dabbles in “a little bit of
+          everything” if it has to do with media. Do we all have every hour that
+          Chen has in the day?
         </p>
 
         <img
-          className="article-image mt-6 mb-4 w-full"
-          src={require("./article_media/jamalvfw/jamal.jpg")}
-          alt="wb3 banner"
+          className="my-6 w-full"
+          src={require("./article_media/cassidy-interview/cassidy1.jpg")}
+          alt="Cassidy Chen"
         />
 
         <div className="text-center text-sm">
-          <p>Image via Metro News</p>
+          <p>Photo credits to @edportraitphotography</p>
         </div>
 
         <p className="text-lg font-normal mt-[30px]">
-          One thing Abdourahman has always strived to maintain is his value of
-          diversity. This was apparent with the inclusion of culture-centric
-          designers like the brand Ay Lelum (@aylelum), a Coast Salish Design
-          House in addition to models of varying ages and races. It was also
-          incredibly refreshing to see disability representation this season
-          with an appearance from Bean Gill (@branzoid), recovering paraplegic
-          model.
-        </p>
-
-        <p className="text-lg font-normal mt-[30px]">
-          These values don’t just stop at the runway, they carry onto
-          Abdourahman’s personal style as well. He proudly refers to his style
-          as distinctly his own, curated through an accumulation of travel
-          experiences. Milan and Tokyo are his top two contenders as style
-          capitals. What stands out about these cities to him is how evident the
-          effort in each individual’s appearance is (subtle diss, sorry
-          Vancouver). Abdourahman often makes appearances with his iconic and
-          larger-than-life Bowler hats. Sadly, when asked about the goodness
-          that is this accessory, his response did not support any wishful
-          theories of a Remy from Ratatouille situation occurring under there.
-          Turns out, the real reason is quite functional. “I shaved my head” and
-          “the wintertime [climate]” make for solid explanations. He typically
-          does not accessorize with other items such as jewelry, so he has a
-          collection of hats to compensate.
-        </p>
-
-        <p className="text-lg font-normal mt-[30px]">
-          All in all, Abdourahman envisions his work as a “platform that helps
-          emerging designers” gain their well-deserved exposure. When asked
-          about the most difficult part of building this platform, Abdourahman
-          believes “the hardest part is also the most exciting part.” Despite
-          the many variables to account for, seeing it all come together truly
-          makes it worthwhile.
+          Snapping photos has been a part of Chen’s life since the start. When
+          most of us were learning how to ride a bike, Chen was out in the field
+          discovering her passions. When she was only seven years old her aunt
+          and uncle- a pair of nature photographers, introduced her to the
+          craft. Chen would spend time in their backyard capturing the local
+          birds, and she “kind of just fell in love with how you can capture a
+          moment”. That fondness grew with Chen thanks to the help of a high
+          school photography teacher, Mr. Sharma fostering it along the way.
+          When it comes to fashion photography, Chen says she just kind of got
+          “thrown into it”- shooting for her friends and clients when she was
+          only sixteen. Now she wouldn’t have it any other way, and is ready to
+          take on the world of fashion by storm!
         </p>
 
         <img
-          className="article-image mt-6 mb-4 w-full"
-          src={require("./article_media/jamalvfw/jamal3.jpg")}
-          alt="wb3 banner"
+          className="my-6 w-full"
+          src={require("./article_media/cassidy-interview/cassidy2.jpg")}
+          alt="Cassidy 2"
         />
 
         <div className="text-center text-sm">
-          <p>
-            Photos by Esther Lu, featuring designs by the brand Chalanse and
-            CoCo Création
-          </p>
+          <p>Photo credits to @cassidychenphotography</p>
         </div>
 
         <p className="text-lg font-normal mt-[30px]">
-          For anyone hoping to enter this industry now, Abdourahman cautions
-          against taking for granted the value of time. Not dedicating enough
-          time almost lost him a show at the beginning of his fashion career.
-          Since then, he has unfailingly given his all to the VFW and Global
-          Fashion Collective brands each year and is excited to see how new
-          talent will continue to expand the Vancouver fashion scene in the
-          coming years.
+          The creative process that goes into each shot is so much more robust
+          than one might think- that’s what Chen loves about photography so
+          much. She enjoys putting together the final product with big teams:
+          “working with stylists, hair, makeup, models” and seeing what they can
+          create together. Chen is playful with her work, and tells how she
+          likes to experiment with various concepts. She particularly enjoys
+          when she can create a “storytelling aspect” for the viewer to digest
+          in her photos.
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          However, the strength of a team can really determine the final
+          product. Luckily Chen says she’s “met some of [her] best friends
+          through being creative… it’s like nothing [she] ever anticipated
+          before”. When you’re spending “eight-hour shoot days” with your team,
+          you better hope you like who you’re working with!
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          So, what’s to be expected from creative counterparts in the city? From
+          Chen’s experience “Working in the Vancouver industry… as a young and
+          female artist… it's been really cool and also enlightening.” Chen is
+          also well aware of the darker side of the photography industry, as
+          modelling can often be a vulnerable experience. To counter that, Chen
+          goes the extra mile to make her clients “feel safe and comfortable at
+          [her] shoots” as she works to create a fun environment. So what does a
+          fun shoot entail? The ideal shoot according to Chen should feel just
+          like a “hangout” that just happens to be in front of a camera!
+        </p>
+
+        <img
+          className="my-6 w-full"
+          src={require("./article_media/cassidy-interview/cassidy3.jpg")}
+          alt="Cassidy 3"
+        />
+
+        <div className="text-center text-sm">
+          <p>Photo credits to @cassidychenphotography</p>
+        </div>
+
+        <p className="text-lg font-normal mt-[30px]">
+          For those looking to follow in Chen’s footsteps, the Plug asked all
+          the questions an up-and-coming photographer might want to know. When
+          specifically asked what the creative scene is like in Vancouver, Chen
+          said “the Vancouver fashion industry is growing as we speak, but right
+          now it is quite small compared to say, the film industry here.” She
+          also noted that especially in comparison to our Canadian counterpart
+          (Toronto), Vancouver has some catching up to do. VFW and modelling
+          industries are growing and “there are more opportunities”.
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          Don’t be fooled though, just because the industry isn’t huge doesn’t
+          mean the competition isn’t tough. Chen never expected “how many free
+          shoots you need to do to get to a point where your portfolio is
+          developed.” She did a lot of “test shoots” starting out, which are
+          symbiotic photo sessions where both a novice model and a photographer
+          leave with photos for their portfolio.
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          That being said, don’t let a competitive industry deter you from
+          pursuing your career dreams. Chen says her “biggest advice is don’t be
+          afraid”, and don’t worry when those self-doubts get in the way. Like
+          any opportunity, “The answer is always no until you try it!” An
+          attitude as positive as Chen’s is sure to land opportunities. She
+          encourages new photographers to “keep experimenting, keep meeting new
+          people- a lot of it is networking.” She also emphasizes “keep being a
+          nice person too… it goes a really long way.”{" "}
+        </p>
+
+        <p className="text-lg font-normal mt-[30px]">
+          So what does the future hold for Chen? She plans to continue to
+          connect more with creatives and expand her network. She plans to move
+          one day to seek out bigger clients and even more exciting
+          opportunities. What matters most to Chen is having her creative
+          freedom, and “not feeling limited”. Considering the success she’s had
+          so far from photographing actresses to shooting in Los Angeles, it’s a
+          safe bet that the future holds great opportunities for Chen!
         </p>
 
         <p className="text-lg font-normal mt-[30px] italic">
-          If you want to learn more about upcoming Fashion Week events and
-          emerging designers make sure to take a look @vanfashionweek on
-          Instagram.
+          Check out Cassidy’s work at https://cassidychenphotography.ca/, and
+          make sure you follow her on Instagram @cassidychenphotography to keep
+          up with her latest projects!
         </p>
 
         <div className="border-solid border-b-[1px] mx-2 my-6" />
-        <a href="/articles/esther-lu">
+        <a href="/articles/lauren-benson">
           <div className="flex h-[75px] mb-4">
             <img
               className="rounded-full mr-6"
-              src={require("../images/team-members/esther.jpg")}
+              src={require("./article_media/authors/laurenbenson.png")}
               alt="lauren"
             />
             <div className="flex align-middle justify-center flex-col">
               <h2 className="">
-                <span>Esther Lu</span>
+                <span>Lauren Benson</span>
                 <br />
-                <span className="font-normal">Editorial Associate</span>
+                <span className="font-normal">Editorial Director</span>
               </h2>
             </div>
           </div>
@@ -389,4 +430,4 @@ const JamalVFWArticle = () => {
   );
 };
 
-export default JamalVFWArticle;
+export default WeeklyBreakdownMarch6Article;
